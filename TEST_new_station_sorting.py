@@ -15,7 +15,8 @@ TAC_1 = {
     'BLSN':[['Aid Unit', 'Engine', 'Ladder']],
     'MED':['Medic Unit', 'Engine'],
     'MEDX':['Medic Unit', ['Engine', 'Ladder'], ['Engine', 'Ladder'], 'Medical Services Officer'],
-    'HZ':[['Engine','Ladder'], 'Engine', 'Command Unit']
+    'HZ':[['Engine','Ladder'], 'Engine', 'Command Unit'],
+    'FCC':['Engine', 'Engine', 'Ladder', 'Engine', 'Engine', 'Medic Unit', ['Aid Unit', 'Medic Unit'], 'Ladder', 'Command Unit', 'Medical Services Officer']
 }
 
 station_order = {
@@ -113,4 +114,4 @@ def recommendations(call_type,grid):
 
 print(recommendations('bls','BA0002'))
 print(recommendations('medX','BA0001'))
-print(recommendations('Hz', 'BA0001'))
+print(recommendations('FCC', 'BA0001'))
