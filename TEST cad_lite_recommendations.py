@@ -32,19 +32,8 @@ class Unit:
     def __str__(self):
         return '\nUnit Number: ' + self.unit_number + '\nUnit Type: ' + self.unit_type + '\nAssigned Station: ' + self.unit_station + '\nUnit Status: ' + self.unit_status
 
-
-class Unit_List:
-    def __init__(self):
-        self.list = {}
-    def add_unit(self,Unit):
-        self.list[Unit] = Unit
-    def __str__(self):
-        return f"{self}"
-
-#fire_list = Unit_List()
-
 q1 = """
-SELECT 
+SELECT
 unit_number,
 unit_type,
 assigned_station,
