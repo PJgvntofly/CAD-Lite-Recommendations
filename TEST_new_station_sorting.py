@@ -3,7 +3,7 @@ from mysql.connector import Error
 import pandas as pd
 import create_server_connection
 
-connection = create_server_connection.create_server_connection('localhost', 'root','IlMC6/3/12','cad_lite')
+connection = create_server_connection.create_server_connection('localhost', 'root','testpassword1','cad_lite')
 
 position = {
     'TAC_1':['BA0001', 'BA0002', 'BA0003', 'BA0004'],
