@@ -3,8 +3,10 @@ from mysql.connector import Error
 import pandas as pd
 import create_server_connection
 
+#update values passed to this function to the appropriate CAD Lite MySQL database
 connection = create_server_connection.create_server_connection('localhost', 'root','testpassword1','cad_lite')
 
+#need to build out the full list of which quadrants are associated with which dispatch positions. Can be done by using csv functions from pandas.
 position = {
     'TAC_1':['BA0001', 'BA0002', 'BA0003', 'BA0004'],
     'TAC_7':['DF009', 'DF010', 'DF011', 'DF013', 'DF055']
