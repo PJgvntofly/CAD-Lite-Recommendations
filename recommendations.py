@@ -21,9 +21,16 @@ TAC_1 = {
     'FCC':['Engine', 'Engine', 'Ladder', 'Engine', 'Engine', 'Medic Unit', ['Aid Unit', 'Medic Unit'], 'Ladder', 'Command Unit', 'Medical Services Officer']
 }
 
+TAC_7 = {
+    'BLS':[['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']],
+    'GLO':[['Engine', 'Ladder'], 'Engine']
+}
+
 station_order = {
     'BA0001':['STA 2', 'STA 3', 'STA 1', 'STA 5', 'STA 4', 'STA 6', 'STA 7', 'STA 61', 'STA 63', 'STA 82'],
-    'BA0002':['STA 2', 'STA 3', 'STA 1', 'STA 5', 'STA 4', 'STA 6', 'STA 7', 'STA 61', 'STA 63', 'STA 82']
+    'BA0002':['STA 2', 'STA 3', 'STA 1', 'STA 5', 'STA 4', 'STA 6', 'STA 7', 'STA 61', 'STA 63', 'STA 82'],
+    'DF009':['STA 19', 'KC STA 63', 'KC STA 57', 'STA 18', 'STA 20', 'KC STA 64', 'KC STA 65', 'STA 15'],
+    'DF013':['KC STA 44', 'STA 18', 'KC STA 57', 'KC STA 51', 'STA 22', 'STA 19', 'KC STA 45', 'KC STA 63']
 }
 
 class Unit:
@@ -49,6 +56,7 @@ results = create_server_connection.read_query(connection, q1)
 unit_list = []
 
 def refresh_units():
+    results = create_server_connection.read_query(connection, q1)
     for unit_number, unit_type, assigned_station, unit_status in results:
         unitx = Unit(unit_number, unit_type, assigned_station, unit_status)
         unit_list.append(unitx)
@@ -73,6 +81,8 @@ def recommendations(call_type,grid):
     refresh_units()
     if radio_position == 'TAC_1':
         radio_position = TAC_1
+    if radio_position == 'TAC_7':
+        radio_position = TAC_7
     response_plan = radio_position[call_type]
     rec_station_order = station_order[grid]
     if i <= len(response_plan):
@@ -117,3 +127,5 @@ def recommendations(call_type,grid):
 print(recommendations('bls','BA0002'))
 print(recommendations('medX','BA0001'))
 print(recommendations('FCC', 'BA0001'))
+print(recommendations('bls', 'DF009'))
+print(recommendations('GLO', 'DF013'))
