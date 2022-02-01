@@ -74,13 +74,14 @@ def recommendations(call_type,grid):
     rec_station_order = station_order[grid]
     if i <= len(response_plan):
         for unit_type in response_plan:
+            list_result = False
             if isinstance(unit_type, list) == True:
                 for option in unit_type:
                     if list_result == False:
                         for station in rec_station_order:
                             station_rank[station] = 1 + len(station_rank)
                             for unit in unit_list:
-                                if unit.unit_type == option and unit.unit_station == station and unit.unit_number not in result and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
+                                if unit.unit_number not in result and unit.unit_type == option and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                                     unit_options.append(unit)
                                     for unit in unit_options:
                                         if list_result == False:
@@ -91,6 +92,10 @@ def recommendations(call_type,grid):
                                                 result.append(sorted_unit_list[0])
                                                 i += 1
                                                 list_result = True
+                                                unit_options = []
+                                                unit_rank = {}
+                                                sorted_units = {}
+                                                sorted_unit_list = []
                     else:
                         list_result = False
                         continue                               
@@ -107,5 +112,5 @@ def recommendations(call_type,grid):
     return f"{call_type}: {result}"
 
 print(recommendations('bls','BA0002'))
-print(recommendations('medx','BA0001'))
+print(recommendations('medX','BA0001'))
 print(recommendations('Hz', 'BA0001'))
