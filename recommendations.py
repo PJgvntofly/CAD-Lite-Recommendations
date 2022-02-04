@@ -20,14 +20,30 @@ TAC_1 = {
     'FRC':['Engine', 'Engine', 'Ladder', 'Engine', 'Engine', 'Medic Unit', ['Aid Unit', 'Medic Unit'], 'Command Unit', 'Medical Services Officer'],
     'FSN':[['Engine', 'Ladder']],
     'GLI':['Engine', ['Engine', 'Ladder'], 'Command Unit'],
+    'GLO':[],
     'MED':['Medic Unit', 'Engine'],
     'MEDX':['Medic Unit', ['Engine', 'Ladder'], ['Engine', 'Ladder'], 'Medical Services Officer'],
-    'HZ':[['Engine','Ladder'], 'Engine', 'Command Unit'],
+    'HZ':[['Engine','Ladder'], 'Engine', 'Command Unit']
 }
 
 TAC_7 = {
+    'AIR':['Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'AIRC':['Engine', 'Engine', 'Ladder', 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Tender'],
+    'AIRS':['Engine'],
     'BLS':[['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']],
-    'GLO':[['Engine', 'Ladder'], 'Engine']
+    'BLSN':[['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']],
+    'COA':[['Engine', 'Ladder']],
+    'COAM':['Engine', 'Medic Unit', 'Command Unit'],
+    'FAC':[['Engine', 'Ladder']],
+    'FS':[['Engine', 'Ladder']],
+    'FTU':[['Engine', 'Ladder']],
+    'FFB':['Ladder', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'FAR':[['Engine', 'Ladder']],
+    'FAS':[['Engine', 'Ladder']],
+    'FCC':['Ladder', 'Engine', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'GLO':[['Engine', 'Ladder'], 'Engine'],
+    'MEDX':['Medic Unit', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
+    'MVC':[['Engine', 'Ladder'], ['Aid Unit', 'Medic Unit']]
 }
 
 TAC_5 = {}

@@ -12,7 +12,7 @@ class Unit:
         return '\nUnit Number: ' + self.unit_number + '\nUnit Type: ' + self.unit_type + '\nAssigned Station: ' + self.unit_station + '\nUnit Status: ' + self.unit_status
 
 #update values passed to this function to the appropriate CAD Lite MySQL database
-connection = create_server_connection.create_server_connection('localhost', 'root','testpassword1','cad_lite')
+connection = create_server_connection.create_server_connection('localhost', 'recommendations','testpassword1','cad_lite')
 
 q1 = """
 SELECT
@@ -23,8 +23,6 @@ unit_status
 FROM
 units
 """
-results = create_server_connection.read_query(connection, q1)
-
 unit_list = []
 
 def refresh_units():
