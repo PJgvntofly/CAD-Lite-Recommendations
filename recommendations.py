@@ -172,8 +172,10 @@ TAC_3 = {
     'FAS':[['Engine', 'Ladder']],
     'FB':[['Engine', 'Ladder']],
     'FCC':['Ladder', 'Engine', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'FCC - No Hydrant':['Engine', 'Engine', 'Ladder', 'Engine', 'Tender', 'Medic Unit' , 'Command Unit'],
     'FI':[],
     'FRC':['Ladder' 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'FRC - No Hydrant':['Engine', ['Engine', 'Ladder'], 'Tender', 'Engine', 'Medic Unit', 'Tender', 'Command Unit'],
     'FSN':[['Engine' , 'Ladder']],
     'GLI':['Engine', ['Engine', 'Ladder'], 'Command Unit'],
     'GLO':[['Engine', 'Ladder'], 'Engine'],
@@ -214,19 +216,17 @@ def get_radio(val):
         if val in values:
             return key
 
-def find_hydrant(call_type, radio_position):
-        if radio_position in [TAC_3, TAC_5] and call_type in ['FCC', 'FRC']:
-            no_hydrant = input('Is this call in a No Hydrant area? Enter Y for yes and N for no:')
-            no_hydrant = no_hydrant.strip().upper()
-            no_hydrant = no_hydrant[0]
-            if no_hydrant == "Y":
-                call_type = call_type + " - No Hydrant"
-            if no_hydrant not in ['Y', 'N']:
-                print('Please enter only Y or N')
-                find_hydrant(call_type, radio_position)
-            else:
-                call_type = call_type
-        return call_type
+def find_hydrant(call, radio_position):
+    if radio_position in [TAC_3, TAC_5] and call in ['FCC', 'FRC']:
+        no_hydrant = ""
+        no_hydrant = input('Is this call in a No Hydrant area? Enter Y for yes and N for no:')
+        no_hydrant = no_hydrant.strip().upper()
+        no_hydrant = no_hydrant[0]
+        if no_hydrant == "Y":
+            return call + " - No Hydrant"
+        if no_hydrant not in ['Y', 'N']:
+            print('Please enter only Y or N \nIf call is in a No Hydrant area, please enter the information again.')
+    return call
 
 def recommendations(call_type,grid):
     call_type = call_type.strip().upper()
@@ -250,7 +250,7 @@ def recommendations(call_type,grid):
     if radio_position == 'TAC_5':
         radio_position = TAC_5
     if radio_position == 'TAC_3':
-        radio_position - TAC_3
+        radio_position = TAC_3
     call_type = find_hydrant(call_type, radio_position)
     response_plan = radio_position[call_type]
     rec_station_order = station_order.station_order[grid]
