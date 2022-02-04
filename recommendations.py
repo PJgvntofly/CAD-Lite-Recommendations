@@ -99,7 +99,38 @@ TAC_7 = {
     'SC':[['Engine', 'Ladder']]
     }
 
-TAC_5 = {}
+TAC_5 = {
+    'AIR':['Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'AIRC':['Engine', 'Engine', 'Ladder', 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Tender'],
+    'AIRS':['Engine'],
+    'BLS':['Aid Unit'],
+    'BLSN':['Aid Unit'],
+    'COA':['Engine', 'Command Unit'],
+    'COAM':['Engine', 'Medic Unit', 'Command Unit'],
+    'FAC':['Engine'],
+    'FS':['Engine'],
+    'FTU':['Engine'],
+    'FFB':['Ladder', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'FAR':['Engine'],
+    'FAS':['Engine'],
+    'FB':['Brush Truck', 'Brush Truck', 'Engine', 'Tender'],
+    'FCC':['Engine', 'Engine', 'Ladder', 'Engine', 'Medic Unit', 'Command Unit'],
+    'FI':[],
+    'FRC':['Engine', ['Engine', 'Ladder'], 'Ladder', 'Medic Unit', 'Engine', 'Command Unit'],
+    'FSN':[['Engine', 'Ladder']],
+    'GLI':['Engine', ['Engine', 'Ladder'], 'Command Unit'],
+    'GLO':[['Engine', 'Ladder'], 'Engine'],
+    'HZ':[['Engine', 'Ladder'], 'Engine', 'Command Unit'],
+    'HZ2':['HazMat', 'Decon', 'Engine', 'Medic Unit'],
+    'HZ3':['Engine', 'HazMat', 'HazMat', 'Air Unit'],
+    'MCI':[['Engine', 'Ladder'], 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Aid Unit', 'Engine', 'Aid Unit', 'Aid Unit', 'Command Unit', 'Command Unit'],
+    'MED':['Medic Unit', ['Engine', 'Aid Unit']],
+    'MEDX':['Medic Unit', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
+    'MVC':[['Engine', 'Ladder'], 'Aid Unit', 'Command Unit'],
+    'MVCE':[['Engine', 'Ladder'], 'Medic Unit', 'Aid Unit', 'Engine', 'Command Unit'],
+    'MVCF':[['Engine', 'Ladder'], 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'MVCM':[['Engine', 'Ladder'], 'Medic Unit', 'Aid Unit', 'Engine', 'Command Unit']
+}
 
 TAC_3 = {}
 
