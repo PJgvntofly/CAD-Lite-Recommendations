@@ -1,65 +1,56 @@
-import mysql.connector
-from mysql.connector import Error
-import pandas as pd
-import create_server_connection
-
-#update values passed to this function to the appropriate CAD Lite MySQL database
-connection = create_server_connection.create_server_connection('localhost', 'root','testpassword1','cad_lite')
-
-#need to build out the full list of which quadrants are associated with which dispatch positions. Can be done by using csv functions from pandas.
-position = {
-    'TAC_1':['BA0001', 'BA0002', 'BA0003', 'BA0004'],
-    'TAC_7':['DF009', 'DF010', 'DF011', 'DF013', 'DF055']
-}
+import units
+import station_order
 
 TAC_1 = {
+    'AIR':['Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'AIRC':['Engine', 'Engine', 'Ladder', 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Tender'],
+    'AIRS':['Engine'],
     'BLS':[['Aid Unit', 'Engine', 'Ladder']],
     'BLSN':[['Aid Unit', 'Engine', 'Ladder']],
+    'COA':['Engine'],
+    'COAM':['Engine', 'Medic Unit', 'Command Unit'],
+    'FAC':[['Engine', 'Ladder']],
+    'FS':[['Engine', 'Ladder']],
+    'FTU':[['Engine', 'Ladder']],
+    'FFB':['Ladder', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'FAR':[['Engine', 'Ladder']],
+    'FAS':[['Engine', 'Ladder']],
+    'FB':['Engine'],
+    'FCC':['Engine', 'Engine', 'Ladder', 'Engine', 'Engine', 'Medic Unit', ['Aid Unit', 'Medic Unit'], 'Ladder', 'Command Unit', 'Medical Services Officer'],
+    'FRC':['Engine', 'Engine', 'Ladder', 'Engine', 'Engine', 'Medic Unit', ['Aid Unit', 'Medic Unit'], 'Command Unit', 'Medical Services Officer'],
+    'FSN':[['Engine', 'Ladder']],
+    'GLI':['Engine', ['Engine', 'Ladder'], 'Command Unit'],
+    'GLO':[],
     'MED':['Medic Unit', 'Engine'],
     'MEDX':['Medic Unit', ['Engine', 'Ladder'], ['Engine', 'Ladder'], 'Medical Services Officer'],
-    'HZ':[['Engine','Ladder'], 'Engine', 'Command Unit'],
-    'FCC':['Engine', 'Engine', 'Ladder', 'Engine', 'Engine', 'Medic Unit', ['Aid Unit', 'Medic Unit'], 'Ladder', 'Command Unit', 'Medical Services Officer']
+    'HZ':[['Engine','Ladder'], 'Engine', 'Command Unit']
 }
 
 TAC_7 = {
+    'AIR':['Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'AIRC':['Engine', 'Engine', 'Ladder', 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Tender'],
+    'AIRS':['Engine'],
     'BLS':[['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']],
-    'GLO':[['Engine', 'Ladder'], 'Engine']
+    'BLSN':[['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']],
+    'COA':[['Engine', 'Ladder']],
+    'COAM':['Engine', 'Medic Unit', 'Command Unit'],
+    'FAC':[['Engine', 'Ladder']],
+    'FS':[['Engine', 'Ladder']],
+    'FTU':[['Engine', 'Ladder']],
+    'FFB':['Ladder', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'FAR':[['Engine', 'Ladder']],
+    'FAS':[['Engine', 'Ladder']],
+    'FCC':['Ladder', 'Engine', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'GLO':[['Engine', 'Ladder'], 'Engine'],
+    'MEDX':['Medic Unit', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
+    'MVC':[['Engine', 'Ladder'], ['Aid Unit', 'Medic Unit']]
 }
 
-station_order = {
-    'BA0001':['STA 2', 'STA 3', 'STA 1', 'STA 5', 'STA 4', 'STA 6', 'STA 7', 'STA 61', 'STA 63', 'STA 82'],
-    'BA0002':['STA 2', 'STA 3', 'STA 1', 'STA 5', 'STA 4', 'STA 6', 'STA 7', 'STA 61', 'STA 63', 'STA 82'],
-    'DF009':['STA 19', 'KC STA 63', 'KC STA 57', 'STA 18', 'STA 20', 'KC STA 64', 'KC STA 65', 'STA 15'],
-    'DF013':['KC STA 44', 'STA 18', 'KC STA 57', 'KC STA 51', 'STA 22', 'STA 19', 'KC STA 45', 'KC STA 63']
-}
+TAC_5 = {}
 
-class Unit:
-    def __init__(self, unit_number, unit_type, unit_station, unit_status):
-        self.unit_number = unit_number
-        self.unit_type = unit_type
-        self.unit_station = unit_station
-        self.unit_status = unit_status
-    def __str__(self):
-        return '\nUnit Number: ' + self.unit_number + '\nUnit Type: ' + self.unit_type + '\nAssigned Station: ' + self.unit_station + '\nUnit Status: ' + self.unit_status
+TAC_3 = {}
 
-q1 = """
-SELECT
-unit_number,
-unit_type,
-assigned_station,
-unit_status
-FROM
-units
-"""
-results = create_server_connection.read_query(connection, q1)
-
-unit_list = []
-
-def refresh_units():
-    results = create_server_connection.read_query(connection, q1)
-    for unit_number, unit_type, assigned_station, unit_status in results:
-        unitx = Unit(unit_number, unit_type, assigned_station, unit_status)
-        unit_list.append(unitx)
+position = station_order.create_positions()
 
 def get_radio(val):
     for key, values in position.items():
@@ -78,13 +69,17 @@ def recommendations(call_type,grid):
     sorted_units = {}
     sorted_unit_list = []
     radio_position = get_radio(grid)
-    refresh_units()
+    units.refresh_units()
     if radio_position == 'TAC_1':
         radio_position = TAC_1
     if radio_position == 'TAC_7':
         radio_position = TAC_7
+    if radio_position == 'TAC_5':
+        radio_position = TAC_5
+    if radio_position == 'TAC_3':
+        radio_position - TAC_3
     response_plan = radio_position[call_type]
-    rec_station_order = station_order[grid]
+    rec_station_order = station_order.station_order[grid]
     if i <= len(response_plan):
         for unit_type in response_plan:
             list_result = False
@@ -93,7 +88,7 @@ def recommendations(call_type,grid):
                     if list_result == False:
                         for station in rec_station_order:
                             station_rank[station] = 1 + len(station_rank)
-                            for unit in unit_list:
+                            for unit in units.unit_list:
                                 if unit.unit_number not in result and unit.unit_type == option and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                                     unit_options.append(unit)
                                     for unit in unit_options:
@@ -114,7 +109,7 @@ def recommendations(call_type,grid):
                         continue                               
             else:
                 for station in rec_station_order:
-                    for unit in unit_list:
+                    for unit in units.unit_list:
                         if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                             if list_result == False:
                                 result.append(unit.unit_number)
@@ -123,9 +118,3 @@ def recommendations(call_type,grid):
     else:
         return result
     return f"{call_type}: {result}"
-
-print(recommendations('bls','BA0002'))
-print(recommendations('medX','BA0001'))
-print(recommendations('FCC', 'BA0001'))
-print(recommendations('bls', 'DF009'))
-print(recommendations('GLO', 'DF013'))
