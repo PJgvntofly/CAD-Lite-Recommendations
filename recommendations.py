@@ -30,6 +30,10 @@ TAC_7 = {
     'GLO':[['Engine', 'Ladder'], 'Engine']
 }
 
+TAC_5 = {}
+
+TAC_3 = {}
+
 position = station_order.create_positions()
 
 def get_radio(val):
@@ -54,6 +58,10 @@ def recommendations(call_type,grid):
         radio_position = TAC_1
     if radio_position == 'TAC_7':
         radio_position = TAC_7
+    if radio_position == 'TAC_5':
+        radio_position = TAC_5
+    if radio_position == 'TAC_3':
+        radio_position - TAC_3
     response_plan = radio_position[call_type]
     rec_station_order = station_order.station_order[grid]
     if i <= len(response_plan):
