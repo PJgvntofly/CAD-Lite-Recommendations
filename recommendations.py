@@ -1,22 +1,28 @@
-import mysql.connector
-from mysql.connector import Error
-import pandas as pd
-import create_server_connection
 import units
-
-#need to build out the full list of which quadrants are associated with which dispatch positions. Can be done by using csv functions from pandas.
-position = {
-    'TAC_1':['BA0001', 'BA0002', 'BA0003', 'BA0004'],
-    'TAC_7':['DF009', 'DF010', 'DF011', 'DF013', 'DF055']
-}
+import test_csv_import
 
 TAC_1 = {
+    'AIR':['Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'AIRC':['Engine', 'Engine', 'Ladder', 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Tender'],
+    'AIRS':['Engine'],
     'BLS':[['Aid Unit', 'Engine', 'Ladder']],
     'BLSN':[['Aid Unit', 'Engine', 'Ladder']],
+    'COA':['Engine'],
+    'COAM':['Engine', 'Medic Unit', 'Command Unit'],
+    'FAC':[['Engine', 'Ladder']],
+    'FS':[['Engine', 'Ladder']],
+    'FTU':[['Engine', 'Ladder']],
+    'FFB':['Ladder', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'FAR':[['Engine', 'Ladder']],
+    'FAS':[['Engine', 'Ladder']],
+    'FB':['Engine'],
+    'FCC':['Engine', 'Engine', 'Ladder', 'Engine', 'Engine', 'Medic Unit', ['Aid Unit', 'Medic Unit'], 'Ladder', 'Command Unit', 'Medical Services Officer'],
+    'FRC':['Engine', 'Engine', 'Ladder', 'Engine', 'Engine', 'Medic Unit', ['Aid Unit', 'Medic Unit'], 'Command Unit', 'Medical Services Officer'],
+    'FSN':[['Engine', 'Ladder']],
+    'GLI':['Engine', ['Engine', 'Ladder'], 'Command Unit'],
     'MED':['Medic Unit', 'Engine'],
     'MEDX':['Medic Unit', ['Engine', 'Ladder'], ['Engine', 'Ladder'], 'Medical Services Officer'],
     'HZ':[['Engine','Ladder'], 'Engine', 'Command Unit'],
-    'FCC':['Engine', 'Engine', 'Ladder', 'Engine', 'Engine', 'Medic Unit', ['Aid Unit', 'Medic Unit'], 'Ladder', 'Command Unit', 'Medical Services Officer']
 }
 
 TAC_7 = {
@@ -24,12 +30,7 @@ TAC_7 = {
     'GLO':[['Engine', 'Ladder'], 'Engine']
 }
 
-station_order = {
-    'BA0001':['STA 2', 'STA 3', 'STA 1', 'STA 5', 'STA 4', 'STA 6', 'STA 7', 'STA 61', 'STA 63', 'STA 82'],
-    'BA0002':['STA 2', 'STA 3', 'STA 1', 'STA 5', 'STA 4', 'STA 6', 'STA 7', 'STA 61', 'STA 63', 'STA 82'],
-    'DF009':['STA 19', 'KC STA 63', 'KC STA 57', 'STA 18', 'STA 20', 'KC STA 64', 'KC STA 65', 'STA 15'],
-    'DF013':['KC STA 44', 'STA 18', 'KC STA 57', 'KC STA 51', 'STA 22', 'STA 19', 'KC STA 45', 'KC STA 63']
-}
+position = test_csv_import.create_positions()
 
 def get_radio(val):
     for key, values in position.items():
@@ -54,7 +55,7 @@ def recommendations(call_type,grid):
     if radio_position == 'TAC_7':
         radio_position = TAC_7
     response_plan = radio_position[call_type]
-    rec_station_order = station_order[grid]
+    rec_station_order = test_csv_import.station_order[grid]
     if i <= len(response_plan):
         for unit_type in response_plan:
             list_result = False
