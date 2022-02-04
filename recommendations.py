@@ -94,9 +94,3 @@ def recommendations(call_type,grid):
     else:
         return result
     return f"{call_type}: {result}"
-
-print(recommendations('bls','BA0002'))
-print(recommendations('medX','BA0001'))
-print(recommendations('FCC', 'BA0001'))
-print(recommendations('bls', 'DF009'))
-print(recommendations('GLO', 'DF013'))
