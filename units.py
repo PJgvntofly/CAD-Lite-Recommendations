@@ -22,6 +22,8 @@ assigned_station,
 unit_status
 FROM
 units
+WHERE
+jurisdiction NOT LIKE "WA%"
 """
 unit_list = []
 
