@@ -1,5 +1,5 @@
 import units
-import test_csv_import
+import station_order
 
 TAC_1 = {
     'AIR':['Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
@@ -30,7 +30,7 @@ TAC_7 = {
     'GLO':[['Engine', 'Ladder'], 'Engine']
 }
 
-position = test_csv_import.create_positions()
+position = station_order.create_positions()
 
 def get_radio(val):
     for key, values in position.items():
@@ -55,7 +55,7 @@ def recommendations(call_type,grid):
     if radio_position == 'TAC_7':
         radio_position = TAC_7
     response_plan = radio_position[call_type]
-    rec_station_order = test_csv_import.station_order[grid]
+    rec_station_order = station_order.station_order[grid]
     if i <= len(response_plan):
         for unit_type in response_plan:
             list_result = False
