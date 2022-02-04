@@ -2,9 +2,7 @@ import mysql.connector
 from mysql.connector import Error
 import pandas as pd
 import create_server_connection
-
-#update values passed to this function to the appropriate CAD Lite MySQL database
-connection = create_server_connection.create_server_connection('localhost', 'root','testpassword1','cad_lite')
+import units
 
 #need to build out the full list of which quadrants are associated with which dispatch positions. Can be done by using csv functions from pandas.
 position = {
@@ -33,34 +31,6 @@ station_order = {
     'DF013':['KC STA 44', 'STA 18', 'KC STA 57', 'KC STA 51', 'STA 22', 'STA 19', 'KC STA 45', 'KC STA 63']
 }
 
-class Unit:
-    def __init__(self, unit_number, unit_type, unit_station, unit_status):
-        self.unit_number = unit_number
-        self.unit_type = unit_type
-        self.unit_station = unit_station
-        self.unit_status = unit_status
-    def __str__(self):
-        return '\nUnit Number: ' + self.unit_number + '\nUnit Type: ' + self.unit_type + '\nAssigned Station: ' + self.unit_station + '\nUnit Status: ' + self.unit_status
-
-q1 = """
-SELECT
-unit_number,
-unit_type,
-assigned_station,
-unit_status
-FROM
-units
-"""
-results = create_server_connection.read_query(connection, q1)
-
-unit_list = []
-
-def refresh_units():
-    results = create_server_connection.read_query(connection, q1)
-    for unit_number, unit_type, assigned_station, unit_status in results:
-        unitx = Unit(unit_number, unit_type, assigned_station, unit_status)
-        unit_list.append(unitx)
-
 def get_radio(val):
     for key, values in position.items():
         if val in values:
@@ -78,7 +48,7 @@ def recommendations(call_type,grid):
     sorted_units = {}
     sorted_unit_list = []
     radio_position = get_radio(grid)
-    refresh_units()
+    units.refresh_units()
     if radio_position == 'TAC_1':
         radio_position = TAC_1
     if radio_position == 'TAC_7':
@@ -93,7 +63,7 @@ def recommendations(call_type,grid):
                     if list_result == False:
                         for station in rec_station_order:
                             station_rank[station] = 1 + len(station_rank)
-                            for unit in unit_list:
+                            for unit in units.unit_list:
                                 if unit.unit_number not in result and unit.unit_type == option and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                                     unit_options.append(unit)
                                     for unit in unit_options:
@@ -114,7 +84,7 @@ def recommendations(call_type,grid):
                         continue                               
             else:
                 for station in rec_station_order:
-                    for unit in unit_list:
+                    for unit in units.unit_list:
                         if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                             if list_result == False:
                                 result.append(unit.unit_number)
