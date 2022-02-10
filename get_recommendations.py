@@ -1,5 +1,6 @@
 from multiprocessing.connection import wait
 import recommendations
+import units
 
 def get_recommendations():
     call_type = input("Enter the call type:")

@@ -239,10 +239,11 @@ def recommendations(call_type,grid):
     unit_rank = {}
     sorted_units = {}
     sorted_unit_list = []
+    unit_list = []
     if call_type in ['RESCS', 'RESTR']:
         return print("Use second alarm type code: {}".format(call_type + "2"))
     radio_position = get_radio(grid)
-    units.refresh_units()
+    unit_list = units.refresh_units()
     if radio_position == 'TAC_1':
         radio_position = TAC_1
     if radio_position == 'TAC_7':
@@ -262,7 +263,7 @@ def recommendations(call_type,grid):
                     if list_result == False:
                         for station in rec_station_order:
                             station_rank[station] = 1 + len(station_rank)
-                            for unit in units.unit_list:
+                            for unit in unit_list:
                                 if unit.unit_number not in result and unit.unit_type == option and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                                     unit_options.append(unit)
                                     for unit in unit_options:
@@ -283,7 +284,7 @@ def recommendations(call_type,grid):
                         continue                               
             else:
                 for station in rec_station_order:
-                    for unit in units.unit_list:
+                    for unit in unit_list:
                         if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                             if list_result == False:
                                 result.append(unit.unit_number)
