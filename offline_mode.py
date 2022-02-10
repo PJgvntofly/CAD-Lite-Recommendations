@@ -7,7 +7,7 @@ def accept_recommendation_list(call_type, unit_type, sorted_unit_list, x):
     result = ""
     skipped_units = []
     print(f"Call Type: {call_type} | Request: {unit_type} | Recommendation: {sorted_unit_list[x]}")
-    accept = input("Accept recommendation? Enter Y for yes or N to see the next unit.    ")
+    accept = input("Accept recommendation? Enter Y for yes or N to see the next unit. ")
     accept = accept.strip().upper()
     while accept != 'Y' and x <= len(sorted_unit_list):
         skipped_units.append(sorted_unit_list[x])
@@ -68,16 +68,18 @@ def offline_recommendations(call_type,grid):
                                             sorted_units = sorted(unit_rank.items(), key=lambda x: x[1])
                                             for apparatus, station_r in sorted_units:
                                                 sorted_unit_list.append(apparatus)
-                                                continue
-                                                accepted = accept_recommendation_list(call_type, unit_type, sorted_unit_list, 0)
-                                                result.append(accepted[0])
-                                                skipped_units.append(accepted[1])
-                                                i += 1
-                                                list_result = True
-                                                unit_options = []
-                                                unit_rank = {}
-                                                sorted_units = {}
-                                                sorted_unit_list = []
+                                                if len(sorted_unit_list) >= len(rec_station_order):
+                                                    accepted = accept_recommendation_list(call_type, unit_type, sorted_unit_list, 0)
+                                                    result.append(accepted[0])
+                                                    skipped_units.append(accepted[1])
+                                                    i += 1
+                                                    list_result = True
+                                                    unit_options = []
+                                                    unit_rank = {}
+                                                    sorted_units = {}
+                                                    sorted_unit_list = []
+                                                else:
+                                                    continue
 
                     else:
                         list_result = False
@@ -85,7 +87,7 @@ def offline_recommendations(call_type,grid):
             else:
                 for station in rec_station_order:
                     for unit in units.unit_list:
-                        if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
+                        if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and unit.unit_number not in skipped_units and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                             if list_result == False:
                                 result.append(unit.unit_number)
                                 i += 1
@@ -94,4 +96,4 @@ def offline_recommendations(call_type,grid):
         return result
     return f"{call_type}: {result}"
 
-print(offline_recommendations('FRC', 'BA0001'))
+print(offline_recommendations('fcc', 'BA0001'))
