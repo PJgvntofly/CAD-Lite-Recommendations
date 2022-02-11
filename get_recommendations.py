@@ -1,6 +1,5 @@
 from multiprocessing.connection import wait
 import recommendations
-import create_server_connection
 import offline_mode
 import units
 
