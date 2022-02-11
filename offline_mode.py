@@ -77,7 +77,7 @@ def offline_recommendations(call_type,grid):
                         if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and unit.unit_number not in skipped_units  and unit.unit_number not in cross_staffing_list and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                             if list_result == False:
                                 print(f"\nCall Type: {call_type} | Request: {unit_type} | Recommendation: {unit.unit_number}")
-                                accept = input("Accept recommendation? Enter Y for yes or N to see the next unit. ")
+                                accept = input("Accept recommended unit? Enter Y for yes or N to see the next unit. ")
                                 accept = accept.strip().upper()
                                 if accept[0] == 'Y':
                                     result.append(unit.unit_number)
@@ -89,5 +89,5 @@ def offline_recommendations(call_type,grid):
                                     skipped_units.append(unit.unit_number)
     else:
         return result
-    return f"{call_type}: {result}"
+    return f"\nRecommendation:\n{call_type}: {result}"
 

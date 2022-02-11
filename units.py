@@ -43,10 +43,10 @@ def refresh_units():
             unitx = Unit(unit_number, unit_type, assigned_station, unit_status, cross_staffing)
             unit_list.append(unitx)
             connection.close()
+        for unit in unit_list:
+            unit.cross_staffing = unit.cross_staffing.split("-")
     else:
         unit_list = import_units()
-    for unit in unit_list:
-        unit.cross_staffing = unit.cross_staffing.split("-")
     return unit_list
 
 def import_units():
