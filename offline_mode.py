@@ -2,27 +2,6 @@ import recommendations
 import units
 import station_order
 
-
-def accept_recommendation_list(call_type, unit_type, sorted_unit_list, x):
-    result = ""
-    skipped_units = []
-    print(f"Call Type: {call_type} | Request: {unit_type} | Recommendation: {sorted_unit_list[x]}")
-    accept = input("Accept recommendation? Enter Y for yes or N to see the next unit. ")
-    accept = accept.strip().upper()
-    while accept != 'Y' and x <= len(sorted_unit_list):
-        skipped_units.append(sorted_unit_list[x])
-        x += 1
-        continue
-    if accept == 'Y':
-        result = sorted_unit_list[x]
-        return result, skipped_units
-    if x > len(sorted_unit_list):
-        print('There are units remaining matching the given criteria.')
-        return result, skipped_units
-
-        
-
-
 def offline_recommendations(call_type,grid):
     call_type = call_type.strip().upper()
     grid = grid.strip().upper()
@@ -39,7 +18,7 @@ def offline_recommendations(call_type,grid):
     if call_type in ['RESCS', 'RESTR']:
         return print("Use second alarm type code: {}".format(call_type + "2"))
     radio_position = recommendations.get_radio(grid)
-    units.refresh_units()
+    unit_list = units.refresh_units()
     if radio_position == 'TAC_1':
         radio_position = recommendations.TAC_1
     if radio_position == 'TAC_7':
@@ -59,7 +38,7 @@ def offline_recommendations(call_type,grid):
                     if list_result == False:
                         for station in rec_station_order:
                             station_rank[station] = 1 + len(station_rank)
-                            for unit in units.unit_list:
+                            for unit in unit_list:
                                 if unit.unit_number not in result and unit.unit_number not in skipped_units and unit.unit_type == option and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                                     unit_options.append(unit)
                                     for unit in unit_options:
@@ -68,32 +47,44 @@ def offline_recommendations(call_type,grid):
                                             sorted_units = sorted(unit_rank.items(), key=lambda x: x[1])
                                             for apparatus, station_r in sorted_units:
                                                 sorted_unit_list.append(apparatus)
-                                                if len(sorted_unit_list) >= len(rec_station_order):
-                                                    accepted = accept_recommendation_list(call_type, unit_type, sorted_unit_list, 0)
-                                                    result.append(accepted[0])
-                                                    skipped_units.append(accepted[1])
-                                                    i += 1
-                                                    list_result = True
-                                                    unit_options = []
-                                                    unit_rank = {}
-                                                    sorted_units = {}
-                                                    sorted_unit_list = []
-                                                else:
-                                                    continue
+                                                for sorted_unit in sorted_unit_list:
+                                                    if sorted_unit not in result and sorted_unit not in skipped_units:
+                                                        print(f"\nCall Type: {call_type} | Request: {unit_type} | Recommendation: {sorted_unit}")
+                                                        accept = input("Accept recommendation? Enter Y for yes or N to see the next unit. ")
+                                                        accept = accept.strip().upper()
+                                                        if accept[0] == 'Y':
+                                                            result.append(sorted_unit)
+                                                            i += 1
+                                                            list_result = True
+                                                            unit_options = []
+                                                            unit_rank = {}
+                                                            sorted_units = {}
+                                                            sorted_unit_list = []
+                                                            continue
+                                                        else:
+                                                            skipped_units.append(sorted_unit)
+                                        else:
+                                            continue
 
                     else:
                         list_result = False
                         continue                               
             else:
                 for station in rec_station_order:
-                    for unit in units.unit_list:
+                    for unit in unit_list:
                         if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and unit.unit_number not in skipped_units and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                             if list_result == False:
-                                result.append(unit.unit_number)
-                                i += 1
-                                list_result = True
+                                print(f"\nCall Type: {call_type} | Request: {unit_type} | Recommendation: {unit.unit_number}")
+                                accept = input("Accept recommendation? Enter Y for yes or N to see the next unit. ")
+                                accept = accept.strip().upper()
+                                if accept[0] == 'Y':
+                                    result.append(unit.unit_number)
+                                    i += 1
+                                    list_result = True
+                                    continue
+                                else:
+                                    skipped_units.append(unit.unit_number)
     else:
         return result
     return f"{call_type}: {result}"
 
-print(offline_recommendations('fcc', 'BA0001'))
