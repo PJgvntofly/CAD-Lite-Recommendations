@@ -18,7 +18,7 @@ def create_connection():
     return connection
 
 def silent_connection():
-    connection = create_server_connection.silent_server_connection('localhosts', 'recommendations','testpassword1','cad_lite')
+    connection = create_server_connection.silent_server_connection('localhost', 'recommendations','testpassword1','cad_lite')
     return connection
     
 q1 = """
