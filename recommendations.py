@@ -274,7 +274,7 @@ def recommendations(call_type,grid):
                                             sorted_units = sorted(unit_rank.items(), key=lambda x: x[1])
                                             for apparatus, station_r in sorted_units:
                                                 sorted_unit_list.append(apparatus)
-                                                cross_staffing_list.append(apparatus.cross_staffing)
+                                                cross_staffing_list.append(unit.cross_staffing)
                                                 result.append(sorted_unit_list[0])
                                                 i += 1
                                                 list_result = True

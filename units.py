@@ -18,7 +18,7 @@ def create_connection():
     return connection
 
 def silent_connection():
-    connection = create_server_connection.silent_server_connection('localhost', 'recommendations','testpassword1','cad_lite')
+    connection = create_server_connection.silent_server_connection('localhosts', 'recommendations','testpassword1','cad_lite')
     return connection
     
 q1 = """
@@ -43,10 +43,10 @@ def refresh_units():
             unitx = Unit(unit_number, unit_type, assigned_station, unit_status, cross_staffing)
             unit_list.append(unitx)
             connection.close()
-            for unit in unit_list:
-                unit.cross_staffing = unit.cross_staffing.split('-')
     else:
         unit_list = import_units()
+    for unit in unit_list:
+        unit.cross_staffing = unit.cross_staffing.split("-")
     return unit_list
 
 def import_units():
@@ -56,9 +56,12 @@ def import_units():
     csv_f = csv.reader(f)
     for row in csv_f:
         unit_number, jurisdiction, unit_type, assigned_station, assigned_beat, display_in_usm, unit_status, cross_staffing = row
-        unitx = Unit(unit_number, unit_type, assigned_station, unit_status)
+        unitx = Unit(unit_number, unit_type, assigned_station, unit_status, cross_staffing)
         unit_list.append(unitx)
     f.close()
     for unit in unit_list:
         unit.unit_status = 'AIQ'
+        unit.cross_staffing = unit.cross_staffing.split("-")
     return unit_list
+
+refresh_units()
