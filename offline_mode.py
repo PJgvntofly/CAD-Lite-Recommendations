@@ -62,7 +62,6 @@ def offline_recommendations(call_type,grid):
                                                             unit_rank = {}
                                                             sorted_units = {}
                                                             sorted_unit_list = []
-                                                            print(cross_staffing_list)
                                                             continue
                                                         else:
                                                             skipped_units.append(sorted_unit)
