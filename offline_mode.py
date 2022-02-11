@@ -18,7 +18,7 @@ def offline_recommendations(call_type,grid):
     if call_type in ['RESCS', 'RESTR']:
         return print("Use second alarm type code: {}".format(call_type + "2"))
     radio_position = recommendations.get_radio(grid)
-    unit_list = units.refresh_units()
+    unit_list = units.import_units()
     if radio_position == 'TAC_1':
         radio_position = recommendations.TAC_1
     if radio_position == 'TAC_7':
