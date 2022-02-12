@@ -10,9 +10,10 @@ def create_server_connection(host_name, user_name, user_password, db_name):
             host = host_name,
             user = user_name,
             passwd = user_password,
-            database = db_name
+            database = db_name,
+            autocommit = True
         )
-        print("MySQL Database connection successful")
+        print("CAD Lite Database connection successful")
     except Error as err:
         print(f"Error: '{err}'")
     

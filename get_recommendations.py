@@ -1,6 +1,9 @@
 from multiprocessing.connection import wait
 import recommendations
+<<<<<<< HEAD
 import offline_mode
+=======
+>>>>>>> main
 import units
 
 def get_recommendations():

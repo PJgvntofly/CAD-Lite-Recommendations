@@ -241,7 +241,10 @@ def recommendations(call_type,grid):
     sorted_units = {}
     sorted_unit_list = []
     unit_list = []
+<<<<<<< HEAD
     cross_staffing_list = []
+=======
+>>>>>>> main
     if call_type in ['RESCS', 'RESTR']:
         return print("Use second alarm type code: {}".format(call_type + "2"))
     radio_position = get_radio(grid)
@@ -266,7 +269,11 @@ def recommendations(call_type,grid):
                         for station in rec_station_order:
                             station_rank[station] = 1 + len(station_rank)
                             for unit in unit_list:
+<<<<<<< HEAD
                                 if unit.unit_number not in result and unit.unit_number not in cross_staffing_list and unit.unit_type == option and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
+=======
+                                if unit.unit_number not in result and unit.unit_type == option and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
+>>>>>>> main
                                     unit_options.append(unit)
                                     for unit in unit_options:
                                         if list_result == False:
@@ -288,7 +295,11 @@ def recommendations(call_type,grid):
             else:
                 for station in rec_station_order:
                     for unit in unit_list:
+<<<<<<< HEAD
                         if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and unit.unit_number not in cross_staffing_list and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
+=======
+                        if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
+>>>>>>> main
                             if list_result == False:
                                 result.append(unit.unit_number)
                                 cross_staffing_list.extend(unit.cross_staffing)
