@@ -1,5 +1,4 @@
 import csv
-import pandas as pd
 
 station_order = {}
 f = open(r"C:\Users\cgass\OneDrive\Documents\Quadrant Station Order 2021-09-09.csv")
