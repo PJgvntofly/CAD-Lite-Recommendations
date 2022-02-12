@@ -36,7 +36,6 @@ jurisdiction NOT LIKE "WA%"
 
 def refresh_units():
     unit_list = []
-<<<<<<< HEAD
     connection = create_connection()
     if connection != None:
         results = create_server_connection.read_query(connection, q1)
@@ -66,14 +65,3 @@ def import_units():
     return unit_list
 
 refresh_units()
-=======
-    #update values passed to this function to the appropriate CAD Lite MySQL database
-    connection = create_server_connection.create_server_connection('localhost', 'recommendations','testpassword1','cad_lite')
-    results = create_server_connection.read_query(connection, q1)
-    for unit_number, unit_type, assigned_station, unit_status in results:
-        unitx = Unit(unit_number, unit_type, assigned_station, unit_status)
-        unit_list.append(unitx)
-    if connection.is_connected():
-        connection.close()
-    return unit_list
->>>>>>> main
