@@ -15,6 +15,7 @@ def offline_recommendations(call_type,grid):
     sorted_units = {}
     sorted_unit_list = []
     cross_staffing_list = []
+    cross_staff_dict = {}
     options = []
     if call_type in ['RESCS', 'RESTR']:
         return print("Use second alarm type code: {}".format(call_type + "2"))
@@ -36,7 +37,7 @@ def offline_recommendations(call_type,grid):
             list_result = False
             if isinstance(unit_type, list):
                 for option in unit_type:
-                        options.append(option)
+                    options.append(option)
                 for station in rec_station_order:
                     station_rank[station] = 1 + len(station_rank)
                     for unit in unit_list:
@@ -45,6 +46,7 @@ def offline_recommendations(call_type,grid):
                 for unit in unit_options:
                     if list_result == False:
                         unit_rank[unit.unit_number] = station_rank[unit.unit_station]
+                        cross_staff_dict[unit.unit_number] = unit.cross_staffing
                     else:
                         continue
                 sorted_units = sorted(unit_rank.items(), key=lambda x: x[1])
@@ -58,7 +60,7 @@ def offline_recommendations(call_type,grid):
                             accept = accept.strip().upper()
                             if accept[0] == 'Y':
                                 result.append(sorted_unit)
-                                cross_staffing_list.extend(unit.cross_staffing)
+                                cross_staffing_list.extend(cross_staff_dict[sorted_unit])
                                 i += 1
                                 list_result = True
                                 unit_options = []
@@ -68,7 +70,7 @@ def offline_recommendations(call_type,grid):
                                 continue
                             else:
                                 skipped_units.append(sorted_unit)
-                                cross_staffing_list.extend(unit.cross_staffing)
+                                cross_staffing_list.extend(cross_staff_dict[sorted_unit])
                     else:
                         continue                              
             else:

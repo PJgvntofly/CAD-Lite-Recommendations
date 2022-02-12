@@ -242,6 +242,8 @@ def recommendations(call_type,grid):
     sorted_unit_list = []
     unit_list = []
     cross_staffing_list = []
+    cross_staff_dict = {}
+    options = []
     if call_type in ['RESCS', 'RESTR']:
         return print("Use second alarm type code: {}".format(call_type + "2"))
     radio_position = get_radio(grid)
@@ -262,28 +264,33 @@ def recommendations(call_type,grid):
             list_result = False
             if isinstance(unit_type, list) == True:
                 for option in unit_type:
+                    options.append(option)
+                for station in rec_station_order:
+                    station_rank[station] = 1 + len(station_rank)
+                    for unit in unit_list:
+                        if unit.unit_number not in result and unit.unit_number not in cross_staffing_list and unit.unit_type == option and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
+                            unit_options.append(unit)
+                for unit in unit_options:
                     if list_result == False:
-                        for station in rec_station_order:
-                            station_rank[station] = 1 + len(station_rank)
-                            for unit in unit_list:
-                                if unit.unit_number not in result and unit.unit_number not in cross_staffing_list and unit.unit_type == option and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
-                                    unit_options.append(unit)
-                                    for unit in unit_options:
-                                        if list_result == False:
-                                            unit_rank[unit.unit_number] = station_rank[unit.unit_station]
-                                            sorted_units = sorted(unit_rank.items(), key=lambda x: x[1])
-                                            for apparatus, station_r in sorted_units:
-                                                sorted_unit_list.append(apparatus)
-                                                cross_staffing_list.append(unit.cross_staffing)
-                                                result.append(sorted_unit_list[0])
-                                                i += 1
-                                                list_result = True
-                                                unit_options = []
-                                                unit_rank = {}
-                                                sorted_units = {}
-                                                sorted_unit_list = []
+                        unit_rank[unit.unit_number] = station_rank[unit.unit_station]
+                        cross_staff_dict[unit.unit_number] = unit.cross_staffing
                     else:
-                        list_result = False
+                        continue
+                sorted_units = sorted(unit_rank.items(), key=lambda x: x[1])
+                for apparatus, station_r in sorted_units:
+                    sorted_unit_list.append(apparatus)
+                for sorted_unit in sorted_unit_list:
+                    if list_result == False: 
+                        result.append(sorted_unit)
+                        cross_staffing_list.extend(cross_staff_dict[sorted_unit])
+                        i += 1
+                        list_result = True
+                        unit_options = []
+                        unit_rank = {}
+                        sorted_units = {}
+                        sorted_unit_list = []
+                        continue
+                    else:
                         continue                               
             else:
                 for station in rec_station_order:
