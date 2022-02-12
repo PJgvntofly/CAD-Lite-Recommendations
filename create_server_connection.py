@@ -11,7 +11,8 @@ def create_server_connection(host_name, user_name, user_password, db_name):
             user = user_name,
             passwd = user_password,
             database = db_name,
-            autocommit = True
+            autocommit = True,
+            auth_plugin='mysql_native_password'
         )
         print("CAD Lite Database connection successful")
     except Error as err:
