@@ -35,7 +35,7 @@ def refresh_units():
 
 def import_units():
     unit_list = []
-    print('Failed to connect to CAD Lite Database \nStarting Offline Mode')
+    print('Starting Offline Mode')
     f = open(r'C:\Users\cgass\OneDrive\Documents\CAD Lite\CADLiteUnitList_2021-04-16.csv','r', newline='')
     csv_f = csv.reader(f)
     for row in csv_f:

@@ -268,7 +268,7 @@ def recommendations(call_type,grid):
                 for station in rec_station_order:
                     station_rank[station] = 1 + len(station_rank)
                     for unit in unit_list:
-                        if unit.unit_number not in result and unit.unit_number not in cross_staffing_list and unit.unit_type == option and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
+                        if unit.unit_number not in result and unit.unit_number not in cross_staffing_list and unit.unit_type in options and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                             unit_options.append(unit)
                 for unit in unit_options:
                     if list_result == False:
