@@ -1,50 +1,34 @@
-import mysql.connector
-from mysql.connector import Error
-import create_server_connection
+import create_api_connection
 import csv
 
 class Unit:
-    def __init__(self, unit_number, unit_type, unit_station, unit_status, cross_staffing):
+    def __init__(self, unit_number, unit_type, unit_station, unit_status):#, cross_staffing):
         self.unit_number = unit_number
         self.unit_type = unit_type
         self.unit_station = unit_station
         self.unit_status = unit_status
-        self.cross_staffing = cross_staffing
+        #self.cross_staffing = cross_staffing
     def __str__(self):
-        return '\nUnit Number: ' + self.unit_number + '\nUnit Type: ' + self.unit_type + '\nAssigned Station: ' + self.unit_station + '\nUnit Status: ' + self.unit_status + '\nCross Staffing: ' +self.cross_staffing
+        return '\nUnit Number: ' + self.unit_number + '\nUnit Type: ' + self.unit_type + '\nAssigned Station: ' + self.unit_station + '\nUnit Status: ' + self.unit_status# + '\nCross Staffing: ' +self.cross_staffing
 
 def create_connection():
-    connection = create_server_connection.create_server_connection('localhost', 'recommendations','testpassword1','cad_lite')
+    connection = create_api_connection.create_api_connection('https://uacy6ocd51.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public', 1, 'WA')
     return connection
 
 def silent_connection():
-    connection = create_server_connection.silent_server_connection('localhost', 'recommendations','testpassword1','cad_lite')
+    connection = create_api_connection.silent_api_connection('https://uacy6ocd51.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public', 1, 'WA')
     return connection
-    
-q1 = """
-SELECT
-unit_number,
-unit_type,
-assigned_station,
-unit_status,
-cross_staffing
-FROM
-units
-WHERE
-jurisdiction NOT LIKE "WA%"
-"""
 
 def refresh_units():
     unit_list = []
     connection = create_connection()
     if connection != None:
-        results = create_server_connection.read_query(connection, q1)
-        for unit_number, unit_type, assigned_station, unit_status, cross_staffing in results:
-            unitx = Unit(unit_number, unit_type, assigned_station, unit_status, cross_staffing)
+        response = connection.json()
+        for unit in response['data']:
+            unitx = Unit(unit['unitId'], unit['unitType'], unit['assignedStation'], unit['unitStatus'])
             unit_list.append(unitx)
-            connection.close()
-        for unit in unit_list:
-            unit.cross_staffing = unit.cross_staffing.split("-")
+        #for unit in unit_list:
+            #unit.cross_staffing = unit.cross_staffing.split("-")
     else:
         unit_list = import_units()
     return unit_list
