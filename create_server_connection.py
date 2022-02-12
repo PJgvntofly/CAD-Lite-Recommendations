@@ -1,5 +1,6 @@
 import mysql.connector
 from mysql.connector import Error
+import mysql.connector.locales.eng.client_error
 import pandas as pd
 
 def create_server_connection(host_name, user_name, user_password, db_name):
