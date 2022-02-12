@@ -9,13 +9,13 @@ def offline_recommendations(call_type,grid):
     skipped_units = []
     list_result = False
     i = 0
-    x = 0
     station_rank = {}
     unit_options = []
     unit_rank = {}
     sorted_units = {}
     sorted_unit_list = []
     cross_staffing_list = []
+    options = []
     if call_type in ['RESCS', 'RESTR']:
         return print("Use second alarm type code: {}".format(call_type + "2"))
     radio_position = recommendations.get_radio(grid)
@@ -34,44 +34,43 @@ def offline_recommendations(call_type,grid):
     if i <= len(response_plan):
         for unit_type in response_plan:
             list_result = False
-            if isinstance(unit_type, list) == True:
+            if isinstance(unit_type, list):
                 for option in unit_type:
+                        options.append(option)
+                for station in rec_station_order:
+                    station_rank[station] = 1 + len(station_rank)
+                    for unit in unit_list:
+                        if unit.unit_number not in result and unit.unit_number not in skipped_units and unit.unit_number not in cross_staffing_list and unit.unit_type in options and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
+                            unit_options.append(unit)
+                for unit in unit_options:
                     if list_result == False:
-                        for station in rec_station_order:
-                            station_rank[station] = 1 + len(station_rank)
-                            for unit in unit_list:
-                                if unit.unit_number not in result and unit.unit_number not in skipped_units and unit.unit_number not in cross_staffing_list and unit.unit_type == option and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
-                                    unit_options.append(unit)
-                                    for unit in unit_options:
-                                        if list_result == False:
-                                            unit_rank[unit.unit_number] = station_rank[unit.unit_station]
-                                            sorted_units = sorted(unit_rank.items(), key=lambda x: x[1])
-                                            for apparatus, station_r in sorted_units:
-                                                sorted_unit_list.append(apparatus)
-                                                for sorted_unit in sorted_unit_list:
-                                                    if sorted_unit not in result and sorted_unit not in skipped_units:
-                                                        print(f"\nCall Type: {call_type} | Request: {unit_type} | Recommendation: {sorted_unit}")
-                                                        accept = input("Accept recommendation? Enter Y for yes or N to see the next unit. ")
-                                                        accept = accept.strip().upper()
-                                                        if accept[0] == 'Y':
-                                                            result.append(sorted_unit)
-                                                            cross_staffing_list.extend(unit.cross_staffing)
-                                                            i += 1
-                                                            list_result = True
-                                                            unit_options = []
-                                                            unit_rank = {}
-                                                            sorted_units = {}
-                                                            sorted_unit_list = []
-                                                            continue
-                                                        else:
-                                                            skipped_units.append(sorted_unit)
-                                                            cross_staffing_list.extend(unit.cross_staffing)
-                                        else:
-                                            continue
-
+                        unit_rank[unit.unit_number] = station_rank[unit.unit_station]
                     else:
-                        list_result = False
-                        continue                               
+                        continue
+                sorted_units = sorted(unit_rank.items(), key=lambda x: x[1])
+                for apparatus, station_r in sorted_units:
+                    sorted_unit_list.append(apparatus)
+                for sorted_unit in sorted_unit_list:
+                    if list_result == False:
+                        if sorted_unit not in result and sorted_unit not in skipped_units:
+                            print(f"\nCall Type: {call_type} | Request: {unit_type} | Recommendation: {sorted_unit}")
+                            accept = input("Accept recommendation? Enter Y for yes or N to see the next unit. ")
+                            accept = accept.strip().upper()
+                            if accept[0] == 'Y':
+                                result.append(sorted_unit)
+                                cross_staffing_list.extend(unit.cross_staffing)
+                                i += 1
+                                list_result = True
+                                unit_options = []
+                                unit_rank = {}
+                                sorted_units = {}
+                                sorted_unit_list = []
+                                continue
+                            else:
+                                skipped_units.append(sorted_unit)
+                                cross_staffing_list.extend(unit.cross_staffing)
+                    else:
+                        continue                              
             else:
                 for station in rec_station_order:
                     for unit in unit_list:
