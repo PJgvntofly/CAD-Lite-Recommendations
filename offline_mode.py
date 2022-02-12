@@ -65,6 +65,7 @@ def offline_recommendations(call_type,grid):
                                                             continue
                                                         else:
                                                             skipped_units.append(sorted_unit)
+                                                            cross_staffing_list.extend(unit.cross_staffing)
                                         else:
                                             continue
 
