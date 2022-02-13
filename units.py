@@ -47,5 +47,3 @@ def import_units():
         unit.unit_status = 'AIQ'
         unit.cross_staffing = unit.cross_staffing.split("-")
     return unit_list
-
-refresh_units()
