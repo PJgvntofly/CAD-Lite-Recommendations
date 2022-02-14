@@ -1,6 +1,4 @@
-import mysql.connector
-from mysql.connector import Error
-import create_server_connection
+import create_api_connection
 import csv
 
 class Unit:
@@ -14,45 +12,33 @@ class Unit:
         return '\nUnit Number: ' + self.unit_number + '\nUnit Type: ' + self.unit_type + '\nAssigned Station: ' + self.unit_station + '\nUnit Status: ' + self.unit_status + '\nCross Staffing: ' +self.cross_staffing
 
 def create_connection():
-    connection = create_server_connection.create_server_connection('localhost', 'recommendations','testpassword1','cad_lite')
+    connection = create_api_connection.create_api_connection('https://uacy6ocd51.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public', 1, 'WA')
     return connection
 
 def silent_connection():
-    connection = create_server_connection.silent_server_connection('localhost', 'recommendations','testpassword1','cad_lite')
+    connection = create_api_connection.silent_api_connection('https://uacy6ocd51.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public', 1, 'WA')
     return connection
-    
-q1 = """
-SELECT
-unit_number,
-unit_type,
-assigned_station,
-unit_status,
-cross_staffing
-FROM
-units
-WHERE
-jurisdiction NOT LIKE "WA%"
-"""
 
 def refresh_units():
     unit_list = []
     connection = create_connection()
     if connection != None:
-        results = create_server_connection.read_query(connection, q1)
-        for unit_number, unit_type, assigned_station, unit_status, cross_staffing in results:
-            unitx = Unit(unit_number, unit_type, assigned_station, unit_status, cross_staffing)
+        response = connection.json()
+        for unit in response['data']:
+            unitx = Unit(unit['unitId'], unit['unitType'], unit['assignedStation'], unit['unitStatus'], unit['crossStaffing'])
             unit_list.append(unitx)
-            connection.close()
         for unit in unit_list:
-            unit.cross_staffing = unit.cross_staffing.split("-")
+            if unit.cross_staffing is not None:
+                unit.cross_staffing = unit.cross_staffing.split("-")
+        connection.close()
     else:
         unit_list = import_units()
     return unit_list
 
 def import_units():
     unit_list = []
-    print('Failed to connect to CAD Lite Database \nStarting Offline Mode')
-    f = open(r'C:\Users\cgass\OneDrive\Documents\CAD Lite\CADLiteUnitList_2021-04-16.csv','r', newline='')
+    print('Starting Offline Mode')
+    f = open(r'P:\DISPATCH\Manual Operations\CAD Lite Recommendations\CADLiteUnitList.csv','r', newline='')
     csv_f = csv.reader(f)
     for row in csv_f:
         unit_number, jurisdiction, unit_type, assigned_station, assigned_beat, display_in_usm, unit_status, cross_staffing = row
@@ -63,5 +49,3 @@ def import_units():
         unit.unit_status = 'AIQ'
         unit.cross_staffing = unit.cross_staffing.split("-")
     return unit_list
-
-refresh_units()
