@@ -1,7 +1,7 @@
 import csv
 
 station_order = {}
-f = open(r"P:\DISPATCH\Manual Operations\CAD Lite Recommendations\Quadrant Station Order.csv")
+f = open(r".\Quadrant Station Order.csv")
 csv_f = csv.reader(f)
 for row in csv_f:
     quadrant, order = row
