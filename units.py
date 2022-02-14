@@ -38,7 +38,7 @@ def refresh_units():
 def import_units():
     unit_list = []
     print('Starting Offline Mode')
-    f = open(r'P:\DISPATCH\Manual Operations\CAD Lite Recommendations\CADLiteUnitList.csv','r', newline='')
+    f = open(r'.\CADLiteUnitList.csv','r', newline='')
     csv_f = csv.reader(f)
     for row in csv_f:
         unit_number, jurisdiction, unit_type, assigned_station, assigned_beat, display_in_usm, unit_status, cross_staffing = row
