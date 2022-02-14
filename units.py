@@ -25,10 +25,12 @@ def refresh_units():
     if connection != None:
         response = connection.json()
         for unit in response['data']:
-            unitx = Unit(unit['unitId'], unit['unitType'], unit['assignedStation'], unit['unitStatus'])
+            unitx = Unit(unit['unitId'], unit['unitType'], unit['assignedStation'], unit['unitStatus'], unit['crossStaffing'])
             unit_list.append(unitx)
         for unit in unit_list:
-            unit.cross_staffing = unit.cross_staffing.split("-")
+            if unit.cross_staffing is not None:
+                unit.cross_staffing = unit.cross_staffing.split("-")
+        connection.close()
     else:
         unit_list = import_units()
     return unit_list
@@ -36,7 +38,7 @@ def refresh_units():
 def import_units():
     unit_list = []
     print('Starting Offline Mode')
-    f = open(r'C:\Users\cgass\OneDrive\Documents\CAD Lite\CADLiteUnitList_2021-04-16.csv','r', newline='')
+    f = open(r'P:\DISPATCH\Manual Operations\CAD Lite Recommendations\CADLiteUnitList.csv','r', newline='')
     csv_f = csv.reader(f)
     for row in csv_f:
         unit_number, jurisdiction, unit_type, assigned_station, assigned_beat, display_in_usm, unit_status, cross_staffing = row

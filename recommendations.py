@@ -256,6 +256,8 @@ def recommendations(call_type,grid):
         radio_position = TAC_5
     if radio_position == 'TAC_3':
         radio_position = TAC_3
+    elif radio_position == None:
+        return print("Quadrant not supported")
     call_type = find_hydrant(call_type, radio_position)
     response_plan = radio_position[call_type]
     rec_station_order = station_order.station_order[grid]
@@ -273,7 +275,8 @@ def recommendations(call_type,grid):
                 for unit in unit_options:
                     if list_result == False:
                         unit_rank[unit.unit_number] = station_rank[unit.unit_station]
-                        cross_staff_dict[unit.unit_number] = unit.cross_staffing
+                        if unit.cross_staffing is not None:
+                            cross_staff_dict[unit.unit_number] = unit.cross_staffing
                     else:
                         continue
                 sorted_units = sorted(unit_rank.items(), key=lambda x: x[1])
@@ -282,7 +285,8 @@ def recommendations(call_type,grid):
                 for sorted_unit in sorted_unit_list:
                     if list_result == False: 
                         result.append(sorted_unit)
-                        cross_staffing_list.extend(cross_staff_dict[sorted_unit])
+                        if sorted_unit in cross_staff_dict.keys():
+                            cross_staffing_list.extend(cross_staff_dict[sorted_unit])
                         i += 1
                         list_result = True
                         unit_options = []
@@ -298,7 +302,8 @@ def recommendations(call_type,grid):
                         if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and unit.unit_number not in cross_staffing_list and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                             if list_result == False:
                                 result.append(unit.unit_number)
-                                cross_staffing_list.extend(unit.cross_staffing)
+                                if unit.cross_staffing is not None:
+                                    cross_staffing_list.extend(unit.cross_staffing)
                                 i += 1
                                 list_result = True
     else:

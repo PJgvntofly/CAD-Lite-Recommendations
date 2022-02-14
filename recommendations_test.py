@@ -20,10 +20,11 @@ def test_recommendations():
                 radio_position = recommendations.TAC_5
             if radio_position == 'TAC_3':
                 radio_position = recommendations.TAC_3
-            matches = re.match(pattern, result)
-            if len(matches[1].split(", ")) != len(radio_position[call_type]):
-                error = f"{call_type} {quadrant} Result:{result}"
-                errors.append(error)
+            matches = re.match(pattern, str(result))
+            if matches != None:
+                if len(matches[1].split(", ")) != len(radio_position[call_type]):
+                    error = f"{call_type} {quadrant} Result:{result}"
+                    errors.append(error)
     return errors
 
 def create_log(returned_errors):

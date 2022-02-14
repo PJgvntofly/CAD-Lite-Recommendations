@@ -1,7 +1,7 @@
 import csv
 
 station_order = {}
-f = open(r"C:\Users\cgass\OneDrive\Documents\Quadrant Station Order 2021-09-09.csv")
+f = open(r"P:\DISPATCH\Manual Operations\CAD Lite Recommendations\Quadrant Station Order.csv")
 csv_f = csv.reader(f)
 for row in csv_f:
     quadrant, order = row
@@ -22,7 +22,7 @@ def create_positions():
             position['TAC_7'].append(quadrant)
         if quadrant[:2] in ['MF', 'AG', 'AJ', 'BJ', 'SK', 'CA', 'AF', 'AC', 'BH', 'D7', 'NO']:
             position['TAC_5'].append(quadrant)
-        if quadrant[:2] in ['AK', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'BI', 'BK', 'DN']:
+        if quadrant[:2] in ['AK', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'BI', 'BK', 'DN', 'AW']:
             position['TAC_3'].append(quadrant)
     return position
 
