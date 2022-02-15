@@ -22,7 +22,7 @@ def create_positions():
             position['TAC_7'].append(quadrant)
         if quadrant[:2] in ['MF', 'AG', 'AJ', 'BJ', 'SK', 'CA', 'AF', 'AC', 'BH', 'D7', 'NO']:
             position['TAC_5'].append(quadrant)
-        if quadrant[:2] in ['AK', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'BI', 'BK', 'DN', 'AW']:
+        if quadrant[:2] in ['AK', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'BI', 'BK', 'DN', 'AW', 'AV', 'AE', 'AD']:
             position['TAC_3'].append(quadrant)
     return position
 
