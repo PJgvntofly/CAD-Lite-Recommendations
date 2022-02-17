@@ -1,6 +1,7 @@
 from audioop import cross
 import units
 import station_order
+from datetime import datetime
 
 TAC_1 = {
     'AIR':['Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
@@ -70,7 +71,7 @@ TAC_7 = {
     'FB':[['Engine', 'Ladder']],
     'FCC':['Ladder', 'Engine', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
     'FI':[],
-    'FRC':['Ladder' 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'FRC':['Ladder', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
     'FSN':[['Engine' , 'Ladder']],
     'GLI':['Engine', ['Engine', 'Ladder'], 'Command Unit'],
     'GLO':[['Engine', 'Ladder'], 'Engine'],
@@ -244,6 +245,8 @@ def recommendations(call_type,grid):
     cross_staffing_list = []
     cross_staff_dict = {}
     options = []
+    sorted_unit_log = {}
+    station_rank_log = {}
     if call_type in ['RESCS', 'RESTR']:
         return print("Use second alarm type code: {}".format(call_type + "2"))
     radio_position = get_radio(grid)
@@ -287,6 +290,8 @@ def recommendations(call_type,grid):
                         result.append(sorted_unit)
                         if sorted_unit in cross_staff_dict.keys():
                             cross_staffing_list.extend(cross_staff_dict[sorted_unit])
+                        sorted_unit_log[sorted_unit] = sorted_units
+                        station_rank_log[sorted_unit] = station_rank
                         i += 1
                         list_result = True
                         unit_options = []
@@ -308,4 +313,6 @@ def recommendations(call_type,grid):
                                 list_result = True
     else:
         return result
+    with open (f'./logs/{datetime.today().strftime("%m %d")} rec_log.txt', 'a') as log:
+        log.writelines(f'Time: {str(datetime.now())}\nCall Type: {call_type} Grid: {grid} Recommendation: {result}\nResponse Plan: {response_plan}\nUnit Ranks: {sorted_unit_log}\nStation Ranks: {station_rank}\nCross Staffing: {cross_staffing_list}\n\n')
     return f"{call_type}: {result}"
