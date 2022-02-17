@@ -1,7 +1,6 @@
 from audioop import cross
 import units
 import station_order
-from datetime import datetime
 import logging
 
 TAC_1 = {
@@ -266,17 +265,17 @@ def recommendations(call_type,grid):
     call_type = find_hydrant(call_type, radio_position)
     response_plan = radio_position[call_type]
     rec_station_order = station_orders[grid]
+    for station in rec_station_order:
+        station_rank[station] = 1 + len(station_rank)
     if i <= len(response_plan):
         for unit_type in response_plan:
             list_result = False
             if isinstance(unit_type, list) == True:
                 for option in unit_type:
                     options.append(option)
-                for station in rec_station_order:
-                    station_rank[station] = 1 + len(station_rank)
-                    for unit in unit_list:
-                        if unit.unit_number not in result and unit.unit_number not in cross_staffing_list and unit.unit_type in options and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
-                            unit_options.append(unit)
+                for unit in unit_list:
+                    if unit.unit_number not in result and unit.unit_number not in cross_staffing_list and unit.unit_type in options and unit.unit_station in rec_station_order and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
+                        unit_options.append(unit)
                 for unit in unit_options:
                     if list_result == False:
                         unit_rank[unit.unit_number] = station_rank[unit.unit_station]

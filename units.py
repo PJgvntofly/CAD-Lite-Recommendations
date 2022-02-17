@@ -41,17 +41,20 @@ def refresh_units():
 def import_units():
     unit_list = []
     print('Starting Offline Mode')
-    logging.info("Importing offline units")
-    f = open(r'.\CADLiteUnitList.csv','r', newline='')
-    csv_f = csv.reader(f)
-    for row in csv_f:
-        unit_number, jurisdiction, unit_type, assigned_station, assigned_beat, display_in_usm, unit_status, cross_staffing = row
-        unitx = Unit(unit_number, unit_type, assigned_station, unit_status, cross_staffing)
-        unit_list.append(unitx)
-    f.close()
-    for unit in unit_list:
-        unit.unit_status = 'AIQ'
-        unit.cross_staffing = unit.cross_staffing.split("-")
-    logging.info("Finished importing offline units")
-    return unit_list
+    try:
+        logging.info("Importing offline units")
+        f = open(r'.\CADLiteUnitList.csv','r', newline='')
+        csv_f = csv.reader(f)
+        for row in csv_f:
+            unit_number, jurisdiction, unit_type, assigned_station, assigned_beat, display_in_usm, unit_status, cross_staffing = row
+            unitx = Unit(unit_number, unit_type, assigned_station, unit_status, cross_staffing)
+            unit_list.append(unitx)
+        f.close()
+        for unit in unit_list:
+            unit.unit_status = 'AIQ'
+            unit.cross_staffing = unit.cross_staffing.split("-")
+        logging.info("Finished importing offline units")
+        return unit_list
+    except Exception:
+        logging.exception("")
     

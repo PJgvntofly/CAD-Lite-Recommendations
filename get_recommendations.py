@@ -4,6 +4,7 @@ import offline_mode
 import logging
 
 def get_recommendations():
+    logging.info("Starting new recommendation cycle")
     call_type = input("Enter the call type:")
     grid = input("Enter the fire grid:")
     grid = grid.strip().upper()
@@ -16,10 +17,10 @@ def get_recommendations():
                 logging.exception("")
                 print(offline_mode.offline_recommendations(call_type,grid),'\n')
         else:
-            logging.debug(f"Invalid call type entered: {call_type}")
+            logging.info(f"Invalid call type entered: {call_type}")
             print(f"{call_type} is not valid. \nPlease enter a valid call type \n")
     else:
-        logging.debug(f"Invalid grid entered: {grid}")
+        logging.info(f"Invalid grid entered: {grid}")
         print(f'{grid} is not valid. \nPlease enter a valid fire grid \n')
     get_recommendations()
 

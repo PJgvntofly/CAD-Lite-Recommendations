@@ -16,7 +16,7 @@ def create_station_order():
         logging.exception("")
 
 def create_positions(station_order):
-    logging.info("Creating positions")
+    logging.info("Creating positions\n")
     position = {
         'TAC_1':[],
         'TAC_3':[],
