@@ -1,5 +1,6 @@
 import create_api_connection
 import csv
+import logging
 
 class Unit:
     def __init__(self, unit_number, unit_type, unit_station, unit_status, cross_staffing):
@@ -22,7 +23,8 @@ def silent_connection():
 def refresh_units():
     unit_list = []
     connection = create_connection()
-    if connection != None:
+    try:
+        logging.info("Refreshing units")
         response = connection.json()
         for unit in response['data']:
             unitx = Unit(unit['unitId'], unit['unitType'], unit['assignedStation'], unit['unitStatus'], unit['crossStaffing'])
@@ -31,13 +33,15 @@ def refresh_units():
             if unit.cross_staffing is not None:
                 unit.cross_staffing = unit.cross_staffing.split("-")
         connection.close()
-    else:
+    except Exception:
+        logging.exception()
         unit_list = import_units()
     return unit_list
 
 def import_units():
     unit_list = []
     print('Starting Offline Mode')
+    logging.info("Importing offline units")
     f = open(r'.\CADLiteUnitList.csv','r', newline='')
     csv_f = csv.reader(f)
     for row in csv_f:
@@ -48,4 +52,6 @@ def import_units():
     for unit in unit_list:
         unit.unit_status = 'AIQ'
         unit.cross_staffing = unit.cross_staffing.split("-")
+    logging.info("Finished importing offline units")
     return unit_list
+    

@@ -1,8 +1,10 @@
 import recommendations
 import units
-import station_order
+from datetime import datetime
+import logging
 
 def offline_recommendations(call_type,grid):
+    logging.info("Beginning offline recommendations")
     call_type = call_type.strip().upper()
     grid = grid.strip().upper()
     result = []
@@ -17,6 +19,8 @@ def offline_recommendations(call_type,grid):
     cross_staffing_list = []
     cross_staff_dict = {}
     options = []
+    sorted_unit_log = {}
+    station_rank_log = {}
     if call_type in ['RESCS', 'RESTR']:
         return print("Use second alarm type code: {}".format(call_type + "2"))
     radio_position = recommendations.get_radio(grid)
@@ -31,7 +35,7 @@ def offline_recommendations(call_type,grid):
         radio_position = recommendations.TAC_3
     call_type = recommendations.find_hydrant(call_type, radio_position)
     response_plan = radio_position[call_type]
-    rec_station_order = station_order.station_order[grid]
+    rec_station_order = recommendations.station_orders[grid]
     if i <= len(response_plan):
         for unit_type in response_plan:
             list_result = False
@@ -61,6 +65,8 @@ def offline_recommendations(call_type,grid):
                             if accept[0] == 'Y':
                                 result.append(sorted_unit)
                                 cross_staffing_list.extend(cross_staff_dict[sorted_unit])
+                                sorted_unit_log[sorted_unit] = sorted_units
+                                station_rank_log[sorted_unit] = station_rank
                                 i += 1
                                 list_result = True
                                 unit_options = []
@@ -91,5 +97,6 @@ def offline_recommendations(call_type,grid):
                                     skipped_units.append(unit.unit_number)
     else:
         return result
+    logging.info(f'OFFLINE MODE\nTime: {str(datetime.now())}\nCall Type: {call_type} Grid: {grid} Recommendation: {result}\nResponse Plan: {response_plan}\n Skipped Units: {skipped_units}\nUnit Ranks: {sorted_unit_log}\nStation Ranks: {station_rank}\nCross Staffing: {cross_staffing_list}\n')
     return f"\nRecommendation:\n{call_type}: {result}"
 

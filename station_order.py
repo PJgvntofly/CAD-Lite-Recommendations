@@ -1,14 +1,22 @@
 import csv
+import logging
 
-station_order = {}
-f = open(r".\Quadrant Station Order.csv")
-csv_f = csv.reader(f)
-for row in csv_f:
-    quadrant, order = row
-    station_order[quadrant] = order.split(",")
-f.close()
+def create_station_order():
+    station_order = {}
+    try:
+        f = open(r".\Quadrant Station Order.csv")
+        logging.info('Importing station orders')
+        csv_f = csv.reader(f)
+        for row in csv_f:
+            quadrant, order = row
+            station_order[quadrant] = order.split(",")
+        f.close()
+        return station_order
+    except Exception:
+        logging.exception("")
 
-def create_positions():
+def create_positions(station_order):
+    logging.info("Creating positions")
     position = {
         'TAC_1':[],
         'TAC_3':[],

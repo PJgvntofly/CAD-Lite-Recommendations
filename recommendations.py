@@ -2,6 +2,7 @@ from audioop import cross
 import units
 import station_order
 from datetime import datetime
+import logging
 
 TAC_1 = {
     'AIR':['Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
@@ -210,8 +211,8 @@ TAC_3 = {
     'RESWA':['Fire Boat', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
     'SC':[['Engine', 'Ladder']]
     }
-
-position = station_order.create_positions()
+station_orders = station_order.create_station_order()
+position = station_order.create_positions(station_orders)
 
 def get_radio(val):
     for key, values in position.items():
@@ -231,6 +232,7 @@ def find_hydrant(call, radio_position):
     return call
 
 def recommendations(call_type,grid):
+    logging.info("Beginning recommendations")
     call_type = call_type.strip().upper()
     grid = grid.strip().upper()
     result = []
@@ -263,7 +265,7 @@ def recommendations(call_type,grid):
         return print("Quadrant not supported")
     call_type = find_hydrant(call_type, radio_position)
     response_plan = radio_position[call_type]
-    rec_station_order = station_order.station_order[grid]
+    rec_station_order = station_orders[grid]
     if i <= len(response_plan):
         for unit_type in response_plan:
             list_result = False
@@ -313,6 +315,5 @@ def recommendations(call_type,grid):
                                 list_result = True
     else:
         return result
-    with open (f'./logs/{datetime.today().strftime("%m %d")} rec_log.txt', 'a') as log:
-        log.writelines(f'Time: {str(datetime.now())}\nCall Type: {call_type} Grid: {grid} Recommendation: {result}\nResponse Plan: {response_plan}\nUnit Ranks: {sorted_unit_log}\nStation Ranks: {station_rank}\nCross Staffing: {cross_staffing_list}\n\n')
+    logging.info(f'Recommendations complete\nCall Type: {call_type} Grid: {grid} Recommendation: {result}\nResponse Plan: {response_plan}\nUnit Ranks: {sorted_unit_log}\nStation Ranks: {station_rank}\nCross Staffing: {cross_staffing_list}\n')
     return f"{call_type}: {result}"
