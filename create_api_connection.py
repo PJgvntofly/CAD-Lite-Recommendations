@@ -4,7 +4,7 @@ from urllib3.exceptions import InsecureRequestWarning
 from datetime import datetime
 import logging
 
-logging.basicConfig(filename=f'./logs/{datetime.today().strftime("%m %d")} application_log.txt', format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %H:%M:%S', encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(filename=f'./logs/{datetime.today().strftime("%m %d")} application_log.log', format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %H:%M:%S', encoding='utf-8', level=logging.DEBUG)
 
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
