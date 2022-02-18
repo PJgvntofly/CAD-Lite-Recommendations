@@ -14,6 +14,8 @@ def create_station_order():
         return station_order
     except Exception:
         logging.exception("")
+        print("Error importing station orders")
+        return station_order
 
 def create_positions(station_order):
     logging.info("Creating positions\n")

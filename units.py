@@ -57,4 +57,6 @@ def import_units():
         return unit_list
     except Exception:
         logging.exception("")
+        print("Error importing offline unit list")
+        return unit_list
     
