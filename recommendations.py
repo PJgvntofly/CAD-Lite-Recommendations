@@ -1,6 +1,7 @@
 from audioop import cross
 import units
 import station_order
+import logging
 
 TAC_1 = {
     'AIR':['Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
@@ -70,7 +71,7 @@ TAC_7 = {
     'FB':[['Engine', 'Ladder']],
     'FCC':['Ladder', 'Engine', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
     'FI':[],
-    'FRC':['Ladder' 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'FRC':['Ladder', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
     'FSN':[['Engine' , 'Ladder']],
     'GLI':['Engine', ['Engine', 'Ladder'], 'Command Unit'],
     'GLO':[['Engine', 'Ladder'], 'Engine'],
@@ -209,8 +210,8 @@ TAC_3 = {
     'RESWA':['Fire Boat', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
     'SC':[['Engine', 'Ladder']]
     }
-
-position = station_order.create_positions()
+station_orders = station_order.create_station_order()
+position = station_order.create_positions(station_orders)
 
 def get_radio(val):
     for key, values in position.items():
@@ -230,6 +231,7 @@ def find_hydrant(call, radio_position):
     return call
 
 def recommendations(call_type,grid):
+    logging.info("Beginning recommendations")
     call_type = call_type.strip().upper()
     grid = grid.strip().upper()
     result = []
@@ -244,6 +246,8 @@ def recommendations(call_type,grid):
     cross_staffing_list = []
     cross_staff_dict = {}
     options = []
+    sorted_unit_log = {}
+    station_rank_log = {}
     if call_type in ['RESCS', 'RESTR']:
         return print("Use second alarm type code: {}".format(call_type + "2"))
     radio_position = get_radio(grid)
@@ -260,18 +264,18 @@ def recommendations(call_type,grid):
         return print("Quadrant not supported")
     call_type = find_hydrant(call_type, radio_position)
     response_plan = radio_position[call_type]
-    rec_station_order = station_order.station_order[grid]
+    rec_station_order = station_orders[grid]
+    for station in rec_station_order:
+        station_rank[station] = 1 + len(station_rank)
     if i <= len(response_plan):
         for unit_type in response_plan:
             list_result = False
             if isinstance(unit_type, list) == True:
                 for option in unit_type:
                     options.append(option)
-                for station in rec_station_order:
-                    station_rank[station] = 1 + len(station_rank)
-                    for unit in unit_list:
-                        if unit.unit_number not in result and unit.unit_number not in cross_staffing_list and unit.unit_type in options and unit.unit_station == station and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
-                            unit_options.append(unit)
+                for unit in unit_list:
+                    if unit.unit_number not in result and unit.unit_number not in cross_staffing_list and unit.unit_type in options and unit.unit_station in rec_station_order and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
+                        unit_options.append(unit)
                 for unit in unit_options:
                     if list_result == False:
                         unit_rank[unit.unit_number] = station_rank[unit.unit_station]
@@ -287,6 +291,8 @@ def recommendations(call_type,grid):
                         result.append(sorted_unit)
                         if sorted_unit in cross_staff_dict.keys():
                             cross_staffing_list.extend(cross_staff_dict[sorted_unit])
+                        sorted_unit_log[sorted_unit] = sorted_units
+                        station_rank_log[sorted_unit] = station_rank
                         i += 1
                         list_result = True
                         unit_options = []
@@ -308,4 +314,5 @@ def recommendations(call_type,grid):
                                 list_result = True
     else:
         return result
+    logging.info(f'Recommendations complete\nCall Type: {call_type} Grid: {grid} Recommendation: {result}\nResponse Plan: {response_plan}\nUnit Ranks: {sorted_unit_log}\nStation Ranks: {station_rank}\nCross Staffing: {cross_staffing_list}\n')
     return f"{call_type}: {result}"
