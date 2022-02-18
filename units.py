@@ -13,11 +13,11 @@ class Unit:
         return '\nUnit Number: ' + self.unit_number + '\nUnit Type: ' + self.unit_type + '\nAssigned Station: ' + self.unit_station + '\nUnit Status: ' + self.unit_status + '\nCross Staffing: ' +self.cross_staffing
 
 def create_connection():
-    connection = create_api_connection.create_api_connection('https://uacy6ocd51.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public', 1, 'WA')
+    connection = create_api_connection.create_api_connection('https://s0eh943fzf.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public', 1, 'WA')
     return connection
 
 def silent_connection():
-    connection = create_api_connection.silent_api_connection('https://uacy6ocd51.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public', 1, 'WA')
+    connection = create_api_connection.silent_api_connection('https://s0eh943fzf.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public', 1, 'WA')
     return connection
 
 def refresh_units():
