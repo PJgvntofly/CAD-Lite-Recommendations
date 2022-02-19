@@ -41,6 +41,7 @@ def refresh_units():
         connection.close()
     except Exception:
         connection_log.exception("")
+        unit_list = None
     return unit_list
 
 def import_units():
@@ -61,7 +62,6 @@ def import_units():
         connection_log.info("Finished importing offline units")
         return unit_list
     except Exception:
-        connection_log.error("")
-        print("Error importing offline unit list")
+        connection_log.error("Error importing offline unit list")
         return unit_list
     
