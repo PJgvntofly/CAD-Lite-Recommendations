@@ -1,10 +1,10 @@
 import recommendations
 import units
 from datetime import datetime
-import logging
+from log_config import rec_log
 
 def offline_recommendations(call_type,grid):
-    logging.info("Beginning offline recommendations")
+    rec_log.info("Beginning offline recommendations")
     call_type = call_type.strip().upper()
     grid = grid.strip().upper()
     result = []
@@ -97,6 +97,6 @@ def offline_recommendations(call_type,grid):
                                     skipped_units.append(unit.unit_number)
     else:
         return result
-    logging.info(f'OFFLINE MODE\nTime: {str(datetime.now())}\nCall Type: {call_type} Grid: {grid} Recommendation: {result}\nResponse Plan: {response_plan}\n Skipped Units: {skipped_units}\nUnit Ranks: {sorted_unit_log}\nStation Ranks: {station_rank}\nCross Staffing: {cross_staffing_list}\n')
+    rec_log.info(f'OFFLINE MODE\nTime: {str(datetime.now())}\nCall Type: {call_type} Grid: {grid} Recommendation: {result}\nResponse Plan: {response_plan}\n Skipped Units: {skipped_units}\nUnit Ranks: {sorted_unit_log}\nStation Ranks: {station_rank}\nCross Staffing: {cross_staffing_list}\n')
     return f"\nRecommendation:\n{call_type}: {result}"
 

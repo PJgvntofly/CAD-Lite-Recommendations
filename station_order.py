@@ -1,11 +1,11 @@
 import csv
-import logging
+from log_config import connection_log
 
 def create_station_order():
     station_order = {}
     try:
         f = open(r".\Quadrant Station Order.csv")
-        logging.info('Importing station orders')
+        connection_log.info('Importing station orders')
         csv_f = csv.reader(f)
         for row in csv_f:
             quadrant, order = row
@@ -13,12 +13,12 @@ def create_station_order():
         f.close()
         return station_order
     except Exception:
-        logging.exception("")
+        connection_log.error("")
         print("Error importing station orders")
         return station_order
 
 def create_positions(station_order):
-    logging.info("Creating positions\n")
+    connection_log.info("Creating positions\n")
     position = {
         'TAC_1':[],
         'TAC_3':[],

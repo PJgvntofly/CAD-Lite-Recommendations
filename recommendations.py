@@ -1,215 +1,8 @@
-from audioop import cross
 import units
 import station_order
-import logging
+from log_config import rec_log, connection_log
+from response_plans import TAC_1, TAC_3, TAC_5, TAC_7
 
-TAC_1 = {
-    'AIR':['Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'AIRC':['Engine', 'Engine', 'Ladder', 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Tender'],
-    'AIRS':['Engine'],
-    'BLS':[['Aid Unit', 'Engine', 'Ladder']],
-    'BLSN':[['Aid Unit', 'Engine', 'Ladder']],
-    'COA':['Engine'],
-    'COAM':['Engine', 'Medic Unit', 'Command Unit'],
-    'FAC':[['Engine', 'Ladder']],
-    'FS':[['Engine', 'Ladder']],
-    'FTU':[['Engine', 'Ladder']],
-    'FFB':['Ladder', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'FAR':[['Engine', 'Ladder']],
-    'FAS':[['Engine', 'Ladder']],
-    'FB':['Engine'],
-    'FCC':['Engine', 'Engine', 'Ladder', 'Engine', 'Engine', 'Medic Unit', ['Aid Unit', 'Medic Unit'], 'Ladder', 'Command Unit', 'Medical Services Officer'],
-    'FI':[],
-    'FRC':['Engine', 'Engine', 'Ladder', 'Engine', 'Engine', 'Medic Unit', ['Aid Unit', 'Medic Unit'], 'Command Unit', 'Medical Services Officer'],
-    'FSN':[['Engine', 'Ladder']],
-    'GLI':['Engine', ['Engine', 'Ladder'], 'Command Unit'],
-    'GLO':[['Engine', 'Ladder'], 'Engine'],
-    'HZ':[['Engine', 'Ladder'], 'Engine', 'Command Unit'],
-    'HZ2':['HazMat', 'Decon', 'Engine', 'Medic Unit'],
-    'HZ3':['Engine', 'HazMat', 'HazMat', 'Air Unit'],
-    'MCI':[['Engine', 'Ladder'], 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Engine', 'Aid Unit', 'Aid Unit', 'Command Unit', 'Command Unit'],
-    'MED':['Medic Unit', 'Engine'],
-    'MEDX':['Medic Unit', ['Engine', 'Ladder'], ['Engine', 'Ladder'], 'Medical Services Officer'],
-    'MVC':[['Engine', 'Ladder']],
-    'MVCE':['Engine', 'Ladder', 'Medic Unit', 'Command Unit', 'Medical Services Officer'],
-    'MVCF':[['Engine', 'Ladder'], 'Engine', 'Medic Unit', 'Command Unit', 'Medical Services Officer'],
-    'MVCM':[['Engine', 'Ladder'], 'Medic Unit'],
-    'MVCN':[['Engine', 'Ladder']],
-    'MVCP':[['Engine', 'Ladder'], 'Medic Unit'],
-    'RESA':[['Engine','Ladder'], ['Medic Unit', 'Aid Unit'], 'Engine', 'Command Unit'],
-    'RESA2':['Technical Rescue', 'Ladder', 'Engine', 'Medic Unit', 'Command Unit'],
-    'RESA3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder'], 'Medic Unit'],
-    'RESA4':['Engine', 'Command Unit'],
-    'RESCS':[],
-    'RESCS2':['Technical Rescue', 'Ladder', 'HazMat', 'Engine', 'Medic Unit', 'Aid Unit', 'Air Unit'],
-    'RESCS3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder'], 'Command Unit'],
-    'RESST':['Engine', ['Engine', 'Ladder'], 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'RESST2':['Technical Rescue', 'Engine', 'Ladder', 'Command Unit'],
-    'RESST3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder'], ['Medic Unit', 'Aid Unit']],
-    'RESSW':['Fire Boat', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
-    'RESTR':[],
-    'RESTR2':['Technical Rescue', 'Ladder', 'HazMat', 'Engine', 'Medic Unit', 'Air Unit', 'Command Unit'],
-    'RESTR3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder']],
-    'RESWA':['Fire Boat', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
-    'SC':[['Engine', 'Ladder']]
-}
-
-TAC_7 = {
-    'AIR':['Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'AIRC':['Engine', 'Engine', 'Ladder', 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Tender'],
-    'AIRS':['Engine'],
-    'BLS':[['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']],
-    'BLSN':[['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']],
-    'COA':[['Engine', 'Ladder']],
-    'COAM':['Engine', 'Medic Unit', 'Command Unit'],
-    'FAC':[['Engine', 'Ladder']],
-    'FS':[['Engine', 'Ladder']],
-    'FTU':[['Engine', 'Ladder']],
-    'FFB':['Ladder', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'FAR':[['Engine', 'Ladder']],
-    'FAS':[['Engine', 'Ladder']],
-    'FB':[['Engine', 'Ladder']],
-    'FCC':['Ladder', 'Engine', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'FI':[],
-    'FRC':['Ladder', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'FSN':[['Engine' , 'Ladder']],
-    'GLI':['Engine', ['Engine', 'Ladder'], 'Command Unit'],
-    'GLO':[['Engine', 'Ladder'], 'Engine'],
-    'HZ':[['Engine', 'Ladder']],
-    'HZ2':['HazMat','Decon','Engine','Medic Unit'],
-    'HZ3':['Engine', 'HazMat', 'HazMat', 'Air Unit'],
-    'MCI':[['Engine', 'Ladder'], 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Engine', 'Aid Unit', 'Aid Unit', 'Command Unit', 'Command Unit'],
-    'MED':['Medic Unit', ['Engine', 'Aid Unit', 'Ladder']],
-    'MEDX':['Medic Unit', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
-    'MVC':[['Engine', 'Ladder'], ['Aid Unit', 'Medic Unit']],
-    'MVCE':[['Engine', 'Ladder'], 'Medic Unit', 'Aid Unit', 'Engine', 'Command Unit'],
-    'MVCF':[['Engine', 'Ladder'], 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'MVCM':[['Engine', 'Ladder'], 'Medic Unit', 'Aid Unit', 'Engine', 'Command Unit'],
-    'MVCN':[['Engine', 'Ladder'], 'Aid Unit'],
-    'MVCP':[['Engine', 'Ladder'], 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'RESA':[['Engine', 'Ladder'], ['Medic Unit', 'Aid Unit'], 'Engine', 'Command Unit'],
-    'RESA2':['Technical Rescue', 'Ladder', 'Engine', 'Medic Unit', 'Command Unit'],
-    'RESA3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder'], 'Medic Unit'],
-    'RESA4':['Engine', 'Command Unit'],
-    'RESCS':[],
-    'RESCS2':['Technical Rescue', 'Ladder', 'Engine', 'HazMat', 'Engine', 'Medic Unit', 'Aid Unit'],
-    'RESCS3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder'], 'Command Unit'],
-    'RESST':['Engine', ['Engine', 'Ladder'], 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'RESST2':['Technical Rescue', 'Engine', 'Ladder', 'Command Unit'],
-    'RESST3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder'], ['Medic Unit', 'Aid Unit']],
-    'RESSW':['Fire Boat', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
-    'RESTR':[],
-    'RESTR2':['Technical Rescue', 'Ladder', 'HazMat', 'Engine', 'Medic Unit', 'Air Unit', 'Command Unit'],
-    'RESTR3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder']],
-    'RESWA':['Fire Boat', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
-    'SC':[['Engine', 'Ladder']]
-    }
-
-TAC_5 = {
-    'AIR':['Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'AIRC':['Engine', 'Engine', 'Ladder', 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Tender'],
-    'AIRS':['Engine'],
-    'BLS':['Aid Unit'],
-    'BLSN':['Aid Unit'],
-    'COA':['Engine', 'Command Unit'],
-    'COAM':['Engine', 'Medic Unit', 'Command Unit'],
-    'FAC':['Engine'],
-    'FS':['Engine'],
-    'FTU':['Engine'],
-    'FFB':['Ladder', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'FAR':['Engine'],
-    'FAS':['Engine'],
-    'FB':['Brush Truck', 'Brush Truck', 'Engine', 'Tender'],
-    'FCC':['Engine', 'Engine', 'Ladder', 'Engine', 'Medic Unit', 'Command Unit'],
-    'FCC - No Hydrant':['Engine', 'Engine', 'Ladder', 'Engine', 'Tender', 'Medic Unit' , 'Command Unit'],
-    'FI':[],
-    'FRC':['Engine', ['Engine', 'Ladder'], 'Ladder', 'Medic Unit', 'Engine', 'Command Unit'],
-    'FRC - No Hydrant':['Engine', ['Engine', 'Ladder'], 'Tender', 'Engine', 'Medic Unit', 'Tender', 'Command Unit'],
-    'FSN':[['Engine', 'Ladder']],
-    'GLI':['Engine', ['Engine', 'Ladder'], 'Command Unit'],
-    'GLO':[['Engine', 'Ladder'], 'Engine'],
-    'HZ':[['Engine', 'Ladder'], 'Engine', 'Command Unit'],
-    'HZ2':['HazMat', 'Decon', 'Engine', 'Medic Unit'],
-    'HZ3':['Engine', 'HazMat', 'HazMat', 'Air Unit'],
-    'MCI':[['Engine', 'Ladder'], 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Aid Unit', 'Engine', 'Aid Unit', 'Aid Unit', 'Command Unit', 'Command Unit'],
-    'MED':['Medic Unit', ['Engine', 'Aid Unit']],
-    'MEDX':['Medic Unit', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
-    'MVC':[['Engine', 'Ladder'], 'Aid Unit', 'Command Unit'],
-    'MVCE':[['Engine', 'Ladder'], 'Medic Unit', 'Aid Unit', 'Engine', 'Command Unit'],
-    'MVCF':[['Engine', 'Ladder'], 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'MVCM':[['Engine', 'Ladder'], 'Medic Unit', 'Aid Unit', 'Engine', 'Command Unit'],
-    'MVCN':[['Engine', 'Ladder'], 'Aid Unit'],
-    'MVCP':['Medic Unit', ['Engine', 'Ladder'], 'Command Unit'],
-    'RESA':[['Engine', 'Ladder'], ['Medic Unit', 'Aid Unit'], 'Engine', 'Command Unit'],
-    'RESA2':['Technical Rescue', 'Ladder', 'Engine', 'Medic Unit', 'Command Unit'],
-    'RESA3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder'], 'Medic Unit'],
-    'RESA4':['Engine', 'Command Unit'],
-    'RESCS':[],
-    'RESCS2':['Technical Rescue', 'Ladder', 'HazMat', 'Engine', 'Medic Unit', 'Aid Unit', 'Air Unit'],
-    'RESCS3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder'], 'Command Unit'],
-    'RESST':['Engine', ['Engine', 'Ladder'], 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'RESST2':['Technical Rescue', 'Engine', 'Ladder', 'Command Unit'],
-    'RESST3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder'], ['Medic Unit', 'Aid Unit']],
-    'RESSW':['Fire Boat', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
-    'RESTR':[],
-    'RESTR2':['Technical Rescue', 'Ladder', 'HazMat', 'Engine', 'Medic Unit', 'Air Unit', 'Command Unit'],
-    'RESTR3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder']],
-    'RESWA':['Fire Boat', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
-    'SC':[['Engine', 'Ladder']]
-}
-
-TAC_3 = {
-    'AIR':['Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'AIRC':['Engine', 'Engine', 'Ladder', 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Tender'],
-    'AIRS':['Engine'],
-    'BLS':[['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']],
-    'BLSN':[['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']],
-    'COA':[['Engine', 'Ladder']],
-    'COAM':['Engine', 'Medic Unit', 'Command Unit'],
-    'FAC':[['Engine', 'Ladder']],
-    'FS':[['Engine', 'Ladder']],
-    'FTU':[['Engine', 'Ladder']],
-    'FFB':['Ladder', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'FAR':[['Engine', 'Ladder']],
-    'FAS':[['Engine', 'Ladder']],
-    'FB':[['Engine', 'Ladder']],
-    'FCC':['Ladder', 'Engine', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'FCC - No Hydrant':['Engine', 'Engine', 'Ladder', 'Engine', 'Tender', 'Medic Unit' , 'Command Unit'],
-    'FI':[],
-    'FRC':['Ladder' 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'FRC - No Hydrant':['Engine', ['Engine', 'Ladder'], 'Tender', 'Engine', 'Medic Unit', 'Tender', 'Command Unit'],
-    'FSN':[['Engine' , 'Ladder']],
-    'GLI':['Engine', ['Engine', 'Ladder'], 'Command Unit'],
-    'GLO':[['Engine', 'Ladder'], 'Engine'],
-    'HZ':[['Engine', 'Ladder']],
-    'HZ2':['HazMat','Decon','Engine','Medic Unit'],
-    'HZ3':['Engine', 'HazMat', 'HazMat', 'Air Unit'],
-    'MCI':[['Engine', 'Ladder'], 'Medic Unit', 'Engine', 'Medic Unit', 'Aid Unit', 'Aid Unit', 'Engine', 'Aid Unit', 'Aid Unit', 'Command Unit', 'Command Unit'],
-    'MED':['Medic Unit', ['Engine', 'Aid Unit', 'Ladder']],
-    'MEDX':['Medic Unit', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
-    'MVC':[['Engine', 'Ladder'], ['Aid Unit', 'Medic Unit']],
-    'MVCE':[['Engine', 'Ladder'], 'Medic Unit', 'Aid Unit', 'Engine', 'Command Unit'],
-    'MVCF':[['Engine', 'Ladder'], 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'MVCM':[['Engine', 'Ladder'], 'Medic Unit', 'Aid Unit', 'Engine', 'Command Unit'],
-    'MVCN':[['Engine', 'Ladder'], 'Aid Unit'],
-    'MVCP':['Medic Unit', ['Engine', 'Ladder'], 'Command Unit'],
-    'RESA':[['Engine', 'Ladder'], ['Medic Unit', 'Aid Unit'], 'Engine', 'Command Unit'],
-    'RESA2':['Technical Rescue', 'Ladder', 'Engine', 'Medic Unit', 'Command Unit'],
-    'RESA3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder'], 'Medic Unit'],
-    'RESA4':['Engine', 'Command Unit'],
-    'RESCS':[],
-    'RESCS2':['Technical Rescue', 'Ladder', 'HazMat', 'Engine', 'Medic Unit', 'Aid Unit', 'Air Unit'],
-    'RESCS3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder'], 'Command Unit'],
-    'RESST':['Engine', ['Engine', 'Ladder'], 'Medic Unit', 'Aid Unit', 'Command Unit'],
-    'RESST2':['Technical Rescue', 'Engine', 'Ladder', 'Command Unit'],
-    'RESST3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder'], ['Medic Unit', 'Aid Unit']],
-    'RESSW':['Fire Boat', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
-    'RESTR':[],
-    'RESTR2':['Technical Rescue', 'Ladder', 'HazMat', 'Engine', 'Medic Unit', 'Air Unit', 'Command Unit'],
-    'RESTR3':['Technical Rescue', 'Technical Rescue', 'Technical Rescue', ['Engine', 'Ladder']],
-    'RESWA':['Fire Boat', ['Engine', 'Ladder'], 'Medic Unit', 'Command Unit'],
-    'SC':[['Engine', 'Ladder']]
-    }
 station_orders = station_order.create_station_order()
 position = station_order.create_positions(station_orders)
 
@@ -222,6 +15,7 @@ def find_hydrant(call, radio_position):
     if radio_position in [TAC_3, TAC_5] and call in ['FCC', 'FRC']:
         no_hydrant = ""
         no_hydrant = input('Is this call in a No Hydrant area? Enter Y for yes and N for no:')
+        rec_log.debug(f"No Hydrant input: {no_hydrant}")
         no_hydrant = no_hydrant.strip().upper()
         no_hydrant = no_hydrant[0]
         if no_hydrant == "Y":
@@ -231,7 +25,7 @@ def find_hydrant(call, radio_position):
     return call
 
 def recommendations(call_type,grid):
-    logging.info("Beginning recommendations")
+    rec_log.info("Beginning recommendations")
     call_type = call_type.strip().upper()
     grid = grid.strip().upper()
     result = []
@@ -251,6 +45,7 @@ def recommendations(call_type,grid):
     if call_type in ['RESCS', 'RESTR']:
         return print("Use second alarm type code: {}".format(call_type + "2"))
     radio_position = get_radio(grid)
+    connection_log.info('Initializing database connection')
     unit_list = units.refresh_units()
     if radio_position == 'TAC_1':
         radio_position = TAC_1
@@ -274,6 +69,7 @@ def recommendations(call_type,grid):
                 for option in unit_type:
                     options.append(option)
                 for unit in unit_list:
+                    rec_log.debug(f'Unit: {unit.unit_number} Status: {unit.unit_status} Type: {unit.unit_type} Station: {unit.unit_station}')
                     if unit.unit_number not in result and unit.unit_number not in cross_staffing_list and unit.unit_type in options and unit.unit_station in rec_station_order and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                         unit_options.append(unit)
                 for unit in unit_options:
@@ -305,6 +101,7 @@ def recommendations(call_type,grid):
             else:
                 for station in rec_station_order:
                     for unit in unit_list:
+                        rec_log.debug(f'Unit: {unit.unit_number} Status: {unit.unit_status} Type: {unit.unit_type} Station: {unit.unit_station}')
                         if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and unit.unit_number not in cross_staffing_list and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                             if list_result == False:
                                 result.append(unit.unit_number)
@@ -314,5 +111,5 @@ def recommendations(call_type,grid):
                                 list_result = True
     else:
         return result
-    logging.info(f'Recommendations complete\nCall Type: {call_type} Grid: {grid} Recommendation: {result}\nResponse Plan: {response_plan}\nUnit Ranks: {sorted_unit_log}\nStation Ranks: {station_rank}\nCross Staffing: {cross_staffing_list}\n')
+    rec_log.info(f'Recommendations complete\nCall Type: {call_type} Grid: {grid} Recommendation: {result}\nResponse Plan: {response_plan}\nUnit Ranks: {sorted_unit_log}\nStation Ranks: {station_rank}\nCross Staffing: {cross_staffing_list}\n')
     return f"{call_type}: {result}"

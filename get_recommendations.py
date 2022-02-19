@@ -1,26 +1,39 @@
 from multiprocessing.connection import wait
-import recommendations
+from recommendations import get_radio, recommendations
 import offline_mode
-import logging
+from response_plans import TAC_1
+from log_config import connection_log
+from log_config import rec_log
 
 def get_recommendations():
-    logging.info("Starting new recommendation cycle")
-    call_type = input("Enter the call type:")
-    grid = input("Enter the fire grid:")
-    grid = grid.strip().upper()
-    call_type = call_type.strip().upper()
-    if recommendations.get_radio(grid):
-        if call_type in recommendations.TAC_1.keys():
+    rec_log.info("Starting new recommendation cycle")
+    try:
+        call_type = input("Enter the call type:")
+        rec_log.debug(f"Input Call Type: {call_type}")
+        grid = input("Enter the fire grid:")
+        rec_log.debug(f"Input Fire Grid: {grid}")
+        grid = grid.strip().upper()
+        call_type = call_type.strip().upper()
+        if call_type == 'FR':
+            print("Using FRC plan")
+            call_type = 'FRC'
+        if call_type == 'FC':
+            print('Using FCC plan')
+            call_type = 'FCC'
+    except KeyboardInterrupt:
+        rec_log.error('User pressed ctrl+c')
+    if get_radio(grid):
+        if call_type in TAC_1.keys():
             try:
-                print(recommendations.recommendations(call_type,grid),'\n')
+                print(recommendations(call_type,grid),'\n')
             except Exception:
-                logging.exception("")
+                connection_log.exception("")
                 print(offline_mode.offline_recommendations(call_type,grid),'\n')
         else:
-            logging.info(f"Invalid call type entered: {call_type}")
+            rec_log.warning(f"Invalid call type entered: {call_type}")
             print(f"{call_type} is not valid. \nPlease enter a valid call type \n")
     else:
-        logging.info(f"Invalid grid entered: {grid}")
+        rec_log.warning(f"Invalid grid entered: {grid}")
         print(f'{grid} is not valid. \nPlease enter a valid fire grid \n')
     get_recommendations()
 
