@@ -1,6 +1,7 @@
 import create_api_connection
 import csv
-import logging
+from log_config import connection_log, rec_log
+import regex as re
 
 class Unit:
     def __init__(self, unit_number, unit_type, unit_station, unit_status, cross_staffing):
@@ -24,25 +25,29 @@ def refresh_units():
     unit_list = []
     connection = create_connection()
     try:
-        logging.info("Refreshing units")
+        connection_log.info("Refreshing units")
         response = connection.json()
         for unit in response['data']:
             unitx = Unit(unit['unitId'], unit['unitType'], unit['assignedStation'], unit['unitStatus'], unit['crossStaffing'])
             unit_list.append(unitx)
         for unit in unit_list:
+            pattern = r'ALS (\w+)'
+            if re.match(pattern, unit.unit_type):
+                clean_type = re.match(pattern, unit.unit_type)
+                rec_log.debug(f'Regex matches: {unit.unit_number} {unit.unit_type}')
+                unit.unit_type = clean_type[1]
             if unit.cross_staffing is not None:
                 unit.cross_staffing = unit.cross_staffing.split("-")
         connection.close()
     except Exception:
-        logging.exception()
-        unit_list = import_units()
+        connection_log.exception("")
     return unit_list
 
 def import_units():
     unit_list = []
     print('Starting Offline Mode')
     try:
-        logging.info("Importing offline units")
+        connection_log.info("Importing offline units")
         f = open(r'.\CADLiteUnitList.csv','r', newline='')
         csv_f = csv.reader(f)
         for row in csv_f:
@@ -53,10 +58,10 @@ def import_units():
         for unit in unit_list:
             unit.unit_status = 'AIQ'
             unit.cross_staffing = unit.cross_staffing.split("-")
-        logging.info("Finished importing offline units")
+        connection_log.info("Finished importing offline units")
         return unit_list
     except Exception:
-        logging.exception("")
+        connection_log.error("")
         print("Error importing offline unit list")
         return unit_list
     
