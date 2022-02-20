@@ -10,7 +10,7 @@ def configure_logger(name):
         },
         'handlers': {
             'console': {
-                'level': 'ERROR',
+                'level': 'CRITICAL',
                 'class': 'logging.StreamHandler',
                 'formatter': 'default',
                 'stream': 'ext//sys.stdout'
