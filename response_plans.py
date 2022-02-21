@@ -171,7 +171,7 @@ TAC_3 = {
     'FCC':['Ladder', 'Engine', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
     'FCC - No Hydrant':['Engine', 'Engine', 'Ladder', 'Engine', 'Tender', 'Medic Unit' , 'Command Unit'],
     'FI':[],
-    'FRC':['Ladder' 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
+    'FRC':['Ladder', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit'],
     'FRC - No Hydrant':['Engine', ['Engine', 'Ladder'], 'Tender', 'Engine', 'Medic Unit', 'Tender', 'Command Unit'],
     'FSN':[['Engine' , 'Ladder']],
     'GLI':['Engine', ['Engine', 'Ladder'], 'Command Unit'],
