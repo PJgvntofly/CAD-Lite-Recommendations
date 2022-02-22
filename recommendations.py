@@ -1,3 +1,4 @@
+import PySimpleGUI as sg
 import units
 import station_order
 from log_config import rec_log, connection_log
@@ -14,14 +15,14 @@ def get_radio(val):
 def find_hydrant(call, radio_position):
     if radio_position in [TAC_3, TAC_5] and call in ['FCC', 'FRC']:
         no_hydrant = ""
-        no_hydrant = input('Is this call in a No Hydrant area? Enter Y for yes and N for no:')
+        no_hydrant = sg.popup_get_text('Is this call in a No Hydrant area? Enter Y for yes and N for no:')
         rec_log.debug(f"No Hydrant input: {no_hydrant}")
         no_hydrant = no_hydrant.strip().upper()
         no_hydrant = no_hydrant[0]
         if no_hydrant == "Y":
             return call + " - No Hydrant"
         if no_hydrant not in ['Y', 'N']:
-            print('Please enter only Y or N \nIf call is in a No Hydrant area, please enter the information again.')
+            sg.popup('Please enter only Y or N \nIf call is in a No Hydrant area, please enter the information again.')
     return call
 
 def recommendations(call_type,grid):
