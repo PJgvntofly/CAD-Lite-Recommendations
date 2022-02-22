@@ -25,3 +25,19 @@ Cross Staffing: []
 02/20/2022 09:00:53 ERROR - User pressed ctrl+c
 02/20/2022 09:04:21 INFO - Starting new recommendation cycle
 02/20/2022 09:04:23 ERROR - User pressed ctrl+c
+02/21/2022 18:46:38 INFO - Starting new recommendation cycle
+02/21/2022 18:46:43 INFO - Beginning recommendations
+02/21/2022 18:46:49 INFO - Beginning offline recommendations
+02/21/2022 18:47:47 INFO - Starting new recommendation cycle
+02/21/2022 18:47:51 INFO - Beginning recommendations
+02/21/2022 18:47:55 INFO - Beginning offline recommendations
+02/21/2022 18:57:08 INFO - Starting new recommendation cycle
+02/21/2022 18:57:12 INFO - Beginning recommendations
+02/21/2022 18:57:19 INFO - Recommendations complete
+Call Type: MED Grid: BA0001 Recommendation: ['M1A', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+02/21/2022 18:57:19 INFO - Starting new recommendation cycle

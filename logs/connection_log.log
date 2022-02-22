@@ -22,3 +22,49 @@
 02/20/2022 09:04:21 INFO - Importing station orders
 02/20/2022 09:04:21 INFO - Creating positions
 
+02/21/2022 18:46:22 INFO - Importing station orders
+02/21/2022 18:46:22 INFO - Creating positions
+
+02/21/2022 18:46:38 INFO - Importing station orders
+02/21/2022 18:46:38 INFO - Creating positions
+
+02/21/2022 18:46:43 INFO - Initializing database connection
+02/21/2022 18:46:49 INFO - Verbose connection successful. Status code: 200
+02/21/2022 18:46:49 INFO - Refreshing units
+02/21/2022 18:46:49 ERROR - 
+Traceback (most recent call last):
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\get_recommendations.py", line 28, in get_recommendations
+    print(recommendations(call_type,grid),'\n')
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\recommendations.py", line 60, in recommendations
+    call_type = find_hydrant(call_type, radio_position)
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\recommendations.py", line 15, in find_hydrant
+    if radio_position in [TAC_3, TAC_5] and call in ['FCC', 'FRC']:
+NameError: name 'TAC_3' is not defined
+02/21/2022 18:46:49 INFO - Importing offline units
+02/21/2022 18:46:50 INFO - Finished importing offline units
+02/21/2022 18:47:47 INFO - Importing station orders
+02/21/2022 18:47:47 INFO - Creating positions
+
+02/21/2022 18:47:51 INFO - Initializing database connection
+02/21/2022 18:47:55 INFO - Verbose connection successful. Status code: 200
+02/21/2022 18:47:55 INFO - Refreshing units
+02/21/2022 18:47:55 ERROR - 
+Traceback (most recent call last):
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\get_recommendations.py", line 28, in get_recommendations
+    print(recommendations(call_type,grid),'\n')
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\recommendations.py", line 61, in recommendations
+    call_type = find_hydrant(call_type, radio_position)
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\recommendations.py", line 16, in find_hydrant
+    if radio_position in [TAC_3, TAC_5] and call in ['FCC', 'FRC']:
+NameError: name 'TAC_3' is not defined
+02/21/2022 18:47:55 INFO - Importing offline units
+02/21/2022 18:47:55 INFO - Finished importing offline units
+02/21/2022 18:55:46 INFO - Importing station orders
+02/21/2022 18:55:46 INFO - Creating positions
+
+02/21/2022 18:57:08 INFO - Importing station orders
+02/21/2022 18:57:08 INFO - Creating positions
+
+02/21/2022 18:57:12 INFO - Initializing database connection
+02/21/2022 18:57:18 INFO - Verbose connection successful. Status code: 200
+02/21/2022 18:57:18 INFO - Refreshing units
