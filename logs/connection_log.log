@@ -4,3 +4,21 @@
 02/18/2022 17:32:15 INFO - Initializing database connection
 02/18/2022 17:32:19 INFO - Verbose connection successful. Status code: 200
 02/18/2022 17:32:19 INFO - Refreshing units
+02/20/2022 08:56:23 INFO - Importing station orders
+02/20/2022 08:56:23 INFO - Creating positions
+
+02/20/2022 08:56:28 INFO - Initializing database connection
+02/20/2022 08:56:35 INFO - Verbose connection successful. Status code: 200
+02/20/2022 08:56:35 INFO - Refreshing units
+02/20/2022 08:58:30 INFO - Importing station orders
+02/20/2022 08:58:30 INFO - Creating positions
+
+02/20/2022 08:58:56 INFO - Importing station orders
+02/20/2022 08:58:56 INFO - Creating positions
+
+02/20/2022 09:00:51 INFO - Importing station orders
+02/20/2022 09:00:51 INFO - Creating positions
+
+02/20/2022 09:04:21 INFO - Importing station orders
+02/20/2022 09:04:21 INFO - Creating positions
+
