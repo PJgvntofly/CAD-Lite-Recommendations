@@ -91,6 +91,7 @@ def recommendations(call_type,grid):
                         station_rank_log[sorted_unit] = station_rank
                         i += 1
                         list_result = True
+                        options = []
                         unit_options = []
                         unit_rank = {}
                         sorted_units = {}
