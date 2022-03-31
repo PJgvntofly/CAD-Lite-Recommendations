@@ -6,7 +6,7 @@ from log_config import connection_log
 from log_config import rec_log
 
 def get_recommendations(call_type, grid):
-    rec_log.info("Starting new recommendation cycle")
+    rec_log.info("\nStarting new recommendation cycle")
     try:
         #call_type = input("Enter the call type:")
         rec_log.debug(f"Input Call Type: {call_type}")
