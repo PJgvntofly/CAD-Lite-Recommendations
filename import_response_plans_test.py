@@ -7,19 +7,26 @@ class TestResponsePlans(unittest.TestCase):
         self.assertEqual(data['SNO911']['TAC-1']['BLS'], [["Aid Unit", "Engine", "Ladder"]])
     
     def test_create_new_agency(self):
-        update_response_plan('ValleyCOM', 'Test', 'Engine')
+        update_response_plan('ValleyCOM', 'Test_Zone', 'Test', ['Engine'])
         data = import_response_plans()
-        self.assertEqual(data['VALLEYCOM']['TEST'], ['Engine'])
-    def test_create_new_plan(self):
-        update_response_plan('ValleyCOM', 'Test2', 'Engine')
+        self.assertEqual(data['VALLEYCOM']['TEST_ZONE']['TEST'], ['Engine'])
+    
+    def test_create_new_zone(self):
+        update_response_plan('ValleyCOM', 'Test_Zone2', 'Test', ['Engine'])
         data = import_response_plans()
-        self.assertEqual(data['VALLEYCOM']['TEST'], ['Engine'])
-        self.assertEqual(data['VALLEYCOM']['TEST2'], ['Engine'])
+        self.assertEqual(data['VALLEYCOM']['TEST_ZONE']['TEST'], ['Engine'])
+        self.assertEqual(data['VALLEYCOM']['TEST_ZONE2']['TEST'], ['Engine'])
+    
+    def test_add_plan_to_zone(self):
+        update_response_plan('ValleyCom', 'Test_zone', 'test2', ['Engine', 'Aid Unit'])
+        data = import_response_plans()
+        self.assertEqual(data['VALLEYCOM']['TEST_ZONE']['TEST2'], ['Engine', 'Aid Unit'])
+    
     def test_update_existing_plan(self):
-        update_response_plan('ValleyCOM', 'Test2', ['Engine', 'Aid Car'])
+        update_response_plan('ValleyCOM', 'Test_Zone', 'Test2', ['Engine', ['Aid Unit', 'Medic Unit']])
         data = import_response_plans()
-        self.assertEqual(data['VALLEYCOM']['TEST'], ['Engine'])
-        self.assertEqual(data['VALLEYCOM']['TEST2'], ['Engine', 'Aid Car'])
+        self.assertEqual(data['VALLEYCOM']['TEST_ZONE']['TEST'], ['Engine'])
+        self.assertEqual(data['VALLEYCOM']['TEST_ZONE']['TEST2'], ['Engine', ['Aid Unit', 'Medic Unit']])
         self.assertEqual(data['SNO911']['TAC-1']['BLS'], [["Aid Unit", "Engine", "Ladder"]])
         
 

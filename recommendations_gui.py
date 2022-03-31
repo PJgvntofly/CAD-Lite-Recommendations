@@ -1,12 +1,9 @@
 #Create GUI for CAD Lite Recommendations
 
+from urllib import response
 import PySimpleGUI as sg
 from get_recommendations import get_recommendations
-
-menu_def = [
-        ['File', ['Exit']],
-        ['Admin', ['View FRLs', 'Update FRLs']]
-    ]
+from import_response_plans import import_response_plans
 
 entry_mask = [
     [
@@ -30,14 +27,11 @@ return_viewer = [
         sg.Output(size=(50,4), key='-OUTPUT-')
     ],
     [
-        sg.Button("Exit")
+        sg.Push(), sg.Button("Exit")
     ]
 ]
 
 layout = [
-    [
-        sg.MenuBar(menu_def)
-    ],
     [
         sg.Column(entry_mask),
         sg.VSeperator(),
@@ -47,8 +41,10 @@ layout = [
 
 window = sg.Window("CAD Lite Recommendations", layout)
 
+win2_active = False
 while True:
     event, values = window.read()
+    response_plans = import_response_plans()
     if event == sg.WIN_CLOSED or event == "Exit":
         break
     if event == "Submit":
@@ -60,12 +56,4 @@ while True:
         window['-CALL TYPE-'].update("")
         window['-GRID-'].update("")
         window['-OUTPUT-'].update("")
-    if event == 'View FRLs':
-        layout2 = [
-            [
-                sg.Text("Select the Agency:"),
-                sg.DropDown()
-            ]
-        ]
-        window_2 = sg.Window("Admin Panel", layout2)
 window.close()
