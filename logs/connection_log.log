@@ -175,3 +175,593 @@
 03/31/2022 10:06:25 INFO - Importing station orders
 03/31/2022 10:06:25 INFO - Creating positions
 
+05/11/2022 08:49:26 INFO - Importing station orders
+05/11/2022 08:49:26 INFO - Creating positions
+
+05/11/2022 08:49:35 INFO - Initializing database connection
+05/11/2022 08:49:42 INFO - Verbose connection successful. Status code: 200
+05/11/2022 08:49:42 INFO - Refreshing units
+05/11/2022 09:36:37 INFO - Importing station orders
+05/11/2022 09:36:37 INFO - Creating positions
+
+05/11/2022 09:36:45 INFO - Importing station orders
+05/11/2022 09:36:45 INFO - Creating positions
+
+05/11/2022 09:39:21 INFO - Importing station orders
+05/11/2022 09:39:21 INFO - Creating positions
+
+05/11/2022 09:40:06 INFO - Importing station orders
+05/11/2022 09:40:06 INFO - Creating positions
+
+05/11/2022 09:40:12 INFO - Initializing database connection
+05/11/2022 09:40:22 INFO - Verbose connection successful. Status code: 200
+05/11/2022 09:40:22 INFO - Refreshing units
+05/11/2022 09:41:55 INFO - Importing station orders
+05/11/2022 09:41:55 INFO - Creating positions
+
+05/11/2022 09:42:03 INFO - Initializing database connection
+05/11/2022 09:42:07 INFO - Verbose connection successful. Status code: 200
+05/11/2022 09:42:07 INFO - Refreshing units
+05/11/2022 09:42:25 INFO - Importing station orders
+05/11/2022 09:42:25 INFO - Creating positions
+
+05/11/2022 09:42:31 INFO - Initializing database connection
+05/11/2022 09:42:34 INFO - Verbose connection successful. Status code: 200
+05/11/2022 09:42:34 INFO - Refreshing units
+05/11/2022 09:43:13 INFO - Initializing database connection
+05/11/2022 09:43:17 INFO - Verbose connection successful. Status code: 200
+05/11/2022 09:43:17 INFO - Refreshing units
+05/11/2022 09:44:50 INFO - Importing station orders
+05/11/2022 09:44:50 INFO - Creating positions
+
+05/11/2022 09:44:56 INFO - Initializing database connection
+05/11/2022 09:45:00 INFO - Verbose connection successful. Status code: 200
+05/11/2022 09:45:00 INFO - Refreshing units
+05/11/2022 09:45:21 INFO - Importing station orders
+05/11/2022 09:45:21 INFO - Creating positions
+
+05/11/2022 09:45:26 INFO - Initializing database connection
+05/11/2022 09:45:29 INFO - Verbose connection successful. Status code: 200
+05/11/2022 09:45:29 INFO - Refreshing units
+05/11/2022 09:46:12 INFO - Importing station orders
+05/11/2022 09:46:12 INFO - Creating positions
+
+05/11/2022 09:46:18 INFO - Initializing database connection
+05/11/2022 09:46:22 INFO - Verbose connection successful. Status code: 200
+05/11/2022 09:46:22 INFO - Refreshing units
+05/11/2022 09:46:53 INFO - Importing station orders
+05/11/2022 09:46:53 INFO - Creating positions
+
+05/11/2022 09:49:46 INFO - Importing station orders
+05/11/2022 09:49:46 INFO - Creating positions
+
+05/11/2022 09:50:03 INFO - Initializing database connection
+05/11/2022 09:50:07 INFO - Verbose connection successful. Status code: 200
+05/11/2022 09:50:07 INFO - Refreshing units
+05/11/2022 09:50:17 INFO - Initializing database connection
+05/11/2022 09:50:20 INFO - Verbose connection successful. Status code: 200
+05/11/2022 09:50:20 INFO - Refreshing units
+05/11/2022 09:51:04 INFO - Initializing database connection
+05/11/2022 09:51:09 INFO - Verbose connection successful. Status code: 200
+05/11/2022 09:51:09 INFO - Refreshing units
+05/11/2022 09:52:59 INFO - Importing station orders
+05/11/2022 09:52:59 INFO - Creating positions
+
+05/11/2022 09:53:58 INFO - Importing station orders
+05/11/2022 09:53:58 INFO - Creating positions
+
+05/11/2022 09:54:18 INFO - Importing station orders
+05/11/2022 09:54:18 INFO - Creating positions
+
+05/11/2022 10:15:47 INFO - Importing station orders
+05/11/2022 10:15:47 INFO - Creating positions
+
+05/11/2022 10:16:01 INFO - Initializing database connection
+05/11/2022 10:16:08 INFO - Verbose connection successful. Status code: 200
+05/11/2022 10:16:08 INFO - Refreshing units
+05/11/2022 10:16:59 INFO - Initializing database connection
+05/11/2022 10:17:05 INFO - Verbose connection successful. Status code: 200
+05/11/2022 10:17:05 INFO - Refreshing units
+05/11/2022 10:17:14 INFO - Initializing database connection
+05/11/2022 10:17:17 INFO - Verbose connection successful. Status code: 200
+05/11/2022 10:17:17 INFO - Refreshing units
+05/11/2022 10:17:43 INFO - Initializing database connection
+05/11/2022 10:17:43 ERROR - 
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000023EDE8BD930>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023EDE8BD930>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\create_api_connection.py", line 14, in create_api_connection
+    response = requests.get(url, params=parameters, verify=False)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023EDE8BD930>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+05/11/2022 10:17:43 INFO - Refreshing units
+05/11/2022 10:17:43 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\units.py", line 29, in refresh_units
+    response = connection.json()
+AttributeError: 'NoneType' object has no attribute 'json'
+05/11/2022 10:17:43 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\get_recommendations.py", line 28, in get_recommendations
+    return recommendations(call_type,grid)
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\recommendations.py", line 108, in recommendations
+    for unit in unit_list:
+TypeError: 'NoneType' object is not iterable
+05/11/2022 10:17:43 INFO - Importing offline units
+05/11/2022 10:17:43 INFO - Finished importing offline units
+05/11/2022 10:21:09 INFO - Importing station orders
+05/11/2022 10:21:09 INFO - Creating positions
+
+05/11/2022 10:21:21 INFO - Initializing database connection
+05/11/2022 10:21:21 ERROR - 
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000288DB8F8670>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000288DB8F8670>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\create_api_connection.py", line 14, in create_api_connection
+    response = requests.get(url, params=parameters, verify=False)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000288DB8F8670>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+05/11/2022 10:21:21 INFO - Refreshing units
+05/11/2022 10:21:21 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\units.py", line 29, in refresh_units
+    response = connection.json()
+AttributeError: 'NoneType' object has no attribute 'json'
+05/11/2022 10:21:21 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\get_recommendations.py", line 28, in get_recommendations
+    return recommendations(call_type,grid)
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\recommendations.py", line 76, in recommendations
+    for unit in unit_list:
+TypeError: 'NoneType' object is not iterable
+05/11/2022 10:21:21 INFO - Importing offline units
+05/11/2022 10:21:21 INFO - Finished importing offline units
+05/11/2022 10:22:03 INFO - Importing station orders
+05/11/2022 10:22:03 INFO - Creating positions
+
+05/11/2022 10:22:09 INFO - Initializing database connection
+05/11/2022 10:22:09 ERROR - 
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000021361F0C3A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021361F0C3A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\create_api_connection.py", line 14, in create_api_connection
+    response = requests.get(url, params=parameters, verify=False)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021361F0C3A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+05/11/2022 10:22:09 INFO - Refreshing units
+05/11/2022 10:22:09 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\units.py", line 29, in refresh_units
+    response = connection.json()
+AttributeError: 'NoneType' object has no attribute 'json'
+05/11/2022 10:22:09 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\get_recommendations.py", line 28, in get_recommendations
+    return recommendations(call_type,grid)
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\recommendations.py", line 76, in recommendations
+    for unit in unit_list:
+TypeError: 'NoneType' object is not iterable
+05/11/2022 10:22:09 INFO - Importing offline units
+05/11/2022 10:22:09 INFO - Finished importing offline units
+05/11/2022 10:29:49 INFO - Importing station orders
+05/11/2022 10:29:49 INFO - Creating positions
+
+05/11/2022 10:30:00 INFO - Initializing database connection
+05/11/2022 10:30:00 ERROR - 
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000001B72D278520>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001B72D278520>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\create_api_connection.py", line 14, in create_api_connection
+    response = requests.get(url, params=parameters, verify=False)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001B72D278520>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+05/11/2022 10:30:00 INFO - Refreshing units
+05/11/2022 10:30:00 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\units.py", line 29, in refresh_units
+    response = connection.json()
+AttributeError: 'NoneType' object has no attribute 'json'
+05/11/2022 10:30:00 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\get_recommendations.py", line 28, in get_recommendations
+    return recommendations(call_type,grid)
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\recommendations.py", line 108, in recommendations
+    for unit in unit_list:
+TypeError: 'NoneType' object is not iterable
+05/11/2022 10:30:00 INFO - Importing offline units
+05/11/2022 10:30:00 INFO - Finished importing offline units
+05/11/2022 10:31:33 INFO - Importing station orders
+05/11/2022 10:31:33 INFO - Creating positions
+
+05/11/2022 10:31:38 INFO - Initializing database connection
+05/11/2022 10:31:38 ERROR - 
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000002B6EB1EC6A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002B6EB1EC6A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\create_api_connection.py", line 14, in create_api_connection
+    response = requests.get(url, params=parameters, verify=False)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002B6EB1EC6A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+05/11/2022 10:31:38 INFO - Refreshing units
+05/11/2022 10:31:38 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\units.py", line 29, in refresh_units
+    response = connection.json()
+AttributeError: 'NoneType' object has no attribute 'json'
+05/11/2022 10:31:38 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\get_recommendations.py", line 28, in get_recommendations
+    return recommendations(call_type,grid)
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\recommendations.py", line 108, in recommendations
+    for unit in unit_list:
+TypeError: 'NoneType' object is not iterable
+05/11/2022 10:31:38 INFO - Importing offline units
+05/11/2022 10:31:38 INFO - Finished importing offline units
+05/11/2022 10:32:26 INFO - Importing station orders
+05/11/2022 10:32:26 INFO - Creating positions
+
+05/11/2022 10:32:31 INFO - Initializing database connection
+05/11/2022 10:32:31 ERROR - 
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000011A3951C3A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000011A3951C3A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\create_api_connection.py", line 14, in create_api_connection
+    response = requests.get(url, params=parameters, verify=False)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000011A3951C3A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+05/11/2022 10:32:31 INFO - Refreshing units
+05/11/2022 10:32:31 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\units.py", line 29, in refresh_units
+    response = connection.json()
+AttributeError: 'NoneType' object has no attribute 'json'
+05/11/2022 10:32:31 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\get_recommendations.py", line 28, in get_recommendations
+    return recommendations(call_type,grid)
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\recommendations.py", line 108, in recommendations
+    for unit in unit_list:
+TypeError: 'NoneType' object is not iterable
+05/11/2022 10:32:31 INFO - Importing offline units
+05/11/2022 10:32:31 INFO - Finished importing offline units
+05/11/2022 10:40:24 INFO - Importing station orders
+05/11/2022 10:40:24 INFO - Creating positions
+
+05/11/2022 11:08:25 INFO - Importing station orders
+05/11/2022 11:08:25 INFO - Creating positions
+
+05/11/2022 11:08:39 INFO - Importing station orders
+05/11/2022 11:08:39 INFO - Creating positions
+
+05/11/2022 11:08:45 INFO - Initializing database connection
+05/11/2022 11:08:45 ERROR - 
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000022832CA8370>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022832CA8370>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\create_api_connection.py", line 14, in create_api_connection
+    response = requests.get(url, params=parameters, verify=False)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\cgass\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='s0eh943fzf.execute-api.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /prod/api/units/get-public?organizationId=1&jurisdiction=WA (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022832CA8370>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+05/11/2022 11:08:45 INFO - Refreshing units
+05/11/2022 11:08:45 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\units.py", line 29, in refresh_units
+    response = connection.json()
+AttributeError: 'NoneType' object has no attribute 'json'
+05/11/2022 11:08:45 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\get_recommendations.py", line 28, in get_recommendations
+    return recommendations(call_type,grid)
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\recommendations.py", line 108, in recommendations
+    for unit in unit_list:
+TypeError: 'NoneType' object is not iterable
+05/11/2022 11:08:45 INFO - Importing offline units
+05/11/2022 11:08:45 INFO - Finished importing offline units

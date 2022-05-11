@@ -1,18 +1,17 @@
 #Create GUI for CAD Lite Recommendations
 
-from urllib import response
 import PySimpleGUI as sg
 from get_recommendations import get_recommendations
 from import_response_plans import import_response_plans
 
 entry_mask = [
     [
-        sg.Text("Call Type"),
-        sg.In(size=(15,1), key="-CALL TYPE-")
+        sg.Text("Call Type:"),
+        sg.Push(),sg.In(size=(15,1), key="-CALL TYPE-")
     ],
     [
-        sg.Text("Grid       "),
-        sg.In(size=(15,1), key="-GRID-")
+        sg.Text("Grid:"),
+        sg.Push(), sg.In(size=(15,1), key="-GRID-")
     ],
     [
         sg.Button("Submit"), sg.Button("Clear")
@@ -24,7 +23,7 @@ return_viewer = [
         sg.Text('Recommendation:')
     ],
     [
-        sg.Output(size=(50,4), key='-OUTPUT-')
+        sg.Output(size=(50,5), key='-OUTPUT-')
     ],
     [
         sg.Push(), sg.Button("Exit")
@@ -50,10 +49,15 @@ while True:
     if event == "Submit":
         call_type = values["-CALL TYPE-"]
         grid = values["-GRID-"]
+        #print(f'Entered Call Type: {call_type.upper()}\nEntered Grid: {grid.upper()}')
         recommendation = get_recommendations(call_type, grid)
         print(recommendation)
+        window['-CALL TYPE-'].update("")
+        window['-GRID-'].update("")
+        window['-CALL TYPE-'].set_focus()
     if event == "Clear":
         window['-CALL TYPE-'].update("")
         window['-GRID-'].update("")
         window['-OUTPUT-'].update("")
+        window['-CALL TYPE-'].set_focus()
 window.close()

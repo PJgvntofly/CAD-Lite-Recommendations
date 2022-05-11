@@ -1,4 +1,3 @@
-from unicodedata import category
 import requests
 from urllib3.exceptions import InsecureRequestWarning
 from log_config import connection_log
