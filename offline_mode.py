@@ -67,33 +67,35 @@ def offline_recommendations(call_type,grid):
                 for sorted_unit in sorted_unit_list:
                     if list_result == False:
                         if sorted_unit not in result and sorted_unit not in skipped_units:
-                            #print(f"\nCall Type: {call_type} | Request: {unit_type} | Recommendation: {sorted_unit}")
-                            accept = sg.popup_get_text(f"Call Type: {call_type} | Request: {unit_type} | Recommendation: {unit.unit_number}\nAccept recommendation? Enter Y for yes or N to see the next unit. ")
-                            accept = accept.strip().upper()
-                            if accept[0] == 'Y':
-                                result.append(sorted_unit)
-                                cross_staffing_list.extend(cross_staff_dict[sorted_unit])
-                                sorted_unit_log[sorted_unit] = sorted_units
-                                station_rank_log[sorted_unit] = station_rank
-                                i += 1
-                                list_result = True
-                                unit_options = []
-                                unit_rank = {}
-                                sorted_units = {}
-                                sorted_unit_list = []
-                                continue
-                            else:
-                                skipped_units.append(sorted_unit)
-                                cross_staffing_list.extend(cross_staff_dict[sorted_unit])
-                    else:
+                            accept = sg.popup_get_text(f"Call Type: {call_type} | Request: {unit_type} | Recommendation: {sorted_unit}\nAccept recommendation? Enter Y for yes or N to see the next unit. ",title='Offline Mode')
+                            try:
+                                accept = accept.strip().upper()
+                                if accept[0] == 'Y':
+                                    result.append(sorted_unit)
+                                    cross_staffing_list.extend(cross_staff_dict[sorted_unit])
+                                    sorted_unit_log[sorted_unit] = sorted_units
+                                    station_rank_log[sorted_unit] = station_rank
+                                    i += 1
+                                    list_result = True
+                                    unit_options = []
+                                    unit_rank = {}
+                                    sorted_units = {}
+                                    sorted_unit_list = []
+                                    continue
+                                else:
+                                    skipped_units.append(sorted_unit)
+                                    cross_staffing_list.extend(cross_staff_dict[sorted_unit])
+                            except AttributeError as err:
+                                rec_log.error(err)
+                                break
+                    else:   
                         continue                              
             else:
                 for station in rec_station_order:
                     for unit in unit_list:
                         if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and unit.unit_number not in skipped_units  and unit.unit_number not in cross_staffing_list and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                             if list_result == False:
-                                #print(f"\nCall Type: {call_type} | Request: {unit_type} | Recommendation: {unit.unit_number}")
-                                accept = sg.popup_get_text(f"Call Type: {call_type} | Request: {unit_type} | Recommendation: {unit.unit_number}\nAccept recommended unit? Enter Y for yes or N to see the next unit. ")
+                                accept = sg.popup_get_text(f"Call Type: {call_type} | Request: {unit_type} | Recommendation: {unit.unit_number}\nAccept recommended unit? Enter Y for yes or N to see the next unit. ",title='Offline Mode')
                                 try:
                                     accept = accept.strip().upper()
                                     if accept[0] == 'Y':

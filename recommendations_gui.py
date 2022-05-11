@@ -4,6 +4,8 @@ import PySimpleGUI as sg
 from get_recommendations import get_recommendations
 from import_response_plans import import_response_plans
 
+sg.theme('DarkBlack1')
+
 entry_mask = [
     [
         sg.Text("Call Type:"),
@@ -14,7 +16,7 @@ entry_mask = [
         sg.Push(), sg.In(size=(15,1), key="-GRID-")
     ],
     [
-        sg.Button("Submit"), sg.Button("Clear")
+        sg.Button("Submit",bind_return_key=True), sg.Button("Clear")
     ]
 ]
 
@@ -32,13 +34,16 @@ return_viewer = [
 
 layout = [
     [
+        sg.Titlebar(title='CAD Lite Recommendations')
+    ],
+    [
         sg.Column(entry_mask),
         sg.VSeperator(),
         sg.Column(return_viewer)
     ]
 ]
 
-window = sg.Window("CAD Lite Recommendations", layout)
+window = sg.Window("CAD Lite Recommendations", layout,font='Courier 14')
 
 win2_active = False
 while True:
