@@ -45,6 +45,7 @@ layout = [
 
 window = sg.Window("CAD Lite Recommendations", layout,font='Courier 14')
 
+gif = sg.Image(source='loading.gif')
 win2_active = False
 while True:
     event, values = window.read()

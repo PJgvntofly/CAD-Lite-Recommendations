@@ -3,6 +3,7 @@ from urllib3.exceptions import InsecureRequestWarning
 from log_config import connection_log
 import PySimpleGUI as sg
 
+
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
 def create_api_connection(url, organization_id, jurisdiction):
@@ -12,12 +13,12 @@ def create_api_connection(url, organization_id, jurisdiction):
         'jurisdiction':jurisdiction
     }
     while response == None:
-        sg.PopupAnimated(image_source='loading.gif',background_color=None)
         connection_log.info('Attempting API connection')
+        sg.popup_no_buttons(text='Loading...',no_titlebar=True,auto_close=True,auto_close_duration=3,)
         try:
             response = requests.get(url, params=parameters, verify=False)
             connection_log.info(f"Verbose connection successful. Status code: {response.status_code}")
-            sg.PopupAnimated(image_source=None)
+            sg.popup_animated(image_source=None)
             print("CAD Lite Database connection successful")
         except:
             connection_log.exception("")
