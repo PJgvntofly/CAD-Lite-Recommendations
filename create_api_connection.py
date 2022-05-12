@@ -12,19 +12,18 @@ def create_api_connection(url, organization_id, jurisdiction):
         'organizationId':organization_id,
         'jurisdiction':jurisdiction
     }
-    while response == None:
-        connection_log.info('Attempting API connection')
-        sg.popup_no_buttons(text='Loading...',no_titlebar=True,auto_close=True,auto_close_duration=3,)
-        try:
-            response = requests.get(url, params=parameters, verify=False)
-            connection_log.info(f"Verbose connection successful. Status code: {response.status_code}")
-            sg.popup_animated(image_source=None)
-            print("CAD Lite Database connection successful")
-        except:
-            connection_log.exception("")
-            sg.PopupAnimated(image_source=None)
-            print(f"Error connecting to CAD Lite Database")
-            response = False
+    connection_log.info('Attempting API connection')
+    sg.popup_no_buttons('Loading...',no_titlebar=True,non_blocking=True)
+    try:
+        response = requests.get(url, params=parameters, verify=False)
+        connection_log.info(f"Verbose connection successful. Status code: {response.status_code}")
+        sg.popup_no_buttons(auto_close_duration=0,auto_close=True)
+        print("CAD Lite Database connection successful")
+    except:
+        connection_log.exception("")
+        sg.PopupAnimated(image_source=None)
+        print(f"Error connecting to CAD Lite Database")
+        response = False
     return response
 
 def silent_api_connection(url, organization_id, jurisdiction, verify=False):
