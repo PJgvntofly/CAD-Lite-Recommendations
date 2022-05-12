@@ -5,6 +5,7 @@ from get_recommendations import get_recommendations
 from import_response_plans import import_response_plans
 
 sg.theme('DarkBlack1')
+sg.set_global_icon('SNO911-Logo.ico')
 
 entry_mask = [
     [
