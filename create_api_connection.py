@@ -13,6 +13,7 @@ def create_api_connection(url, organization_id, jurisdiction):
     }
     while response == None:
         sg.PopupAnimated(image_source='loading.gif',background_color=None)
+        connection_log.info('Attempting API connection')
         try:
             response = requests.get(url, params=parameters, verify=False)
             connection_log.info(f"Verbose connection successful. Status code: {response.status_code}")

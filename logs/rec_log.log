@@ -607,3 +607,6 @@ Unit Ranks: {}
 Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
 Cross Staffing: []
 
+05/11/2022 17:37:17 INFO - 
+Starting new recommendation cycle
+05/11/2022 17:37:17 INFO - Beginning recommendations

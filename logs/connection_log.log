@@ -1761,3 +1761,8 @@ Traceback (most recent call last):
 TypeError: 'NoneType' object is not iterable
 05/11/2022 15:39:47 INFO - Importing offline units
 05/11/2022 15:39:47 INFO - Finished importing offline units
+05/11/2022 17:37:11 INFO - Importing station orders
+05/11/2022 17:37:11 INFO - Creating positions
+
+05/11/2022 17:37:17 INFO - Initializing database connection
+05/11/2022 17:37:17 INFO - Attempting API connection
