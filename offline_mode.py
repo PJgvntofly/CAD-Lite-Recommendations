@@ -67,7 +67,7 @@ def offline_recommendations(call_type,grid):
                 for sorted_unit in sorted_unit_list:
                     if list_result == False:
                         if sorted_unit not in result and sorted_unit not in skipped_units:
-                            accept = sg.popup_get_text(f"Call Type: {call_type} | Request: {unit_type} | Recommendation: {sorted_unit}\nAccept recommendation? Enter Y for yes or N to see the next unit. ",title='Offline Mode')
+                            accept = sg.popup_get_text(f"Call Type: {call_type} | Request: {unit_type} | Recommendation: {sorted_unit}\nAccept recommended unit?\nEnter Y for yes or N to see the next unit. ",title='Offline Mode')
                             try:
                                 accept = accept.strip().upper()
                                 if accept[0] == 'Y':
@@ -95,7 +95,7 @@ def offline_recommendations(call_type,grid):
                     for unit in unit_list:
                         if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and unit.unit_number not in skipped_units  and unit.unit_number not in cross_staffing_list and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                             if list_result == False:
-                                accept = sg.popup_get_text(f"Call Type: {call_type} | Request: {unit_type} | Recommendation: {unit.unit_number}\nAccept recommended unit? Enter Y for yes or N to see the next unit. ",title='Offline Mode')
+                                accept = sg.popup_get_text(f"Call Type: {call_type} | Request: {unit_type} | Recommendation: {unit.unit_number}\nAccept recommended unit?\nEnter Y for yes or N to see the next unit. ",title='Offline Mode')
                                 try:
                                     accept = accept.strip().upper()
                                     if accept[0] == 'Y':

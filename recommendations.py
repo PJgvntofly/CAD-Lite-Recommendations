@@ -18,7 +18,7 @@ def find_hydrant(call, radio_position):
         no_hydrant_response = False
         no_hydrant = ""
         while no_hydrant_response is False:
-            no_hydrant = sg.popup_get_text('Is this call in a No Hydrant area? Enter Y for yes and N for no:')
+            no_hydrant = sg.popup_get_text('Is this call in a No Hydrant area? Enter Y for yes and N for no:',title='No Hydrant Area')
             rec_log.debug(f"No Hydrant input: {no_hydrant}")
             no_hydrant = no_hydrant.strip().upper()
             no_hydrant = no_hydrant[0]

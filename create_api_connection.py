@@ -13,11 +13,10 @@ def create_api_connection(url, organization_id, jurisdiction):
         'jurisdiction':jurisdiction
     }
     connection_log.info('Attempting API connection')
-    sg.popup_no_buttons('Loading...',no_titlebar=True,non_blocking=True)
+    sg.popup_no_buttons('CAD Lite Recommendations Loading...',no_titlebar=True,non_blocking=True,auto_close_duration=4, auto_close=True)
     try:
         response = requests.get(url, params=parameters, verify=False)
         connection_log.info(f"Verbose connection successful. Status code: {response.status_code}")
-        sg.popup_no_buttons(auto_close_duration=0,auto_close=True)
         print("CAD Lite Database connection successful")
     except:
         connection_log.exception("")

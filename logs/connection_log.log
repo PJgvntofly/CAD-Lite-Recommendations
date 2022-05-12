@@ -1851,3 +1851,31 @@ TypeError: popup_no_buttons() got an unexpected keyword argument 'text'
 05/11/2022 20:21:17 INFO - Attempting API connection
 05/11/2022 20:21:21 INFO - Verbose connection successful. Status code: 200
 05/11/2022 20:21:21 INFO - Refreshing units
+05/12/2022 14:38:54 INFO - Importing station orders
+05/12/2022 14:38:54 INFO - Creating positions
+
+05/12/2022 14:39:18 INFO - Importing station orders
+05/12/2022 14:39:18 INFO - Creating positions
+
+05/12/2022 14:40:11 INFO - Importing station orders
+05/12/2022 14:40:11 INFO - Creating positions
+
+05/12/2022 14:41:16 INFO - Importing station orders
+05/12/2022 14:41:16 INFO - Creating positions
+
+05/12/2022 14:43:26 INFO - Importing station orders
+05/12/2022 14:43:26 INFO - Creating positions
+
+05/12/2022 14:43:36 INFO - Initializing database connection
+05/12/2022 14:43:36 INFO - Attempting API connection
+05/12/2022 14:43:44 INFO - Verbose connection successful. Status code: 200
+05/12/2022 14:43:44 INFO - Refreshing units
+05/12/2022 14:45:06 INFO - Importing station orders
+05/12/2022 14:45:06 INFO - Creating positions
+
+05/12/2022 14:45:35 INFO - Importing station orders
+05/12/2022 14:45:35 INFO - Creating positions
+
+05/12/2022 14:48:47 INFO - Importing station orders
+05/12/2022 14:48:47 INFO - Creating positions
+
