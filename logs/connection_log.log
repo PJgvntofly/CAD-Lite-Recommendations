@@ -1766,3 +1766,88 @@ TypeError: 'NoneType' object is not iterable
 
 05/11/2022 17:37:17 INFO - Initializing database connection
 05/11/2022 17:37:17 INFO - Attempting API connection
+05/11/2022 20:10:03 INFO - Importing station orders
+05/11/2022 20:10:03 INFO - Creating positions
+
+05/11/2022 20:10:08 INFO - Initializing database connection
+05/11/2022 20:10:08 INFO - Attempting API connection
+05/11/2022 20:10:08 ERROR - 
+Traceback (most recent call last):
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\get_recommendations.py", line 28, in get_recommendations
+    return recommendations(call_type,grid)
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\recommendations.py", line 57, in recommendations
+    unit_list = units.refresh_units()
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\units.py", line 26, in refresh_units
+    connection = create_connection()
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\units.py", line 17, in create_connection
+    connection = create_api_connection.create_api_connection('https://s0eh943fzf.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public', 1, 'WA')
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\create_api_connection.py", line 17, in create_api_connection
+    sg.popup_no_buttons(text='Loading...',no_titlebar=True,auto_close=True,auto_close_duration=3,)
+TypeError: popup_no_buttons() got an unexpected keyword argument 'text'
+05/11/2022 20:10:08 INFO - Importing offline units
+05/11/2022 20:10:08 INFO - Finished importing offline units
+05/11/2022 20:11:36 INFO - Importing station orders
+05/11/2022 20:11:36 INFO - Creating positions
+
+05/11/2022 20:11:40 INFO - Initializing database connection
+05/11/2022 20:11:40 INFO - Attempting API connection
+05/11/2022 20:11:40 ERROR - 
+Traceback (most recent call last):
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\get_recommendations.py", line 28, in get_recommendations
+    return recommendations(call_type,grid)
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\recommendations.py", line 57, in recommendations
+    unit_list = units.refresh_units()
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\units.py", line 26, in refresh_units
+    connection = create_connection()
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\units.py", line 17, in create_connection
+    connection = create_api_connection.create_api_connection('https://s0eh943fzf.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public', 1, 'WA')
+  File "c:\Users\cgass\Documents\GitHub\CAD Lite Recommendations\create_api_connection.py", line 16, in create_api_connection
+    sg.popup_no_buttons(text='Loading...',no_titlebar=True,auto_close=True,auto_close_duration=3,)
+TypeError: popup_no_buttons() got an unexpected keyword argument 'text'
+05/11/2022 20:11:40 INFO - Importing offline units
+05/11/2022 20:11:40 INFO - Finished importing offline units
+05/11/2022 20:13:50 INFO - Importing station orders
+05/11/2022 20:13:50 INFO - Creating positions
+
+05/11/2022 20:13:54 INFO - Initializing database connection
+05/11/2022 20:13:54 INFO - Attempting API connection
+05/11/2022 20:14:04 INFO - Verbose connection successful. Status code: 200
+05/11/2022 20:14:04 INFO - Refreshing units
+05/11/2022 20:14:17 INFO - Initializing database connection
+05/11/2022 20:14:17 INFO - Attempting API connection
+05/11/2022 20:14:24 INFO - Verbose connection successful. Status code: 200
+05/11/2022 20:14:24 INFO - Refreshing units
+05/11/2022 20:14:56 INFO - Importing station orders
+05/11/2022 20:14:56 INFO - Creating positions
+
+05/11/2022 20:15:01 INFO - Initializing database connection
+05/11/2022 20:15:01 INFO - Attempting API connection
+05/11/2022 20:15:12 INFO - Verbose connection successful. Status code: 200
+05/11/2022 20:15:12 INFO - Refreshing units
+05/11/2022 20:15:19 INFO - Initializing database connection
+05/11/2022 20:15:19 INFO - Attempting API connection
+05/11/2022 20:15:27 INFO - Verbose connection successful. Status code: 200
+05/11/2022 20:15:27 INFO - Refreshing units
+05/11/2022 20:18:01 INFO - Importing station orders
+05/11/2022 20:18:01 INFO - Creating positions
+
+05/11/2022 20:18:06 INFO - Initializing database connection
+05/11/2022 20:18:06 INFO - Attempting API connection
+05/11/2022 20:18:16 INFO - Verbose connection successful. Status code: 200
+05/11/2022 20:18:16 INFO - Refreshing units
+05/11/2022 20:19:39 INFO - Importing station orders
+05/11/2022 20:19:39 INFO - Creating positions
+
+05/11/2022 20:19:43 INFO - Initializing database connection
+05/11/2022 20:19:43 INFO - Attempting API connection
+05/11/2022 20:20:59 INFO - Importing station orders
+05/11/2022 20:20:59 INFO - Creating positions
+
+05/11/2022 20:21:03 INFO - Initializing database connection
+05/11/2022 20:21:03 INFO - Attempting API connection
+05/11/2022 20:21:07 INFO - Verbose connection successful. Status code: 200
+05/11/2022 20:21:07 INFO - Refreshing units
+05/11/2022 20:21:17 INFO - Initializing database connection
+05/11/2022 20:21:17 INFO - Attempting API connection
+05/11/2022 20:21:21 INFO - Verbose connection successful. Status code: 200
+05/11/2022 20:21:21 INFO - Refreshing units
