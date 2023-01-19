@@ -1,12 +1,13 @@
 from multiprocessing.connection import wait
 from recommendations import get_radio, recommendations
 import offline_mode
-from response_plans import TAC_1
+from import_response_plans import import_response_plans
 from log_config import connection_log
 from log_config import rec_log
 
 def get_recommendations(call_type, grid):
     rec_log.info("\nStarting new recommendation cycle")
+    response_plans = import_response_plans()
     try:
         #call_type = input("Enter the call type:")
         rec_log.debug(f"Input Call Type: {call_type}")
@@ -23,7 +24,7 @@ def get_recommendations(call_type, grid):
     except KeyboardInterrupt:
         rec_log.error('User pressed ctrl+c')
     if get_radio(grid):
-        if call_type in TAC_1.keys():
+        if call_type in response_plans['SNO911']['TAC-1']:
             try:
                 return recommendations(call_type,grid)
             except Exception:
