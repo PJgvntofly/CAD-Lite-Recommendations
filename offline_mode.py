@@ -1,7 +1,11 @@
+from import_response_plans import import_response_plans
 import recommendations
 import units
 from datetime import datetime
 from log_config import rec_log
+import PySimpleGUI as sg
+
+frls = import_response_plans()
 
 def offline_recommendations(call_type,grid):
     rec_log.info("Beginning offline recommendations")
@@ -34,7 +38,11 @@ def offline_recommendations(call_type,grid):
     if radio_position == 'TAC_3':
         radio_position = recommendations.TAC_3
     call_type = recommendations.find_hydrant(call_type, radio_position)
-    response_plan = radio_position[call_type]
+    agency = 'SNO911'
+    if grid in frls[agency].keys() and call_type in frls[agency][grid].keys():
+        response_plan = frls[agency][grid][call_type]
+    else:
+        response_plan = frls[agency][radio_position][call_type]
     rec_station_order = recommendations.station_orders[grid]
     if i <= len(response_plan):
         for unit_type in response_plan:
@@ -59,43 +67,48 @@ def offline_recommendations(call_type,grid):
                 for sorted_unit in sorted_unit_list:
                     if list_result == False:
                         if sorted_unit not in result and sorted_unit not in skipped_units:
-                            print(f"\nCall Type: {call_type} | Request: {unit_type} | Recommendation: {sorted_unit}")
-                            accept = input("Accept recommendation? Enter Y for yes or N to see the next unit. ")
-                            accept = accept.strip().upper()
-                            if accept[0] == 'Y':
-                                result.append(sorted_unit)
-                                cross_staffing_list.extend(cross_staff_dict[sorted_unit])
-                                sorted_unit_log[sorted_unit] = sorted_units
-                                station_rank_log[sorted_unit] = station_rank
-                                i += 1
-                                list_result = True
-                                options = []
-                                unit_options = []
-                                unit_rank = {}
-                                sorted_units = {}
-                                sorted_unit_list = []
-                                continue
-                            else:
-                                skipped_units.append(sorted_unit)
-                                cross_staffing_list.extend(cross_staff_dict[sorted_unit])
-                    else:
+                            accept = sg.popup_get_text(f"Call Type: {call_type} | Request: {unit_type} | Recommendation: {sorted_unit}\nAccept recommended unit?\nEnter Y for yes or N to see the next unit. ",title='Offline Mode')
+                            try:
+                                accept = accept.strip().upper()
+                                if accept[0] == 'Y':
+                                    result.append(sorted_unit)
+                                    cross_staffing_list.extend(cross_staff_dict[sorted_unit])
+                                    sorted_unit_log[sorted_unit] = sorted_units
+                                    station_rank_log[sorted_unit] = station_rank
+                                    i += 1
+                                    list_result = True
+                                    unit_options = []
+                                    unit_rank = {}
+                                    sorted_units = {}
+                                    sorted_unit_list = []
+                                    continue
+                                else:
+                                    skipped_units.append(sorted_unit)
+                                    cross_staffing_list.extend(cross_staff_dict[sorted_unit])
+                            except AttributeError as err:
+                                rec_log.error(err)
+                                break
+                    else:   
                         continue                              
             else:
                 for station in rec_station_order:
                     for unit in unit_list:
                         if unit.unit_type == unit_type and unit.unit_station == station and unit.unit_number not in result and unit.unit_number not in skipped_units  and unit.unit_number not in cross_staffing_list and i < len(response_plan) and unit.unit_status in ['Available', 'AIQ']:
                             if list_result == False:
-                                print(f"\nCall Type: {call_type} | Request: {unit_type} | Recommendation: {unit.unit_number}")
-                                accept = input("Accept recommended unit? Enter Y for yes or N to see the next unit. ")
-                                accept = accept.strip().upper()
-                                if accept[0] == 'Y':
-                                    result.append(unit.unit_number)
-                                    cross_staffing_list.extend(unit.cross_staffing)
-                                    i += 1
-                                    list_result = True
-                                    continue
-                                else:
-                                    skipped_units.append(unit.unit_number)
+                                accept = sg.popup_get_text(f"Call Type: {call_type} | Request: {unit_type} | Recommendation: {unit.unit_number}\nAccept recommended unit?\nEnter Y for yes or N to see the next unit. ",title='Offline Mode')
+                                try:
+                                    accept = accept.strip().upper()
+                                    if accept[0] == 'Y':
+                                        result.append(unit.unit_number)
+                                        cross_staffing_list.extend(unit.cross_staffing)
+                                        i += 1
+                                        list_result = True
+                                        continue
+                                    else:
+                                        skipped_units.append(unit.unit_number)
+                                except AttributeError as err:
+                                    rec_log.exception(err)
+                                    break
     else:
         return result
     rec_log.info(f'OFFLINE MODE\nTime: {str(datetime.now())}\nCall Type: {call_type} Grid: {grid} Recommendation: {result}\nResponse Plan: {response_plan}\n Skipped Units: {skipped_units}\nUnit Ranks: {sorted_unit_log}\nStation Ranks: {station_rank}\nCross Staffing: {cross_staffing_list}\n')

@@ -1,6 +1,10 @@
 from asyncio import format_helpers
 import logging
 import logging.config
+import os
+
+if not os.path.exists('./logs'):
+    os.makedirs('./logs')
 
 def configure_logger(name):
     logging.config.dictConfig({

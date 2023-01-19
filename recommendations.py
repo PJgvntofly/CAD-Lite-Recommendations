@@ -1,10 +1,12 @@
+import PySimpleGUI as sg
 import units
 import station_order
 from log_config import rec_log, connection_log
-from response_plans import TAC_1, TAC_3, TAC_5, TAC_7
+from import_response_plans import import_response_plans
 
 station_orders = station_order.create_station_order()
 position = station_order.create_positions(station_orders)
+frls = import_response_plans()
 
 def get_radio(val):
     for key, values in position.items():
@@ -12,16 +14,22 @@ def get_radio(val):
             return key
 
 def find_hydrant(call, radio_position):
-    if radio_position in [TAC_3, TAC_5] and call in ['FCC', 'FRC']:
+    if radio_position in ['TAC-3', 'TAC-5'] and call in ['FCC', 'FRC']:
+        no_hydrant_response = False
         no_hydrant = ""
-        no_hydrant = input('Is this call in a No Hydrant area? Enter Y for yes and N for no:')
-        rec_log.debug(f"No Hydrant input: {no_hydrant}")
-        no_hydrant = no_hydrant.strip().upper()
-        no_hydrant = no_hydrant[0]
-        if no_hydrant == "Y":
-            return call + " - No Hydrant"
-        if no_hydrant not in ['Y', 'N']:
-            print('Please enter only Y or N \nIf call is in a No Hydrant area, please enter the information again.')
+        while no_hydrant_response is False:
+            no_hydrant = sg.popup_get_text('Is this call in a No Hydrant area? Enter Y for yes and N for no:',title='No Hydrant Area')
+            rec_log.debug(f"No Hydrant input: {no_hydrant}")
+            no_hydrant = no_hydrant.strip().upper()
+            no_hydrant = no_hydrant[0]
+            if no_hydrant == "Y":
+                no_hydrant_response = True
+                return call + " - No Hydrant"
+            if no_hydrant == 'N':
+                return call
+            if no_hydrant not in ['Y', 'N']:
+                sg.popup('Please enter only Y or N')
+                continue
     return call
 
 def recommendations(call_type,grid):
@@ -47,18 +55,15 @@ def recommendations(call_type,grid):
     radio_position = get_radio(grid)
     connection_log.info('Initializing database connection')
     unit_list = units.refresh_units()
-    if radio_position == 'TAC_1':
-        radio_position = TAC_1
-    if radio_position == 'TAC_7':
-        radio_position = TAC_7
-    if radio_position == 'TAC_5':
-        radio_position = TAC_5
-    if radio_position == 'TAC_3':
-        radio_position = TAC_3
-    elif radio_position == None:
+    if radio_position == None:
         return print("Quadrant not supported")
     call_type = find_hydrant(call_type, radio_position)
-    response_plan = radio_position[call_type]
+    if grid in station_orders:
+        agency = 'SNO911'
+    if grid in frls[agency].keys() and call_type in frls[agency][grid].keys():
+        response_plan = frls[agency][grid][call_type]
+    else:
+        response_plan = frls[agency][radio_position][call_type]
     rec_station_order = station_orders[grid]
     for station in rec_station_order:
         station_rank[station] = 1 + len(station_rank)
