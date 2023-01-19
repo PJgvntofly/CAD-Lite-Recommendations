@@ -31,8 +31,8 @@ def offline_recommendations(call_type,grid):
     unit_list = units.import_units()
     if radio_position == 'TAC_1':
         radio_position = recommendations.TAC_1
-    if radio_position == 'TAC_7':
-        radio_position = recommendations.TAC_7
+    if radio_position == 'TAC_2':
+        radio_position = recommendations.TAC_2
     if radio_position == 'TAC_5':
         radio_position = recommendations.TAC_5
     if radio_position == 'TAC_3':
