@@ -721,3 +721,256 @@ Unit Ranks: {'A2': [('A2', 1), ('E2', 1), ('A1', 3), ('E1', 3), ('L1', 3), ('E5'
 Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
 Cross Staffing: []
 
+01/19/2023 08:44:47 INFO - 
+Starting new recommendation cycle
+01/19/2023 08:44:47 WARNING - Invalid call type entered: MED1
+01/19/2023 08:50:04 INFO - 
+Starting new recommendation cycle
+01/19/2023 08:50:04 WARNING - Invalid call type entered: MED1
+01/19/2023 08:52:57 INFO - 
+Starting new recommendation cycle
+01/19/2023 08:52:57 WARNING - Invalid call type entered: MED
+01/19/2023 08:53:10 INFO - 
+Starting new recommendation cycle
+01/19/2023 08:53:10 INFO - Beginning recommendations
+01/19/2023 08:53:17 INFO - Beginning offline recommendations
+01/19/2023 08:55:12 INFO - 
+Starting new recommendation cycle
+01/19/2023 08:55:12 INFO - Beginning recommendations
+01/19/2023 08:55:18 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/19/2023 08:55:25 INFO - 
+Starting new recommendation cycle
+01/19/2023 08:55:25 INFO - Beginning recommendations
+01/19/2023 08:55:29 INFO - Recommendations complete
+Call Type: MED2 Grid: BA0001 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/19/2023 08:55:45 INFO - 
+Starting new recommendation cycle
+01/19/2023 08:55:45 INFO - Beginning recommendations
+01/19/2023 08:55:49 INFO - Recommendations complete
+Call Type: MED3 Grid: BA0001 Recommendation: ['A2']
+Response Plan: [['Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'A2': [('A2', 1), ('E2', 1), ('A1', 3), ('L1', 3), ('E1', 3), ('L5', 4), ('E5', 4), ('E4', 5), ('A6', 6), ('E6', 6), ('E7', 7), ('A61', 8), ('E61', 8), ('E63', 9)]}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/19/2023 08:56:07 INFO - 
+Starting new recommendation cycle
+01/19/2023 08:56:07 INFO - Beginning recommendations
+01/19/2023 08:56:10 INFO - Recommendations complete
+Call Type: BLS1 Grid: BA0001 Recommendation: ['A2']
+Response Plan: [['Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'A2': [('A2', 1), ('E2', 1), ('A1', 3), ('L1', 3), ('E1', 3), ('L5', 4), ('E5', 4), ('E4', 5), ('A6', 6), ('E6', 6), ('E7', 7), ('A61', 8), ('E61', 8), ('E63', 9)]}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/19/2023 08:56:21 INFO - 
+Starting new recommendation cycle
+01/19/2023 08:56:21 INFO - Beginning recommendations
+01/19/2023 08:56:25 INFO - Recommendations complete
+Call Type: BLS2 Grid: BA0001 Recommendation: ['A2']
+Response Plan: [['Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'A2': [('A2', 1), ('E2', 1), ('A1', 3), ('L1', 3), ('E1', 3), ('L5', 4), ('E5', 4), ('E4', 5), ('A6', 6), ('E6', 6), ('E7', 7), ('A61', 8), ('E61', 8), ('E63', 9)]}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/19/2023 08:56:36 INFO - 
+Starting new recommendation cycle
+01/19/2023 08:56:36 INFO - Beginning recommendations
+01/19/2023 08:56:39 INFO - Recommendations complete
+Call Type: BLS3 Grid: BA0001 Recommendation: ['A2']
+Response Plan: [['Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'A2': [('A2', 1), ('E2', 1), ('A1', 3), ('L1', 3), ('E1', 3), ('L5', 4), ('E5', 4), ('E4', 5), ('A6', 6), ('E6', 6), ('E7', 7), ('A61', 8), ('E61', 8), ('E63', 9)]}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/19/2023 09:01:39 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:01:39 INFO - Beginning recommendations
+01/19/2023 09:01:44 INFO - Recommendations complete
+Call Type: MED1 Grid: MF2215 Recommendation: ['M63', 'A62']
+Response Plan: ['Medic Unit', ['Engine', 'Aid Unit']]
+Unit Ranks: {'A62': [('A62', 1), ('A62A', 1), ('E63', 2), ('A61', 3), ('E61', 3), ('A68', 4), ('E68', 4), ('A47', 5), ('A66', 7), ('E66', 7), ('A2', 8), ('E2', 8), ('A65', 9), ('E65', 9), ('A90', 10), ('E90', 10), ('E46', 11), ('A1', 12), ('E1', 12), ('E5', 17), ('E43', 18), ('A6', 19), ('E6', 19), ('E11', 20), ('E99', 21), ('A81', 22), ('E4', 23), ('A97', 26), ('E97', 26), ('E12', 29)]}
+Station Ranks: {'STA 62': 1, 'STA 63': 2, 'STA 61': 3, 'STA 68': 4, 'STA 48': 5, 'STA 47': 6, 'STA 66': 7, 'STA 2': 8, 'STA 65': 9, 'STA 90': 10, 'STA 46': 11, 'STA 1': 12, 'STA 86': 13, 'STA 60': 14, 'STA 96': 15, 'STA 82': 16, 'STA 5': 17, 'STA 43': 18, 'STA 6': 19, 'STA 11': 20, 'STA 99': 21, 'STA 81': 22, 'STA 4': 23, 'STA 49': 24, 'STA 87': 25, 'STA 97': 26, 'STA 69': 27, 'STA 40': 28, 'STA 12': 29}
+Cross Staffing: []
+
+01/19/2023 09:01:51 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:01:51 INFO - Beginning recommendations
+01/19/2023 09:01:56 INFO - Recommendations complete
+Call Type: MED2 Grid: MF2215 Recommendation: ['M63', 'A62']
+Response Plan: ['Medic Unit', ['Engine', 'Aid Unit']]
+Unit Ranks: {'A62': [('A62', 1), ('A62A', 1), ('E63', 2), ('A61', 3), ('E61', 3), ('A68', 4), ('E68', 4), ('A47', 5), ('A66', 7), ('E66', 7), ('A2', 8), ('E2', 8), ('A65', 9), ('E65', 9), ('A90', 10), ('E90', 10), ('E46', 11), ('A1', 12), ('E1', 12), ('E5', 17), ('E43', 18), ('A6', 19), ('E6', 19), ('E11', 20), ('E99', 21), ('A81', 22), ('E4', 23), ('A97', 26), ('E97', 26), ('E12', 29)]}
+Station Ranks: {'STA 62': 1, 'STA 63': 2, 'STA 61': 3, 'STA 68': 4, 'STA 48': 5, 'STA 47': 6, 'STA 66': 7, 'STA 2': 8, 'STA 65': 9, 'STA 90': 10, 'STA 46': 11, 'STA 1': 12, 'STA 86': 13, 'STA 60': 14, 'STA 96': 15, 'STA 82': 16, 'STA 5': 17, 'STA 43': 18, 'STA 6': 19, 'STA 11': 20, 'STA 99': 21, 'STA 81': 22, 'STA 4': 23, 'STA 49': 24, 'STA 87': 25, 'STA 97': 26, 'STA 69': 27, 'STA 40': 28, 'STA 12': 29}
+Cross Staffing: []
+
+01/19/2023 09:02:02 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:02:02 INFO - Beginning recommendations
+01/19/2023 09:02:06 INFO - Recommendations complete
+Call Type: MED3 Grid: MF2215 Recommendation: ['A62']
+Response Plan: ['Aid Unit']
+Unit Ranks: {}
+Station Ranks: {'STA 62': 1, 'STA 63': 2, 'STA 61': 3, 'STA 68': 4, 'STA 48': 5, 'STA 47': 6, 'STA 66': 7, 'STA 2': 8, 'STA 65': 9, 'STA 90': 10, 'STA 46': 11, 'STA 1': 12, 'STA 86': 13, 'STA 60': 14, 'STA 96': 15, 'STA 82': 16, 'STA 5': 17, 'STA 43': 18, 'STA 6': 19, 'STA 11': 20, 'STA 99': 21, 'STA 81': 22, 'STA 4': 23, 'STA 49': 24, 'STA 87': 25, 'STA 97': 26, 'STA 69': 27, 'STA 40': 28, 'STA 12': 29}
+Cross Staffing: []
+
+01/19/2023 09:02:14 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:02:14 INFO - Beginning recommendations
+01/19/2023 09:02:17 INFO - Recommendations complete
+Call Type: BLS1 Grid: MF2215 Recommendation: ['A62']
+Response Plan: ['Aid Unit']
+Unit Ranks: {}
+Station Ranks: {'STA 62': 1, 'STA 63': 2, 'STA 61': 3, 'STA 68': 4, 'STA 48': 5, 'STA 47': 6, 'STA 66': 7, 'STA 2': 8, 'STA 65': 9, 'STA 90': 10, 'STA 46': 11, 'STA 1': 12, 'STA 86': 13, 'STA 60': 14, 'STA 96': 15, 'STA 82': 16, 'STA 5': 17, 'STA 43': 18, 'STA 6': 19, 'STA 11': 20, 'STA 99': 21, 'STA 81': 22, 'STA 4': 23, 'STA 49': 24, 'STA 87': 25, 'STA 97': 26, 'STA 69': 27, 'STA 40': 28, 'STA 12': 29}
+Cross Staffing: []
+
+01/19/2023 09:02:25 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:02:25 INFO - Beginning recommendations
+01/19/2023 09:02:28 INFO - Recommendations complete
+Call Type: BLS2 Grid: MF2215 Recommendation: ['A62']
+Response Plan: ['Aid Unit']
+Unit Ranks: {}
+Station Ranks: {'STA 62': 1, 'STA 63': 2, 'STA 61': 3, 'STA 68': 4, 'STA 48': 5, 'STA 47': 6, 'STA 66': 7, 'STA 2': 8, 'STA 65': 9, 'STA 90': 10, 'STA 46': 11, 'STA 1': 12, 'STA 86': 13, 'STA 60': 14, 'STA 96': 15, 'STA 82': 16, 'STA 5': 17, 'STA 43': 18, 'STA 6': 19, 'STA 11': 20, 'STA 99': 21, 'STA 81': 22, 'STA 4': 23, 'STA 49': 24, 'STA 87': 25, 'STA 97': 26, 'STA 69': 27, 'STA 40': 28, 'STA 12': 29}
+Cross Staffing: []
+
+01/19/2023 09:02:34 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:02:34 INFO - Beginning recommendations
+01/19/2023 09:02:38 INFO - Recommendations complete
+Call Type: BLS3 Grid: MF2215 Recommendation: ['A62']
+Response Plan: ['Aid Unit']
+Unit Ranks: {}
+Station Ranks: {'STA 62': 1, 'STA 63': 2, 'STA 61': 3, 'STA 68': 4, 'STA 48': 5, 'STA 47': 6, 'STA 66': 7, 'STA 2': 8, 'STA 65': 9, 'STA 90': 10, 'STA 46': 11, 'STA 1': 12, 'STA 86': 13, 'STA 60': 14, 'STA 96': 15, 'STA 82': 16, 'STA 5': 17, 'STA 43': 18, 'STA 6': 19, 'STA 11': 20, 'STA 99': 21, 'STA 81': 22, 'STA 4': 23, 'STA 49': 24, 'STA 87': 25, 'STA 97': 26, 'STA 69': 27, 'STA 40': 28, 'STA 12': 29}
+Cross Staffing: []
+
+01/19/2023 09:02:56 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:02:56 INFO - Beginning recommendations
+01/19/2023 09:02:59 INFO - Recommendations complete
+Call Type: MED1 Grid: AO2710 Recommendation: ['M48', 'A94']
+Response Plan: ['Medic Unit', ['Engine', 'Aid Unit', 'Ladder']]
+Unit Ranks: {'A94': [('A94', 1), ('E94', 1), ('A65', 3), ('E65', 3), ('A47', 4), ('A97', 5), ('E97', 5), ('E63', 6), ('E99', 7), ('A90', 9), ('E90', 9), ('E46', 10), ('A68', 11), ('E68', 11), ('A62', 13), ('A62A', 13), ('L62', 13), ('A102', 15), ('E102', 15), ('A81', 16), ('A61', 19), ('E61', 19), ('E43', 20), ('E42', 23), ('A39', 26), ('A39A', 26), ('E39', 26)]}
+Station Ranks: {'STA 94': 1, 'STA 95': 2, 'STA 65': 3, 'STA 48': 4, 'STA 97': 5, 'STA 63': 6, 'STA 99': 7, 'STA 47': 8, 'STA 90': 9, 'STA 46': 10, 'STA 68': 11, 'STA 49': 12, 'STA 62': 13, 'STA 60': 14, 'IC STA 102': 15, 'STA 81': 16, 'STA 87': 17, 'STA 82': 18, 'STA 61': 19, 'STA 43': 20, 'STA 71': 21, 'STA 85': 22, 'STA 42': 23, 'STA 37': 24, 'STA 89': 25, 'STA 39': 26}
+Cross Staffing: ['L48', 'M48', 'A94', 'E94', 'T94', 'AIR94']
+
+01/19/2023 09:03:07 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:03:07 INFO - Beginning recommendations
+01/19/2023 09:03:11 INFO - Recommendations complete
+Call Type: MED2 Grid: AO2710 Recommendation: ['M48', 'A94']
+Response Plan: ['Medic Unit', ['Engine', 'Aid Unit', 'Ladder']]
+Unit Ranks: {'A94': [('A94', 1), ('E94', 1), ('A65', 3), ('E65', 3), ('A47', 4), ('A97', 5), ('E97', 5), ('E63', 6), ('E99', 7), ('A90', 9), ('E90', 9), ('E46', 10), ('A68', 11), ('E68', 11), ('A62', 13), ('A62A', 13), ('L62', 13), ('A102', 15), ('E102', 15), ('A81', 16), ('A61', 19), ('E61', 19), ('E43', 20), ('E42', 23), ('A39', 26), ('A39A', 26), ('E39', 26)]}
+Station Ranks: {'STA 94': 1, 'STA 95': 2, 'STA 65': 3, 'STA 48': 4, 'STA 97': 5, 'STA 63': 6, 'STA 99': 7, 'STA 47': 8, 'STA 90': 9, 'STA 46': 10, 'STA 68': 11, 'STA 49': 12, 'STA 62': 13, 'STA 60': 14, 'IC STA 102': 15, 'STA 81': 16, 'STA 87': 17, 'STA 82': 18, 'STA 61': 19, 'STA 43': 20, 'STA 71': 21, 'STA 85': 22, 'STA 42': 23, 'STA 37': 24, 'STA 89': 25, 'STA 39': 26}
+Cross Staffing: ['L48', 'M48', 'A94', 'E94', 'T94', 'AIR94']
+
+01/19/2023 09:03:20 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:03:20 INFO - Beginning recommendations
+01/19/2023 09:03:24 INFO - Recommendations complete
+Call Type: MED3 Grid: AO2710 Recommendation: ['A94']
+Response Plan: [['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'A94': [('A94', 1), ('E94', 1), ('A65', 3), ('E65', 3), ('A47', 4), ('L48', 4), ('M48', 4), ('A97', 5), ('E97', 5), ('M63', 6), ('E63', 6), ('E99', 7), ('M99', 7), ('A90', 9), ('E90', 9), ('M46', 10), ('E46', 10), ('A68', 11), ('E68', 11), ('A62', 13), ('A62A', 13), ('L62', 13), ('A102', 15), ('M102', 15), ('E102', 15), ('A81', 16), ('A61', 19), ('M61', 19), ('E61', 19), ('M43', 20), ('E43', 20), ('M42', 23), ('E42', 23), ('A39', 26), ('A39A', 26), ('M39', 26), ('E39', 26)]}
+Station Ranks: {'STA 94': 1, 'STA 95': 2, 'STA 65': 3, 'STA 48': 4, 'STA 97': 5, 'STA 63': 6, 'STA 99': 7, 'STA 47': 8, 'STA 90': 9, 'STA 46': 10, 'STA 68': 11, 'STA 49': 12, 'STA 62': 13, 'STA 60': 14, 'IC STA 102': 15, 'STA 81': 16, 'STA 87': 17, 'STA 82': 18, 'STA 61': 19, 'STA 43': 20, 'STA 71': 21, 'STA 85': 22, 'STA 42': 23, 'STA 37': 24, 'STA 89': 25, 'STA 39': 26}
+Cross Staffing: ['A94', 'E94', 'T94', 'AIR94']
+
+01/19/2023 09:03:33 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:03:33 INFO - Beginning recommendations
+01/19/2023 09:03:37 INFO - Recommendations complete
+Call Type: BLS1 Grid: AO2710 Recommendation: ['A94']
+Response Plan: [['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'A94': [('A94', 1), ('E94', 1), ('A65', 3), ('E65', 3), ('A47', 4), ('L48', 4), ('M48', 4), ('A97', 5), ('E97', 5), ('M63', 6), ('E63', 6), ('E99', 7), ('M99', 7), ('A90', 9), ('E90', 9), ('M46', 10), ('E46', 10), ('A68', 11), ('E68', 11), ('A62', 13), ('A62A', 13), ('L62', 13), ('A102', 15), ('M102', 15), ('E102', 15), ('A81', 16), ('A61', 19), ('M61', 19), ('E61', 19), ('M43', 20), ('E43', 20), ('M42', 23), ('E42', 23), ('A39', 26), ('A39A', 26), ('M39', 26), ('E39', 26)]}
+Station Ranks: {'STA 94': 1, 'STA 95': 2, 'STA 65': 3, 'STA 48': 4, 'STA 97': 5, 'STA 63': 6, 'STA 99': 7, 'STA 47': 8, 'STA 90': 9, 'STA 46': 10, 'STA 68': 11, 'STA 49': 12, 'STA 62': 13, 'STA 60': 14, 'IC STA 102': 15, 'STA 81': 16, 'STA 87': 17, 'STA 82': 18, 'STA 61': 19, 'STA 43': 20, 'STA 71': 21, 'STA 85': 22, 'STA 42': 23, 'STA 37': 24, 'STA 89': 25, 'STA 39': 26}
+Cross Staffing: ['A94', 'E94', 'T94', 'AIR94']
+
+01/19/2023 09:03:45 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:03:45 INFO - Beginning recommendations
+01/19/2023 09:03:48 INFO - Recommendations complete
+Call Type: BLS2 Grid: AO2710 Recommendation: ['A94']
+Response Plan: [['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'A94': [('A94', 1), ('E94', 1), ('A65', 3), ('E65', 3), ('A47', 4), ('L48', 4), ('M48', 4), ('A97', 5), ('E97', 5), ('M63', 6), ('E63', 6), ('E99', 7), ('M99', 7), ('A90', 9), ('E90', 9), ('M46', 10), ('E46', 10), ('A68', 11), ('E68', 11), ('A62', 13), ('A62A', 13), ('L62', 13), ('A102', 15), ('M102', 15), ('E102', 15), ('A81', 16), ('A61', 19), ('M61', 19), ('E61', 19), ('M43', 20), ('E43', 20), ('M42', 23), ('E42', 23), ('A39', 26), ('A39A', 26), ('M39', 26), ('E39', 26)]}
+Station Ranks: {'STA 94': 1, 'STA 95': 2, 'STA 65': 3, 'STA 48': 4, 'STA 97': 5, 'STA 63': 6, 'STA 99': 7, 'STA 47': 8, 'STA 90': 9, 'STA 46': 10, 'STA 68': 11, 'STA 49': 12, 'STA 62': 13, 'STA 60': 14, 'IC STA 102': 15, 'STA 81': 16, 'STA 87': 17, 'STA 82': 18, 'STA 61': 19, 'STA 43': 20, 'STA 71': 21, 'STA 85': 22, 'STA 42': 23, 'STA 37': 24, 'STA 89': 25, 'STA 39': 26}
+Cross Staffing: ['A94', 'E94', 'T94', 'AIR94']
+
+01/19/2023 09:03:59 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:03:59 INFO - Beginning recommendations
+01/19/2023 09:04:02 INFO - Recommendations complete
+Call Type: BLS3 Grid: AO2710 Recommendation: ['A94']
+Response Plan: [['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'A94': [('A94', 1), ('E94', 1), ('A65', 3), ('E65', 3), ('A47', 4), ('L48', 4), ('M48', 4), ('A97', 5), ('E97', 5), ('M63', 6), ('E63', 6), ('E99', 7), ('M99', 7), ('A90', 9), ('E90', 9), ('M46', 10), ('E46', 10), ('A68', 11), ('E68', 11), ('A62', 13), ('A62A', 13), ('L62', 13), ('A102', 15), ('M102', 15), ('E102', 15), ('A81', 16), ('A61', 19), ('M61', 19), ('E61', 19), ('M43', 20), ('E43', 20), ('M42', 23), ('E42', 23), ('A39', 26), ('A39A', 26), ('M39', 26), ('E39', 26)]}
+Station Ranks: {'STA 94': 1, 'STA 95': 2, 'STA 65': 3, 'STA 48': 4, 'STA 97': 5, 'STA 63': 6, 'STA 99': 7, 'STA 47': 8, 'STA 90': 9, 'STA 46': 10, 'STA 68': 11, 'STA 49': 12, 'STA 62': 13, 'STA 60': 14, 'IC STA 102': 15, 'STA 81': 16, 'STA 87': 17, 'STA 82': 18, 'STA 61': 19, 'STA 43': 20, 'STA 71': 21, 'STA 85': 22, 'STA 42': 23, 'STA 37': 24, 'STA 89': 25, 'STA 39': 26}
+Cross Staffing: ['A94', 'E94', 'T94', 'AIR94']
+
+01/19/2023 09:04:18 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:04:18 INFO - Beginning recommendations
+01/19/2023 09:04:22 INFO - Recommendations complete
+Call Type: MED1 Grid: DF264 Recommendation: ['M22', 'E18']
+Response Plan: ['Medic Unit', ['Engine', 'Aid Unit', 'Ladder']]
+Unit Ranks: {'E18': [('E18', 2), ('E21', 3), ('A15', 4), ('E15', 4), ('KCE144', 5), ('KCA144', 5), ('KCE145', 6), ('KCL144', 6), ('KCA145', 6), ('E19', 7), ('L14', 10), ('KCE151', 11), ('KCA151', 11), ('E16', 12), ('E23', 13), ('KCE157', 14), ('KCA163', 15), ('E20', 17), ('E7', 18), ('E11', 19), ('E25', 21), ('KCE142', 23), ('KCA142', 23), ('KCE164', 24), ('KCA164', 24), ('KCE165', 25), ('KCL161', 25), ('E17', 26), ('A6', 27), ('E6', 27), ('E12', 28), ('L5', 29), ('E5', 29)]}
+Station Ranks: {'STA 22': 1, 'STA 18': 2, 'STA 21': 3, 'STA 15': 4, 'KC STA 44': 5, 'KC STA 45': 6, 'STA 19': 7, 'STA 76': 8, 'STA 10': 9, 'STA 14': 10, 'KC STA 51': 11, 'STA 16': 12, 'STA 23': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'STA 72': 16, 'STA 20': 17, 'STA 7': 18, 'STA 11': 19, 'STA 73': 20, 'STA 25': 21, 'STA 26': 22, 'KC STA 42': 23, 'KC STA 64': 24, 'KC STA 65': 25, 'STA 17': 26, 'STA 6': 27, 'STA 12': 28, 'STA 5': 29}
+Cross Staffing: ['E22', 'M22', 'E18', 'M18']
+
+01/19/2023 09:04:47 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:04:47 INFO - Beginning recommendations
+01/19/2023 09:04:50 INFO - Recommendations complete
+Call Type: MED2 Grid: DF264 Recommendation: ['M22', 'E18']
+Response Plan: ['Medic Unit', ['Engine', 'Aid Unit', 'Ladder']]
+Unit Ranks: {'E18': [('E18', 2), ('E21', 3), ('A15', 4), ('E15', 4), ('KCE144', 5), ('KCA144', 5), ('KCE145', 6), ('KCL144', 6), ('KCA145', 6), ('E19', 7), ('L14', 10), ('KCE151', 11), ('KCA151', 11), ('E16', 12), ('E23', 13), ('KCE157', 14), ('KCA163', 15), ('E20', 17), ('E7', 18), ('E11', 19), ('E25', 21), ('KCE142', 23), ('KCA142', 23), ('KCE164', 24), ('KCA164', 24), ('KCE165', 25), ('KCL161', 25), ('E17', 26), ('A6', 27), ('E6', 27), ('E12', 28), ('L5', 29), ('E5', 29)]}
+Station Ranks: {'STA 22': 1, 'STA 18': 2, 'STA 21': 3, 'STA 15': 4, 'KC STA 44': 5, 'KC STA 45': 6, 'STA 19': 7, 'STA 76': 8, 'STA 10': 9, 'STA 14': 10, 'KC STA 51': 11, 'STA 16': 12, 'STA 23': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'STA 72': 16, 'STA 20': 17, 'STA 7': 18, 'STA 11': 19, 'STA 73': 20, 'STA 25': 21, 'STA 26': 22, 'KC STA 42': 23, 'KC STA 64': 24, 'KC STA 65': 25, 'STA 17': 26, 'STA 6': 27, 'STA 12': 28, 'STA 5': 29}
+Cross Staffing: ['E22', 'M22', 'E18', 'M18']
+
+01/19/2023 09:05:00 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:05:00 INFO - Beginning recommendations
+01/19/2023 09:05:04 INFO - Recommendations complete
+Call Type: MED3 Grid: DF264 Recommendation: ['M22']
+Response Plan: [['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'M22': [('M22', 1), ('E22', 1), ('M18', 2), ('E18', 2), ('M21', 3), ('E21', 3), ('A15', 4), ('M15', 4), ('E15', 4), ('KCE144', 5), ('KCA144', 5), ('KCE145', 6), ('KCL144', 6), ('KCA145', 6), ('M19', 7), ('E19', 7), ('M10', 9), ('L14', 10), ('KCE151', 11), ('KCA151', 11), ('M16', 12), ('E16', 12), ('E23', 13), ('KCE157', 14), ('KCM157', 14), ('KCM163', 15), ('KCA163', 15), ('M20', 17), ('E20', 17), ('E7', 18), ('M11', 19), ('E11', 19), ('M25', 21), ('E25', 21), ('KCE142', 23), ('KCM142', 23), ('KCA142', 23), ('KCE164', 24), ('KCA164', 24), ('KCE165', 25), ('KCL161', 25), ('M17', 26), ('E17', 26), ('A6', 27), ('M6', 27), ('E6', 27), ('M12', 28), ('E12', 28), ('L5', 29), ('M5', 29), ('E5', 29)]}
+Station Ranks: {'STA 22': 1, 'STA 18': 2, 'STA 21': 3, 'STA 15': 4, 'KC STA 44': 5, 'KC STA 45': 6, 'STA 19': 7, 'STA 76': 8, 'STA 10': 9, 'STA 14': 10, 'KC STA 51': 11, 'STA 16': 12, 'STA 23': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'STA 72': 16, 'STA 20': 17, 'STA 7': 18, 'STA 11': 19, 'STA 73': 20, 'STA 25': 21, 'STA 26': 22, 'KC STA 42': 23, 'KC STA 64': 24, 'KC STA 65': 25, 'STA 17': 26, 'STA 6': 27, 'STA 12': 28, 'STA 5': 29}
+Cross Staffing: ['E22', 'M22']
+
+01/19/2023 09:05:11 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:05:11 INFO - Beginning recommendations
+01/19/2023 09:05:14 INFO - Recommendations complete
+Call Type: BLS1 Grid: DF264 Recommendation: ['M22']
+Response Plan: [['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'M22': [('M22', 1), ('E22', 1), ('M18', 2), ('E18', 2), ('M21', 3), ('E21', 3), ('A15', 4), ('M15', 4), ('E15', 4), ('KCE144', 5), ('KCA144', 5), ('KCE145', 6), ('KCL144', 6), ('KCA145', 6), ('M19', 7), ('E19', 7), ('M10', 9), ('L14', 10), ('KCE151', 11), ('KCA151', 11), ('M16', 12), ('E16', 12), ('E23', 13), ('KCE157', 14), ('KCM157', 14), ('KCM163', 15), ('KCA163', 15), ('M20', 17), ('E20', 17), ('E7', 18), ('M11', 19), ('E11', 19), ('M25', 21), ('E25', 21), ('KCE142', 23), ('KCM142', 23), ('KCA142', 23), ('KCE164', 24), ('KCA164', 24), ('KCE165', 25), ('KCL161', 25), ('M17', 26), ('E17', 26), ('A6', 27), ('M6', 27), ('E6', 27), ('M12', 28), ('E12', 28), ('L5', 29), ('M5', 29), ('E5', 29)]}
+Station Ranks: {'STA 22': 1, 'STA 18': 2, 'STA 21': 3, 'STA 15': 4, 'KC STA 44': 5, 'KC STA 45': 6, 'STA 19': 7, 'STA 76': 8, 'STA 10': 9, 'STA 14': 10, 'KC STA 51': 11, 'STA 16': 12, 'STA 23': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'STA 72': 16, 'STA 20': 17, 'STA 7': 18, 'STA 11': 19, 'STA 73': 20, 'STA 25': 21, 'STA 26': 22, 'KC STA 42': 23, 'KC STA 64': 24, 'KC STA 65': 25, 'STA 17': 26, 'STA 6': 27, 'STA 12': 28, 'STA 5': 29}
+Cross Staffing: ['E22', 'M22']
+
+01/19/2023 09:05:19 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:05:19 INFO - Beginning recommendations
+01/19/2023 09:05:23 INFO - Recommendations complete
+Call Type: BLS2 Grid: DF264 Recommendation: ['M22']
+Response Plan: [['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'M22': [('M22', 1), ('E22', 1), ('M18', 2), ('E18', 2), ('M21', 3), ('E21', 3), ('A15', 4), ('M15', 4), ('E15', 4), ('KCE144', 5), ('KCA144', 5), ('KCE145', 6), ('KCL144', 6), ('KCA145', 6), ('M19', 7), ('E19', 7), ('M10', 9), ('L14', 10), ('KCE151', 11), ('KCA151', 11), ('M16', 12), ('E16', 12), ('E23', 13), ('KCE157', 14), ('KCM157', 14), ('KCM163', 15), ('KCA163', 15), ('M20', 17), ('E20', 17), ('E7', 18), ('M11', 19), ('E11', 19), ('M25', 21), ('E25', 21), ('KCE142', 23), ('KCM142', 23), ('KCA142', 23), ('KCE164', 24), ('KCA164', 24), ('KCE165', 25), ('KCL161', 25), ('M17', 26), ('E17', 26), ('A6', 27), ('M6', 27), ('E6', 27), ('M12', 28), ('E12', 28), ('L5', 29), ('M5', 29), ('E5', 29)]}
+Station Ranks: {'STA 22': 1, 'STA 18': 2, 'STA 21': 3, 'STA 15': 4, 'KC STA 44': 5, 'KC STA 45': 6, 'STA 19': 7, 'STA 76': 8, 'STA 10': 9, 'STA 14': 10, 'KC STA 51': 11, 'STA 16': 12, 'STA 23': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'STA 72': 16, 'STA 20': 17, 'STA 7': 18, 'STA 11': 19, 'STA 73': 20, 'STA 25': 21, 'STA 26': 22, 'KC STA 42': 23, 'KC STA 64': 24, 'KC STA 65': 25, 'STA 17': 26, 'STA 6': 27, 'STA 12': 28, 'STA 5': 29}
+Cross Staffing: ['E22', 'M22']
+
+01/19/2023 09:05:28 INFO - 
+Starting new recommendation cycle
+01/19/2023 09:05:28 INFO - Beginning recommendations
+01/19/2023 09:05:31 INFO - Recommendations complete
+Call Type: BLS3 Grid: DF264 Recommendation: ['M22']
+Response Plan: [['Aid Unit', 'Medic Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'M22': [('M22', 1), ('E22', 1), ('M18', 2), ('E18', 2), ('M21', 3), ('E21', 3), ('A15', 4), ('M15', 4), ('E15', 4), ('KCE144', 5), ('KCA144', 5), ('KCE145', 6), ('KCL144', 6), ('KCA145', 6), ('M19', 7), ('E19', 7), ('M10', 9), ('L14', 10), ('KCE151', 11), ('KCA151', 11), ('M16', 12), ('E16', 12), ('E23', 13), ('KCE157', 14), ('KCM157', 14), ('KCM163', 15), ('KCA163', 15), ('M20', 17), ('E20', 17), ('E7', 18), ('M11', 19), ('E11', 19), ('M25', 21), ('E25', 21), ('KCE142', 23), ('KCM142', 23), ('KCA142', 23), ('KCE164', 24), ('KCA164', 24), ('KCE165', 25), ('KCL161', 25), ('M17', 26), ('E17', 26), ('A6', 27), ('M6', 27), ('E6', 27), ('M12', 28), ('E12', 28), ('L5', 29), ('M5', 29), ('E5', 29)]}
+Station Ranks: {'STA 22': 1, 'STA 18': 2, 'STA 21': 3, 'STA 15': 4, 'KC STA 44': 5, 'KC STA 45': 6, 'STA 19': 7, 'STA 76': 8, 'STA 10': 9, 'STA 14': 10, 'KC STA 51': 11, 'STA 16': 12, 'STA 23': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'STA 72': 16, 'STA 20': 17, 'STA 7': 18, 'STA 11': 19, 'STA 73': 20, 'STA 25': 21, 'STA 26': 22, 'KC STA 42': 23, 'KC STA 64': 24, 'KC STA 65': 25, 'STA 17': 26, 'STA 6': 27, 'STA 12': 28, 'STA 5': 29}
+Cross Staffing: ['E22', 'M22']
+

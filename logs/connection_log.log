@@ -1879,3 +1879,136 @@ TypeError: popup_no_buttons() got an unexpected keyword argument 'text'
 05/12/2022 14:48:47 INFO - Importing station orders
 05/12/2022 14:48:47 INFO - Creating positions
 
+01/19/2023 08:44:17 INFO - Importing station orders
+01/19/2023 08:44:17 INFO - Creating positions
+
+01/19/2023 08:44:39 INFO - Importing station orders
+01/19/2023 08:44:39 INFO - Creating positions
+
+01/19/2023 08:49:57 INFO - Importing station orders
+01/19/2023 08:49:57 INFO - Creating positions
+
+01/19/2023 08:52:01 INFO - Importing station orders
+01/19/2023 08:52:01 INFO - Creating positions
+
+01/19/2023 08:52:51 INFO - Importing station orders
+01/19/2023 08:52:51 INFO - Creating positions
+
+01/19/2023 08:53:10 INFO - Initializing database connection
+01/19/2023 08:53:10 INFO - Attempting API connection
+01/19/2023 08:53:17 INFO - Verbose connection successful. Status code: 200
+01/19/2023 08:53:17 INFO - Refreshing units
+01/19/2023 08:53:17 ERROR - 
+Traceback (most recent call last):
+  File "c:\Users\cgass\OneDrive\Documents\GitHub\CAD-Lite-Recommendations\get_recommendations.py", line 28, in get_recommendations
+    return recommendations(call_type,grid)
+  File "c:\Users\cgass\OneDrive\Documents\GitHub\CAD-Lite-Recommendations\recommendations.py", line 66, in recommendations
+    response_plan = frls[agency][radio_position][call_type]
+KeyError: 'MED1'
+01/19/2023 08:53:17 INFO - Importing offline units
+01/19/2023 08:53:17 INFO - Finished importing offline units
+01/19/2023 08:55:06 INFO - Importing station orders
+01/19/2023 08:55:06 INFO - Creating positions
+
+01/19/2023 08:55:12 INFO - Initializing database connection
+01/19/2023 08:55:12 INFO - Attempting API connection
+01/19/2023 08:55:18 INFO - Verbose connection successful. Status code: 200
+01/19/2023 08:55:18 INFO - Refreshing units
+01/19/2023 08:55:25 INFO - Initializing database connection
+01/19/2023 08:55:25 INFO - Attempting API connection
+01/19/2023 08:55:28 INFO - Verbose connection successful. Status code: 200
+01/19/2023 08:55:28 INFO - Refreshing units
+01/19/2023 08:55:41 INFO - Importing station orders
+01/19/2023 08:55:41 INFO - Creating positions
+
+01/19/2023 08:55:45 INFO - Initializing database connection
+01/19/2023 08:55:45 INFO - Attempting API connection
+01/19/2023 08:55:49 INFO - Verbose connection successful. Status code: 200
+01/19/2023 08:55:49 INFO - Refreshing units
+01/19/2023 08:56:07 INFO - Initializing database connection
+01/19/2023 08:56:07 INFO - Attempting API connection
+01/19/2023 08:56:10 INFO - Verbose connection successful. Status code: 200
+01/19/2023 08:56:10 INFO - Refreshing units
+01/19/2023 08:56:21 INFO - Initializing database connection
+01/19/2023 08:56:21 INFO - Attempting API connection
+01/19/2023 08:56:25 INFO - Verbose connection successful. Status code: 200
+01/19/2023 08:56:25 INFO - Refreshing units
+01/19/2023 08:56:36 INFO - Initializing database connection
+01/19/2023 08:56:36 INFO - Attempting API connection
+01/19/2023 08:56:39 INFO - Verbose connection successful. Status code: 200
+01/19/2023 08:56:39 INFO - Refreshing units
+01/19/2023 09:01:01 INFO - Importing station orders
+01/19/2023 09:01:01 INFO - Creating positions
+
+01/19/2023 09:01:39 INFO - Initializing database connection
+01/19/2023 09:01:39 INFO - Attempting API connection
+01/19/2023 09:01:44 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:01:44 INFO - Refreshing units
+01/19/2023 09:01:51 INFO - Initializing database connection
+01/19/2023 09:01:51 INFO - Attempting API connection
+01/19/2023 09:01:56 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:01:56 INFO - Refreshing units
+01/19/2023 09:02:02 INFO - Initializing database connection
+01/19/2023 09:02:02 INFO - Attempting API connection
+01/19/2023 09:02:05 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:02:06 INFO - Refreshing units
+01/19/2023 09:02:14 INFO - Initializing database connection
+01/19/2023 09:02:14 INFO - Attempting API connection
+01/19/2023 09:02:17 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:02:17 INFO - Refreshing units
+01/19/2023 09:02:25 INFO - Initializing database connection
+01/19/2023 09:02:25 INFO - Attempting API connection
+01/19/2023 09:02:28 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:02:28 INFO - Refreshing units
+01/19/2023 09:02:34 INFO - Initializing database connection
+01/19/2023 09:02:34 INFO - Attempting API connection
+01/19/2023 09:02:38 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:02:38 INFO - Refreshing units
+01/19/2023 09:02:56 INFO - Initializing database connection
+01/19/2023 09:02:56 INFO - Attempting API connection
+01/19/2023 09:02:59 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:02:59 INFO - Refreshing units
+01/19/2023 09:03:07 INFO - Initializing database connection
+01/19/2023 09:03:07 INFO - Attempting API connection
+01/19/2023 09:03:11 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:03:11 INFO - Refreshing units
+01/19/2023 09:03:20 INFO - Initializing database connection
+01/19/2023 09:03:20 INFO - Attempting API connection
+01/19/2023 09:03:24 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:03:24 INFO - Refreshing units
+01/19/2023 09:03:33 INFO - Initializing database connection
+01/19/2023 09:03:33 INFO - Attempting API connection
+01/19/2023 09:03:37 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:03:37 INFO - Refreshing units
+01/19/2023 09:03:45 INFO - Initializing database connection
+01/19/2023 09:03:45 INFO - Attempting API connection
+01/19/2023 09:03:48 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:03:48 INFO - Refreshing units
+01/19/2023 09:03:59 INFO - Initializing database connection
+01/19/2023 09:03:59 INFO - Attempting API connection
+01/19/2023 09:04:02 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:04:02 INFO - Refreshing units
+01/19/2023 09:04:18 INFO - Initializing database connection
+01/19/2023 09:04:18 INFO - Attempting API connection
+01/19/2023 09:04:22 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:04:22 INFO - Refreshing units
+01/19/2023 09:04:47 INFO - Initializing database connection
+01/19/2023 09:04:47 INFO - Attempting API connection
+01/19/2023 09:04:50 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:04:50 INFO - Refreshing units
+01/19/2023 09:05:00 INFO - Initializing database connection
+01/19/2023 09:05:00 INFO - Attempting API connection
+01/19/2023 09:05:04 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:05:04 INFO - Refreshing units
+01/19/2023 09:05:11 INFO - Initializing database connection
+01/19/2023 09:05:11 INFO - Attempting API connection
+01/19/2023 09:05:14 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:05:14 INFO - Refreshing units
+01/19/2023 09:05:19 INFO - Initializing database connection
+01/19/2023 09:05:19 INFO - Attempting API connection
+01/19/2023 09:05:23 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:05:23 INFO - Refreshing units
+01/19/2023 09:05:28 INFO - Initializing database connection
+01/19/2023 09:05:28 INFO - Attempting API connection
+01/19/2023 09:05:31 INFO - Verbose connection successful. Status code: 200
+01/19/2023 09:05:31 INFO - Refreshing units
