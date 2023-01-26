@@ -2189,3 +2189,336 @@ TypeError: 'NoneType' object is not iterable
 Importing station orders
 01/19/2023 10:44:04 INFO - Creating positions
 
+01/26/2023 07:00:23 INFO - Importing station orders
+01/26/2023 07:00:23 INFO - Creating positions
+01/26/2023 07:00:23 INFO - Creating FDIDs
+
+01/26/2023 07:00:40 INFO - Importing station orders
+01/26/2023 07:00:47 INFO - Creating positions
+01/26/2023 07:00:47 INFO - Creating FDIDs
+
+01/26/2023 07:01:02 INFO - Importing station orders
+01/26/2023 07:01:02 INFO - Creating positions
+01/26/2023 07:01:02 INFO - Creating FDIDs
+
+01/26/2023 07:01:44 INFO - Importing station orders
+01/26/2023 07:01:44 INFO - Creating positions
+01/26/2023 07:01:44 INFO - Creating FDIDs
+
+01/26/2023 07:18:19 INFO - Importing station orders
+01/26/2023 07:18:19 INFO - Creating positions
+01/26/2023 07:18:19 INFO - Creating FDIDs
+
+01/26/2023 07:18:42 INFO - Importing station orders
+01/26/2023 07:18:42 INFO - Creating positions
+01/26/2023 07:18:42 INFO - Creating FDIDs
+
+01/26/2023 07:19:44 INFO - Importing station orders
+01/26/2023 07:19:44 INFO - Creating positions
+01/26/2023 07:19:44 INFO - Creating FDIDs
+
+01/26/2023 07:23:52 INFO - Importing station orders
+01/26/2023 07:23:52 INFO - Creating positions
+01/26/2023 07:23:52 INFO - Creating FDIDs
+
+01/26/2023 07:24:00 INFO - Initializing database connection
+01/26/2023 07:24:00 INFO - Attempting API connection
+01/26/2023 07:24:08 INFO - Verbose connection successful. Status code: 200
+01/26/2023 07:24:08 INFO - Refreshing units
+01/26/2023 07:24:08 ERROR - 
+Traceback (most recent call last):
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\get_recommendations.py", line 29, in get_recommendations
+    return recommendations(call_type,grid)
+  File "c:\Chris stuff\GitHub\CAD-Lite-Recommendations\recommendations.py", line 67, in recommendations
+    elif fdid in frls[agency].keys() and call_type in frls[agency][fdid].keys():
+TypeError: unhashable type: 'dict'
+01/26/2023 07:24:08 INFO - Importing offline units
+01/26/2023 07:24:08 ERROR - Error importing offline unit list
+01/26/2023 07:38:46 INFO - Importing station orders
+01/26/2023 07:38:46 INFO - Creating positions
+01/26/2023 07:38:46 INFO - Creating FDIDs
+
+01/26/2023 07:38:52 INFO - Initializing database connection
+01/26/2023 07:38:52 INFO - Attempting API connection
+01/26/2023 07:38:57 INFO - Verbose connection successful. Status code: 200
+01/26/2023 07:38:57 INFO - Refreshing units
+01/26/2023 07:42:08 INFO - Importing station orders
+01/26/2023 07:42:08 INFO - Creating positions
+01/26/2023 07:42:08 INFO - Creating FDIDs
+
+01/26/2023 07:42:17 INFO - Initializing database connection
+01/26/2023 07:42:17 INFO - Attempting API connection
+01/26/2023 07:42:22 INFO - Verbose connection successful. Status code: 200
+01/26/2023 07:42:22 INFO - Refreshing units
+01/26/2023 07:43:53 INFO - Importing station orders
+01/26/2023 07:43:53 INFO - Creating positions
+01/26/2023 07:43:53 INFO - Creating FDIDs
+
+01/26/2023 07:44:00 INFO - Initializing database connection
+01/26/2023 07:44:00 INFO - Attempting API connection
+01/26/2023 07:44:05 INFO - Verbose connection successful. Status code: 200
+01/26/2023 07:44:05 INFO - Refreshing units
+01/26/2023 07:58:24 INFO - Importing station orders
+01/26/2023 07:58:24 INFO - Creating positions
+01/26/2023 07:58:24 INFO - Creating FDIDs
+
+01/26/2023 07:58:35 INFO - Initializing database connection
+01/26/2023 07:58:35 INFO - Attempting API connection
+01/26/2023 07:58:42 INFO - Verbose connection successful. Status code: 200
+01/26/2023 07:58:42 INFO - Refreshing units
+01/26/2023 07:59:44 INFO - Importing station orders
+01/26/2023 07:59:44 INFO - Creating positions
+01/26/2023 07:59:44 INFO - Creating FDIDs
+
+01/26/2023 07:59:51 INFO - Initializing database connection
+01/26/2023 07:59:51 INFO - Attempting API connection
+01/26/2023 07:59:55 INFO - Verbose connection successful. Status code: 200
+01/26/2023 07:59:55 INFO - Refreshing units
+01/26/2023 08:00:44 INFO - Importing station orders
+01/26/2023 08:00:44 INFO - Creating positions
+01/26/2023 08:00:44 INFO - Creating FDIDs
+
+01/26/2023 08:00:52 INFO - Initializing database connection
+01/26/2023 08:00:52 INFO - Attempting API connection
+01/26/2023 08:00:56 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:00:56 INFO - Refreshing units
+01/26/2023 08:09:59 INFO - Importing station orders
+01/26/2023 08:09:59 INFO - Creating positions
+01/26/2023 08:09:59 INFO - Creating FDIDs
+
+01/26/2023 08:10:09 INFO - Initializing database connection
+01/26/2023 08:10:09 INFO - Attempting API connection
+01/26/2023 08:10:16 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:10:16 INFO - Refreshing units
+01/26/2023 08:12:13 INFO - Importing station orders
+01/26/2023 08:12:13 INFO - Creating positions
+01/26/2023 08:12:13 INFO - Creating FDIDs
+
+01/26/2023 08:12:23 INFO - Initializing database connection
+01/26/2023 08:12:23 INFO - Attempting API connection
+01/26/2023 08:12:27 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:12:27 INFO - Refreshing units
+01/26/2023 08:16:25 INFO - Importing station orders
+01/26/2023 08:16:25 INFO - Creating positions
+01/26/2023 08:16:25 INFO - Creating FDIDs
+
+01/26/2023 08:16:31 INFO - Initializing database connection
+01/26/2023 08:16:31 INFO - Attempting API connection
+01/26/2023 08:16:34 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:16:34 INFO - Refreshing units
+01/26/2023 08:16:49 INFO - Initializing database connection
+01/26/2023 08:16:49 INFO - Attempting API connection
+01/26/2023 08:16:52 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:16:52 INFO - Refreshing units
+01/26/2023 08:36:23 INFO - Importing station orders
+01/26/2023 08:36:23 INFO - Creating positions
+01/26/2023 08:36:23 INFO - Creating FDIDs
+
+01/26/2023 08:36:23 INFO - Initializing database connection
+01/26/2023 08:36:23 INFO - Attempting API connection
+01/26/2023 08:36:29 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:36:29 INFO - Refreshing units
+01/26/2023 08:37:06 INFO - Importing station orders
+01/26/2023 08:37:06 INFO - Creating positions
+01/26/2023 08:37:06 INFO - Creating FDIDs
+
+01/26/2023 08:37:06 INFO - Initializing database connection
+01/26/2023 08:37:06 INFO - Attempting API connection
+01/26/2023 08:37:12 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:37:12 INFO - Refreshing units
+01/26/2023 08:42:10 INFO - Importing station orders
+01/26/2023 08:42:10 INFO - Creating positions
+01/26/2023 08:42:10 INFO - Creating FDIDs
+
+01/26/2023 08:42:10 INFO - Initializing database connection
+01/26/2023 08:42:10 INFO - Attempting API connection
+01/26/2023 08:42:15 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:42:15 INFO - Refreshing units
+01/26/2023 08:42:15 INFO - Initializing database connection
+01/26/2023 08:42:15 INFO - Attempting API connection
+01/26/2023 08:42:18 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:42:18 INFO - Refreshing units
+01/26/2023 08:44:51 INFO - Importing station orders
+01/26/2023 08:44:51 INFO - Creating positions
+01/26/2023 08:44:51 INFO - Creating FDIDs
+
+01/26/2023 08:44:51 INFO - Initializing database connection
+01/26/2023 08:44:51 INFO - Attempting API connection
+01/26/2023 08:44:55 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:44:55 INFO - Refreshing units
+01/26/2023 08:44:55 INFO - Initializing database connection
+01/26/2023 08:44:55 INFO - Attempting API connection
+01/26/2023 08:44:59 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:44:59 INFO - Refreshing units
+01/26/2023 08:44:59 INFO - Initializing database connection
+01/26/2023 08:44:59 INFO - Attempting API connection
+01/26/2023 08:45:01 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:45:01 INFO - Refreshing units
+01/26/2023 08:45:32 INFO - Importing station orders
+01/26/2023 08:45:32 INFO - Creating positions
+01/26/2023 08:45:32 INFO - Creating FDIDs
+
+01/26/2023 08:45:32 INFO - Initializing database connection
+01/26/2023 08:45:32 INFO - Attempting API connection
+01/26/2023 08:45:36 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:45:36 INFO - Refreshing units
+01/26/2023 08:45:36 INFO - Initializing database connection
+01/26/2023 08:45:36 INFO - Attempting API connection
+01/26/2023 08:45:39 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:45:39 INFO - Refreshing units
+01/26/2023 08:45:39 INFO - Initializing database connection
+01/26/2023 08:45:39 INFO - Attempting API connection
+01/26/2023 08:45:42 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:45:42 INFO - Refreshing units
+01/26/2023 08:48:09 INFO - Importing station orders
+01/26/2023 08:48:09 INFO - Creating positions
+01/26/2023 08:48:09 INFO - Creating FDIDs
+
+01/26/2023 08:48:21 INFO - Initializing database connection
+01/26/2023 08:48:21 INFO - Attempting API connection
+01/26/2023 08:48:26 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:48:26 INFO - Refreshing units
+01/26/2023 08:53:57 INFO - Importing station orders
+01/26/2023 08:53:57 INFO - Creating positions
+01/26/2023 08:53:57 INFO - Creating FDIDs
+
+01/26/2023 08:53:57 INFO - Initializing database connection
+01/26/2023 08:53:57 INFO - Attempting API connection
+01/26/2023 08:54:04 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:54:04 INFO - Refreshing units
+01/26/2023 08:54:04 INFO - Initializing database connection
+01/26/2023 08:54:04 INFO - Attempting API connection
+01/26/2023 08:54:08 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:54:08 INFO - Refreshing units
+01/26/2023 08:54:08 INFO - Initializing database connection
+01/26/2023 08:54:08 INFO - Attempting API connection
+01/26/2023 08:54:10 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:54:10 INFO - Refreshing units
+01/26/2023 08:54:11 INFO - Initializing database connection
+01/26/2023 08:54:11 INFO - Attempting API connection
+01/26/2023 08:54:14 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:54:14 INFO - Refreshing units
+01/26/2023 08:59:29 INFO - Importing station orders
+01/26/2023 08:59:29 INFO - Creating positions
+01/26/2023 08:59:29 INFO - Creating FDIDs
+
+01/26/2023 08:59:29 INFO - Initializing database connection
+01/26/2023 08:59:29 INFO - Attempting API connection
+01/26/2023 08:59:34 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:59:34 INFO - Refreshing units
+01/26/2023 08:59:34 INFO - Initializing database connection
+01/26/2023 08:59:34 INFO - Attempting API connection
+01/26/2023 08:59:37 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:59:37 INFO - Refreshing units
+01/26/2023 08:59:37 INFO - Initializing database connection
+01/26/2023 08:59:37 INFO - Attempting API connection
+01/26/2023 08:59:41 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:59:41 INFO - Refreshing units
+01/26/2023 08:59:41 INFO - Initializing database connection
+01/26/2023 08:59:41 INFO - Attempting API connection
+01/26/2023 08:59:43 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:59:43 INFO - Refreshing units
+01/26/2023 08:59:43 INFO - Initializing database connection
+01/26/2023 08:59:43 INFO - Attempting API connection
+01/26/2023 08:59:47 INFO - Verbose connection successful. Status code: 200
+01/26/2023 08:59:47 INFO - Refreshing units
+01/26/2023 09:00:39 INFO - Importing station orders
+01/26/2023 09:00:39 INFO - Creating positions
+01/26/2023 09:00:39 INFO - Creating FDIDs
+
+01/26/2023 09:00:39 INFO - Initializing database connection
+01/26/2023 09:00:39 INFO - Attempting API connection
+01/26/2023 09:00:43 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:00:43 INFO - Refreshing units
+01/26/2023 09:00:44 INFO - Initializing database connection
+01/26/2023 09:00:44 INFO - Attempting API connection
+01/26/2023 09:00:47 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:00:47 INFO - Refreshing units
+01/26/2023 09:00:47 INFO - Initializing database connection
+01/26/2023 09:00:47 INFO - Attempting API connection
+01/26/2023 09:00:50 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:00:50 INFO - Refreshing units
+01/26/2023 09:00:50 INFO - Initializing database connection
+01/26/2023 09:00:50 INFO - Attempting API connection
+01/26/2023 09:00:52 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:00:52 INFO - Refreshing units
+01/26/2023 09:00:52 INFO - Initializing database connection
+01/26/2023 09:00:52 INFO - Attempting API connection
+01/26/2023 09:00:55 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:00:55 INFO - Refreshing units
+01/26/2023 09:01:30 INFO - Importing station orders
+01/26/2023 09:01:30 INFO - Creating positions
+01/26/2023 09:01:30 INFO - Creating FDIDs
+
+01/26/2023 09:02:36 INFO - Importing station orders
+01/26/2023 09:02:36 INFO - Creating positions
+01/26/2023 09:02:36 INFO - Creating FDIDs
+
+01/26/2023 09:02:36 INFO - Initializing database connection
+01/26/2023 09:02:36 INFO - Attempting API connection
+01/26/2023 09:02:38 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:02:38 INFO - Refreshing units
+01/26/2023 09:02:38 INFO - Initializing database connection
+01/26/2023 09:02:38 INFO - Attempting API connection
+01/26/2023 09:02:41 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:02:41 INFO - Refreshing units
+01/26/2023 09:02:41 INFO - Initializing database connection
+01/26/2023 09:02:41 INFO - Attempting API connection
+01/26/2023 09:02:45 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:02:45 INFO - Refreshing units
+01/26/2023 09:02:45 INFO - Initializing database connection
+01/26/2023 09:02:45 INFO - Attempting API connection
+01/26/2023 09:02:47 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:02:47 INFO - Refreshing units
+01/26/2023 09:02:47 INFO - Initializing database connection
+01/26/2023 09:02:47 INFO - Attempting API connection
+01/26/2023 09:02:51 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:02:51 INFO - Refreshing units
+01/26/2023 09:12:57 INFO - Importing station orders
+01/26/2023 09:12:57 INFO - Creating positions
+01/26/2023 09:12:57 INFO - Creating FDIDs
+
+01/26/2023 09:12:57 INFO - Initializing database connection
+01/26/2023 09:12:57 INFO - Attempting API connection
+01/26/2023 09:13:04 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:13:04 INFO - Refreshing units
+01/26/2023 09:13:05 INFO - Initializing database connection
+01/26/2023 09:13:05 INFO - Attempting API connection
+01/26/2023 09:13:08 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:13:08 INFO - Refreshing units
+01/26/2023 09:13:08 INFO - Initializing database connection
+01/26/2023 09:13:08 INFO - Attempting API connection
+01/26/2023 09:13:11 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:13:11 INFO - Refreshing units
+01/26/2023 09:13:12 INFO - Initializing database connection
+01/26/2023 09:13:12 INFO - Attempting API connection
+01/26/2023 09:13:15 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:13:15 INFO - Refreshing units
+01/26/2023 09:13:15 INFO - Initializing database connection
+01/26/2023 09:13:15 INFO - Attempting API connection
+01/26/2023 09:13:18 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:13:18 INFO - Refreshing units
+01/26/2023 09:14:14 INFO - Importing station orders
+01/26/2023 09:14:14 INFO - Creating positions
+01/26/2023 09:14:14 INFO - Creating FDIDs
+
+01/26/2023 09:14:14 INFO - Initializing database connection
+01/26/2023 09:14:14 INFO - Attempting API connection
+01/26/2023 09:14:20 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:14:20 INFO - Refreshing units
+01/26/2023 09:14:20 INFO - Initializing database connection
+01/26/2023 09:14:20 INFO - Attempting API connection
+01/26/2023 09:14:24 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:14:24 INFO - Refreshing units
+01/26/2023 09:14:24 INFO - Initializing database connection
+01/26/2023 09:14:24 INFO - Attempting API connection
+01/26/2023 09:14:27 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:14:27 INFO - Refreshing units
+01/26/2023 09:14:27 INFO - Initializing database connection
+01/26/2023 09:14:27 INFO - Attempting API connection
+01/26/2023 09:14:31 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:14:31 INFO - Refreshing units
+01/26/2023 09:14:31 INFO - Initializing database connection
+01/26/2023 09:14:31 INFO - Attempting API connection
+01/26/2023 09:14:34 INFO - Verbose connection successful. Status code: 200
+01/26/2023 09:14:34 INFO - Refreshing units

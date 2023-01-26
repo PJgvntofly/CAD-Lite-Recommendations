@@ -6,10 +6,17 @@ from import_response_plans import import_response_plans
 
 station_orders = station_order.create_station_order()
 position = station_order.create_positions(station_orders)
+fdid = position[1]
+position = position[0]
 frls = import_response_plans()
 
 def get_radio(val):
     for key, values in position.items():
+        if val in values:
+            return key
+
+def get_fdid(val):
+    for key, values in fdid.items():
         if val in values:
             return key
 
@@ -53,6 +60,7 @@ def recommendations(call_type,grid):
     if call_type in ['RESCS', 'RESTR']:
         return print("Use second alarm type code: {}".format(call_type + "2"))
     radio_position = get_radio(grid)
+    department = get_fdid(grid)
     connection_log.info('Initializing database connection')
     unit_list = units.refresh_units()
     if radio_position == None:
@@ -62,6 +70,8 @@ def recommendations(call_type,grid):
         agency = 'SNO911'
     if grid in frls[agency].keys() and call_type in frls[agency][grid].keys():
         response_plan = frls[agency][grid][call_type]
+    elif department in frls[agency].keys() and call_type in frls[agency][department].keys():
+        response_plan = frls[agency][department][call_type]
     else:
         response_plan = frls[agency][radio_position][call_type]
     rec_station_order = station_orders[grid]
@@ -117,5 +127,5 @@ def recommendations(call_type,grid):
                                 list_result = True
     else:
         return result
-    rec_log.info(f'Recommendations complete\nCall Type: {call_type} Grid: {grid} Recommendation: {result}\nResponse Plan: {response_plan}\nUnit Ranks: {sorted_unit_log}\nStation Ranks: {station_rank}\nCross Staffing: {cross_staffing_list}\n')
+    rec_log.info(f'Recommendations complete\nCall Type: {call_type} Grid: {grid} FDID: {department} Recommendation: {result}\nResponse Plan: {response_plan}\nUnit Ranks: {sorted_unit_log}\nStation Ranks: {station_rank}\nCross Staffing: {cross_staffing_list}\n')
     return f"{call_type}: {result}"

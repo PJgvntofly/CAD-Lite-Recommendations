@@ -1026,3 +1026,559 @@ Unit Ranks: {'E21': [('E21', 3), ('A15', 4), ('E15', 4), ('KCA144', 5), ('KCE144
 Station Ranks: {'STA 22': 1, 'STA 18': 2, 'STA 21': 3, 'STA 15': 4, 'KC STA 44': 5, 'KC STA 45': 6, 'STA 19': 7, 'STA 76': 8, 'STA 10': 9, 'STA 14': 10, 'KC STA 51': 11, 'STA 16': 12, 'STA 23': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'STA 72': 16, 'STA 20': 17, 'STA 7': 18, 'STA 11': 19, 'STA 73': 20, 'STA 25': 21, 'STA 26': 22, 'KC STA 42': 23, 'KC STA 64': 24, 'KC STA 65': 25, 'STA 17': 26, 'STA 6': 27, 'STA 12': 28, 'STA 5': 29}
 Cross Staffing: ['E', '2', '2', '-', 'M', '2', '2', 'E', '2', '1', '-', 'T', 'R', '2', '1']
 
+01/26/2023 07:24:00 INFO - 
+Starting new recommendation cycle
+01/26/2023 07:24:00 INFO - Beginning recommendations
+01/26/2023 07:24:08 INFO - Beginning offline recommendations
+01/26/2023 07:24:35 INFO - OFFLINE MODE
+Time: 2023-01-26 07:24:35.007593
+Call Type: MED1 Grid: BA0001 Recommendation: ['M1', 'E1']
+Response Plan: ['Medic Unit', 'Engine']
+ Skipped Units: ['E2']
+Unit Ranks: {}
+Station Ranks: {}
+Cross Staffing: []
+
+01/26/2023 07:38:52 INFO - 
+Starting new recommendation cycle
+01/26/2023 07:38:52 INFO - Beginning recommendations
+01/26/2023 07:38:57 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 07:42:17 INFO - 
+Starting new recommendation cycle
+01/26/2023 07:42:17 INFO - Beginning recommendations
+01/26/2023 07:42:24 INFO - Recommendations complete
+Call Type: FCC Grid: LF311 Recommendation: ['L14', 'E15', 'E18', 'E16', 'E21', 'M15', 'A15', 'B15']
+Response Plan: ['Ladder', 'Engine', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit']
+Unit Ranks: {}
+Station Ranks: {'STA 15': 1, 'STA 14': 2, 'STA 18': 3, 'STA 10': 4, 'STA 16': 5, 'STA 21': 6, 'STA 22': 7, 'STA 19': 8, 'STA 23': 9, 'STA 11': 10, 'STA 20': 11, 'STA 17': 12, 'STA 25': 13, 'STA 76': 14, 'KC STA 45': 15, 'KC STA 44': 16, 'KC STA 63': 17, 'KC STA 65': 18, 'KC STA 64': 19, 'KC STA 42': 20, 'KC STA 57': 21, 'STA 12': 22, 'STA 24': 23, 'STA 13': 24}
+Cross Staffing: ['E18', 'M18', 'E16', 'M16', 'E21', 'TR21']
+
+01/26/2023 07:44:00 INFO - 
+Starting new recommendation cycle
+01/26/2023 07:44:00 INFO - Beginning recommendations
+01/26/2023 07:44:07 INFO - Recommendations complete
+Call Type: FCC Grid: LF311 FDID: 31D01_rfa Recommendation: ['L14', 'E15', 'E18', 'E16', 'E21', 'M15', 'A15', 'B15']
+Response Plan: ['Ladder', 'Engine', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit']
+Unit Ranks: {}
+Station Ranks: {'STA 15': 1, 'STA 14': 2, 'STA 18': 3, 'STA 10': 4, 'STA 16': 5, 'STA 21': 6, 'STA 22': 7, 'STA 19': 8, 'STA 23': 9, 'STA 11': 10, 'STA 20': 11, 'STA 17': 12, 'STA 25': 13, 'STA 76': 14, 'KC STA 45': 15, 'KC STA 44': 16, 'KC STA 63': 17, 'KC STA 65': 18, 'KC STA 64': 19, 'KC STA 42': 20, 'KC STA 57': 21, 'STA 12': 22, 'STA 24': 23, 'STA 13': 24}
+Cross Staffing: ['E18', 'M18', 'E16', 'M16', 'E21', 'TR21']
+
+01/26/2023 07:58:35 INFO - 
+Starting new recommendation cycle
+01/26/2023 07:58:35 INFO - Beginning recommendations
+01/26/2023 07:58:42 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 07:59:51 INFO - 
+Starting new recommendation cycle
+01/26/2023 07:59:51 INFO - Beginning recommendations
+01/26/2023 07:59:55 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 08:00:52 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:00:52 INFO - Beginning recommendations
+01/26/2023 08:00:56 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 08:10:09 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:10:09 INFO - Beginning recommendations
+01/26/2023 08:10:17 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 08:12:23 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:12:23 INFO - Does this work: dict_keys(['SNO911', 'VALLEYCOM'])
+01/26/2023 08:12:23 INFO - Beginning recommendations
+01/26/2023 08:12:30 INFO - Recommendations complete
+Call Type: FCC Grid: LF311 FDID: 31D01_rfa Recommendation: ['L14', 'E15', 'E18', 'E16', 'E21', 'M15', 'A15', 'B15']
+Response Plan: ['Ladder', 'Engine', 'Engine', 'Engine', 'Engine', 'Medic Unit', 'Aid Unit', 'Command Unit']
+Unit Ranks: {}
+Station Ranks: {'STA 15': 1, 'STA 14': 2, 'STA 18': 3, 'STA 10': 4, 'STA 16': 5, 'STA 21': 6, 'STA 22': 7, 'STA 19': 8, 'STA 23': 9, 'STA 11': 10, 'STA 20': 11, 'STA 17': 12, 'STA 25': 13, 'STA 76': 14, 'KC STA 45': 15, 'KC STA 44': 16, 'KC STA 63': 17, 'KC STA 65': 18, 'KC STA 64': 19, 'KC STA 42': 20, 'KC STA 57': 21, 'STA 12': 22, 'STA 24': 23, 'STA 13': 24}
+Cross Staffing: ['E18', 'M18', 'E16', 'M16', 'E21', 'TR21']
+
+01/26/2023 08:16:31 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:16:31 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:16:31 INFO - Beginning recommendations
+01/26/2023 08:16:35 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 08:16:49 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:16:49 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:16:49 INFO - Beginning recommendations
+01/26/2023 08:16:52 INFO - Recommendations complete
+Call Type: FCC Grid: LF311 FDID: 31D01_rfa Recommendation: ['E15']
+Response Plan: [['Engine', 'Ladder']]
+Unit Ranks: {'E15': [('E15', 1), ('L14', 2), ('E18', 3), ('E16', 5), ('E21', 6), ('E22', 7), ('E19', 8), ('E23', 9), ('E11', 10), ('E20', 11), ('E17', 12), ('E25', 13), ('KCE145', 15), ('KCL144', 15), ('KCE144', 16), ('KCE165', 18), ('KCL161', 18), ('KCE164', 19), ('KCE142', 20), ('KCE157', 21), ('E12', 22), ('E24', 23), ('E13', 24)]}
+Station Ranks: {'STA 15': 1, 'STA 14': 2, 'STA 18': 3, 'STA 10': 4, 'STA 16': 5, 'STA 21': 6, 'STA 22': 7, 'STA 19': 8, 'STA 23': 9, 'STA 11': 10, 'STA 20': 11, 'STA 17': 12, 'STA 25': 13, 'STA 76': 14, 'KC STA 45': 15, 'KC STA 44': 16, 'KC STA 63': 17, 'KC STA 65': 18, 'KC STA 64': 19, 'KC STA 42': 20, 'KC STA 57': 21, 'STA 12': 22, 'STA 24': 23, 'STA 13': 24}
+Cross Staffing: []
+
+01/26/2023 08:36:23 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:36:23 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:36:23 INFO - Beginning recommendations
+01/26/2023 08:36:30 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 08:37:06 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:37:06 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:37:06 INFO - Beginning recommendations
+01/26/2023 08:37:13 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 08:42:10 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:42:10 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:42:10 INFO - Beginning recommendations
+01/26/2023 08:42:15 INFO - Recommendations complete
+Call Type: BLS1 Grid: LF258 FDID: 31D01_rfa Recommendation: ['L14']
+Response Plan: [['Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'L14': [('L14', 1), ('A15', 2), ('E15', 2), ('E16', 3), ('E20', 4), ('E19', 6), ('E18', 7), ('E17', 8), ('E23', 9), ('E21', 10), ('KCE164', 11), ('KCA164', 11), ('E22', 12), ('A11A', 13), ('E11', 13), ('E25', 14), ('KCA163', 15), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('KCE165', 18), ('KCL161', 18), ('KCE144', 19), ('KCA144', 19), ('KCE157', 20), ('KCE142', 21), ('KCA142', 21), ('E12', 22), ('E24', 23), ('E13', 24)]}
+Station Ranks: {'STA 14': 1, 'STA 15': 2, 'STA 16': 3, 'STA 20': 4, 'STA 10': 5, 'STA 19': 6, 'STA 18': 7, 'STA 17': 8, 'STA 23': 9, 'STA 21': 10, 'KC STA 64': 11, 'STA 22': 12, 'STA 11': 13, 'STA 25': 14, 'KC STA 63': 15, 'STA 76': 16, 'KC STA 45': 17, 'KC STA 65': 18, 'KC STA 44': 19, 'KC STA 57': 20, 'KC STA 42': 21, 'STA 12': 22, 'STA 24': 23, 'STA 13': 24}
+Cross Staffing: []
+
+01/26/2023 08:42:15 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:42:15 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:42:15 INFO - Beginning recommendations
+01/26/2023 08:42:18 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 08:44:51 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:44:51 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:44:51 INFO - Beginning recommendations
+01/26/2023 08:44:55 INFO - Recommendations complete
+Call Type: BLS1 Grid: LF258 FDID: 31D01_rfa Recommendation: ['L14']
+Response Plan: [['Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'L14': [('L14', 1), ('A15', 2), ('E15', 2), ('E16', 3), ('E20', 4), ('E19', 6), ('E18', 7), ('E17', 8), ('E23', 9), ('E21', 10), ('KCE164', 11), ('KCA164', 11), ('E22', 12), ('A11A', 13), ('E11', 13), ('E25', 14), ('KCA163', 15), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('KCE165', 18), ('KCL161', 18), ('KCE144', 19), ('KCA144', 19), ('KCE157', 20), ('KCE142', 21), ('KCA142', 21), ('E12', 22), ('E24', 23), ('E13', 24)]}
+Station Ranks: {'STA 14': 1, 'STA 15': 2, 'STA 16': 3, 'STA 20': 4, 'STA 10': 5, 'STA 19': 6, 'STA 18': 7, 'STA 17': 8, 'STA 23': 9, 'STA 21': 10, 'KC STA 64': 11, 'STA 22': 12, 'STA 11': 13, 'STA 25': 14, 'KC STA 63': 15, 'STA 76': 16, 'KC STA 45': 17, 'KC STA 65': 18, 'KC STA 44': 19, 'KC STA 57': 20, 'KC STA 42': 21, 'STA 12': 22, 'STA 24': 23, 'STA 13': 24}
+Cross Staffing: []
+
+01/26/2023 08:44:55 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:44:55 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:44:55 INFO - Beginning recommendations
+01/26/2023 08:44:59 INFO - Recommendations complete
+Call Type: BLS1 Grid: TF161 FDID: 31D01_city Recommendation: ['M18']
+Response Plan: [['Medic Unit', 'Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'M18': [('M18', 1), ('E18', 1), ('A15', 2), ('M15', 2), ('E15', 2), ('M19', 3), ('E19', 3), ('M22', 4), ('E22', 4), ('L14', 5), ('E16', 6), ('M20', 7), ('E20', 7), ('M10', 8), ('M17', 9), ('E17', 9), ('M21', 10), ('E21', 10), ('KCE144', 11), ('KCA144', 11), ('E23', 12), ('A11A', 13), ('M11', 13), ('E11', 13), ('KCE157', 14), ('KCM157', 14), ('KCM163', 15), ('KCA163', 15), ('KCE164', 16), ('KCA164', 16), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('M25', 19), ('E25', 19), ('KCE165', 21), ('KCL161', 21)]}
+Station Ranks: {'STA 18': 1, 'STA 15': 2, 'STA 19': 3, 'STA 22': 4, 'STA 14': 5, 'STA 16': 6, 'STA 20': 7, 'STA 10': 8, 'STA 17': 9, 'STA 21': 10, 'KC STA 44': 11, 'STA 23': 12, 'STA 11': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'KC STA 64': 16, 'KC STA 45': 17, 'STA 76': 18, 'STA 25': 19, 'STA 73': 20, 'KC STA 65': 21, 'STA 72': 22}
+Cross Staffing: ['E18', 'M18']
+
+01/26/2023 08:44:59 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:44:59 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:44:59 INFO - Beginning recommendations
+01/26/2023 08:45:01 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 08:45:32 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:45:32 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:45:32 INFO - Beginning recommendations
+01/26/2023 08:45:36 INFO - Recommendations complete
+Call Type: BLS1 Grid: LF258 FDID: 31D01_rfa Recommendation: ['L14']
+Response Plan: [['Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'L14': [('L14', 1), ('A15', 2), ('E15', 2), ('E16', 3), ('E20', 4), ('E19', 6), ('E18', 7), ('E17', 8), ('E23', 9), ('E21', 10), ('KCE164', 11), ('KCA164', 11), ('E22', 12), ('A11A', 13), ('E11', 13), ('E25', 14), ('KCA163', 15), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('KCE165', 18), ('KCL161', 18), ('KCE144', 19), ('KCA144', 19), ('KCE157', 20), ('KCE142', 21), ('KCA142', 21), ('E12', 22), ('E24', 23), ('E13', 24)]}
+Station Ranks: {'STA 14': 1, 'STA 15': 2, 'STA 16': 3, 'STA 20': 4, 'STA 10': 5, 'STA 19': 6, 'STA 18': 7, 'STA 17': 8, 'STA 23': 9, 'STA 21': 10, 'KC STA 64': 11, 'STA 22': 12, 'STA 11': 13, 'STA 25': 14, 'KC STA 63': 15, 'STA 76': 16, 'KC STA 45': 17, 'KC STA 65': 18, 'KC STA 44': 19, 'KC STA 57': 20, 'KC STA 42': 21, 'STA 12': 22, 'STA 24': 23, 'STA 13': 24}
+Cross Staffing: []
+
+01/26/2023 08:45:36 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:45:36 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:45:36 INFO - Beginning recommendations
+01/26/2023 08:45:39 INFO - Recommendations complete
+Call Type: BLS1 Grid: TF161 FDID: 31D01_city Recommendation: ['M18']
+Response Plan: [['Medic Unit', 'Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'M18': [('M18', 1), ('E18', 1), ('A15', 2), ('M15', 2), ('E15', 2), ('M19', 3), ('E19', 3), ('M22', 4), ('E22', 4), ('L14', 5), ('E16', 6), ('M20', 7), ('E20', 7), ('M10', 8), ('M17', 9), ('E17', 9), ('M21', 10), ('E21', 10), ('KCE144', 11), ('KCA144', 11), ('E23', 12), ('A11A', 13), ('M11', 13), ('E11', 13), ('KCE157', 14), ('KCM157', 14), ('KCM163', 15), ('KCA163', 15), ('KCE164', 16), ('KCA164', 16), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('M25', 19), ('E25', 19), ('KCE165', 21), ('KCL161', 21)]}
+Station Ranks: {'STA 18': 1, 'STA 15': 2, 'STA 19': 3, 'STA 22': 4, 'STA 14': 5, 'STA 16': 6, 'STA 20': 7, 'STA 10': 8, 'STA 17': 9, 'STA 21': 10, 'KC STA 44': 11, 'STA 23': 12, 'STA 11': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'KC STA 64': 16, 'KC STA 45': 17, 'STA 76': 18, 'STA 25': 19, 'STA 73': 20, 'KC STA 65': 21, 'STA 72': 22}
+Cross Staffing: ['E18', 'M18']
+
+01/26/2023 08:45:39 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:45:39 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:45:39 INFO - Beginning recommendations
+01/26/2023 08:45:42 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 08:48:21 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:48:21 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:48:21 INFO - Beginning recommendations
+01/26/2023 08:48:26 INFO - Recommendations complete
+Call Type: MVC Grid: DF414 FDID: 31D01_rfa Recommendation: ['E21', 'M21']
+Response Plan: [['Engine', 'Ladder'], ['Aid Unit', 'Medic Unit']]
+Unit Ranks: {'E21': [('E21', 1), ('E22', 2), ('E15', 3), ('E18', 6), ('E23', 7), ('KCE145', 8), ('KCL144', 8), ('KCE144', 9), ('E7', 11), ('E11', 12), ('L14', 13), ('E25', 14), ('E19', 16), ('KCE142', 17), ('E16', 18), ('E6', 19), ('E51', 20), ('E12', 23), ('E20', 24), ('E5', 25), ('KCE157', 26), ('E13', 27), ('KCE164', 30)], 'M21': [('M21', 1), ('M22', 2), ('A15', 3), ('M15', 3), ('M10', 5), ('M18', 6), ('KCA145', 8), ('KCA144', 9), ('A11A', 12), ('M11', 12), ('M25', 14), ('M19', 16), ('KCM142', 17), ('KCA142', 17), ('A6', 19), ('M6', 19), ('A51', 20), ('A51A', 20), ('KCM163', 22), ('KCA163', 22), ('M12', 23), ('M20', 24), ('M5', 25), ('KCM157', 26), ('M13', 27), ('KCA131', 29), ('KCA164', 30)]}
+Station Ranks: {'STA 21': 1, 'STA 22': 2, 'STA 15': 3, 'STA 76': 4, 'STA 10': 5, 'STA 18': 6, 'STA 23': 7, 'KC STA 45': 8, 'KC STA 44': 9, 'STA 72': 10, 'STA 7': 11, 'STA 11': 12, 'STA 14': 13, 'STA 25': 14, 'STA 26': 15, 'STA 19': 16, 'KC STA 42': 17, 'STA 16': 18, 'STA 6': 19, 'STA 51': 20, 'STA 73': 21, 'KC STA 63': 22, 'STA 12': 23, 'STA 20': 24, 'STA 5': 25, 'KC STA 57': 26, 'STA 13': 27, 'STA 71': 28, 'KC STA 31': 29, 'KC STA 64': 30}
+Cross Staffing: ['E21', 'TR21']
+
+01/26/2023 08:53:57 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:53:57 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:53:57 INFO - Beginning recommendations
+01/26/2023 08:54:04 INFO - Recommendations complete
+Call Type: BLS1 Grid: LF258 FDID: 31D01_rfa Recommendation: ['L14']
+Response Plan: [['Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'L14': [('L14', 1), ('A15', 2), ('E15', 2), ('E16', 3), ('E20', 4), ('E19', 6), ('E18', 7), ('E17', 8), ('E23', 9), ('E21', 10), ('KCE164', 11), ('KCA164', 11), ('E22', 12), ('A11A', 13), ('E11', 13), ('E25', 14), ('KCA163', 15), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('KCE165', 18), ('KCL161', 18), ('KCE144', 19), ('KCA144', 19), ('KCE157', 20), ('KCE142', 21), ('KCA142', 21), ('E12', 22), ('E24', 23), ('E13', 24)]}
+Station Ranks: {'STA 14': 1, 'STA 15': 2, 'STA 16': 3, 'STA 20': 4, 'STA 10': 5, 'STA 19': 6, 'STA 18': 7, 'STA 17': 8, 'STA 23': 9, 'STA 21': 10, 'KC STA 64': 11, 'STA 22': 12, 'STA 11': 13, 'STA 25': 14, 'KC STA 63': 15, 'STA 76': 16, 'KC STA 45': 17, 'KC STA 65': 18, 'KC STA 44': 19, 'KC STA 57': 20, 'KC STA 42': 21, 'STA 12': 22, 'STA 24': 23, 'STA 13': 24}
+Cross Staffing: []
+
+01/26/2023 08:54:04 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:54:04 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:54:04 INFO - Beginning recommendations
+01/26/2023 08:54:08 INFO - Recommendations complete
+Call Type: BLS1 Grid: TF161 FDID: 31D01_city Recommendation: ['M18']
+Response Plan: [['Medic Unit', 'Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'M18': [('M18', 1), ('E18', 1), ('A15', 2), ('M15', 2), ('E15', 2), ('M19', 3), ('E19', 3), ('M22', 4), ('E22', 4), ('L14', 5), ('E16', 6), ('M20', 7), ('E20', 7), ('M10', 8), ('M17', 9), ('E17', 9), ('M21', 10), ('E21', 10), ('KCE144', 11), ('KCA144', 11), ('E23', 12), ('A11A', 13), ('M11', 13), ('E11', 13), ('KCE157', 14), ('KCM157', 14), ('KCM163', 15), ('KCA163', 15), ('KCE164', 16), ('KCA164', 16), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('M25', 19), ('E25', 19), ('KCE165', 21), ('KCL161', 21)]}
+Station Ranks: {'STA 18': 1, 'STA 15': 2, 'STA 19': 3, 'STA 22': 4, 'STA 14': 5, 'STA 16': 6, 'STA 20': 7, 'STA 10': 8, 'STA 17': 9, 'STA 21': 10, 'KC STA 44': 11, 'STA 23': 12, 'STA 11': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'KC STA 64': 16, 'KC STA 45': 17, 'STA 76': 18, 'STA 25': 19, 'STA 73': 20, 'KC STA 65': 21, 'STA 72': 22}
+Cross Staffing: ['E18', 'M18']
+
+01/26/2023 08:54:08 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:54:08 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:54:08 INFO - Beginning recommendations
+01/26/2023 08:54:11 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 08:54:11 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:54:11 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa'])
+01/26/2023 08:54:11 INFO - Beginning recommendations
+01/26/2023 08:54:14 INFO - Recommendations complete
+Call Type: MVC Grid: DF414 FDID: 31D01_rfa Recommendation: ['E21', 'M21']
+Response Plan: [['Engine', 'Ladder'], ['Aid Unit', 'Medic Unit']]
+Unit Ranks: {'E21': [('E21', 1), ('E22', 2), ('E15', 3), ('E18', 6), ('E23', 7), ('KCE145', 8), ('KCL144', 8), ('KCE144', 9), ('E7', 11), ('E11', 12), ('L14', 13), ('E25', 14), ('E19', 16), ('KCE142', 17), ('E16', 18), ('E6', 19), ('E51', 20), ('E12', 23), ('E20', 24), ('E5', 25), ('KCE157', 26), ('E13', 27), ('KCE164', 30)], 'M21': [('M21', 1), ('M22', 2), ('A15', 3), ('M15', 3), ('M10', 5), ('M18', 6), ('KCA145', 8), ('KCA144', 9), ('A11A', 12), ('M11', 12), ('M25', 14), ('M19', 16), ('KCM142', 17), ('KCA142', 17), ('A6', 19), ('M6', 19), ('A51', 20), ('A51A', 20), ('KCM163', 22), ('KCA163', 22), ('M12', 23), ('M20', 24), ('M5', 25), ('KCM157', 26), ('M13', 27), ('KCA131', 29), ('KCA164', 30)]}
+Station Ranks: {'STA 21': 1, 'STA 22': 2, 'STA 15': 3, 'STA 76': 4, 'STA 10': 5, 'STA 18': 6, 'STA 23': 7, 'KC STA 45': 8, 'KC STA 44': 9, 'STA 72': 10, 'STA 7': 11, 'STA 11': 12, 'STA 14': 13, 'STA 25': 14, 'STA 26': 15, 'STA 19': 16, 'KC STA 42': 17, 'STA 16': 18, 'STA 6': 19, 'STA 51': 20, 'STA 73': 21, 'KC STA 63': 22, 'STA 12': 23, 'STA 20': 24, 'STA 5': 25, 'KC STA 57': 26, 'STA 13': 27, 'STA 71': 28, 'KC STA 31': 29, 'KC STA 64': 30}
+Cross Staffing: ['E21', 'TR21']
+
+01/26/2023 08:59:29 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:59:29 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa', '31D01_RFA'])
+01/26/2023 08:59:29 INFO - Beginning recommendations
+01/26/2023 08:59:34 INFO - Recommendations complete
+Call Type: BLS1 Grid: LF258 FDID: 31D01_RFA Recommendation: ['L14']
+Response Plan: [['Medic Unit', 'Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'L14': [('L14', 1), ('A15', 2), ('M15', 2), ('E15', 2), ('E16', 3), ('M20', 4), ('E20', 4), ('M10', 5), ('M19', 6), ('E19', 6), ('M18', 7), ('E18', 7), ('M17', 8), ('E17', 8), ('E23', 9), ('M21', 10), ('E21', 10), ('KCE164', 11), ('KCA164', 11), ('M22', 12), ('E22', 12), ('A11A', 13), ('M11', 13), ('E11', 13), ('M25', 14), ('E25', 14), ('KCM163', 15), ('KCA163', 15), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('KCE165', 18), ('KCL161', 18), ('KCE144', 19), ('KCA144', 19), ('KCE157', 20), ('KCM157', 20), ('KCE142', 21), ('KCM142', 21), ('KCA142', 21), ('M12', 22), ('E12', 22), ('M24', 23), ('E24', 23), ('M13', 24), ('E13', 24)]}
+Station Ranks: {'STA 14': 1, 'STA 15': 2, 'STA 16': 3, 'STA 20': 4, 'STA 10': 5, 'STA 19': 6, 'STA 18': 7, 'STA 17': 8, 'STA 23': 9, 'STA 21': 10, 'KC STA 64': 11, 'STA 22': 12, 'STA 11': 13, 'STA 25': 14, 'KC STA 63': 15, 'STA 76': 16, 'KC STA 45': 17, 'KC STA 65': 18, 'KC STA 44': 19, 'KC STA 57': 20, 'KC STA 42': 21, 'STA 12': 22, 'STA 24': 23, 'STA 13': 24}
+Cross Staffing: []
+
+01/26/2023 08:59:34 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:59:34 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa', '31D01_RFA'])
+01/26/2023 08:59:34 INFO - Beginning recommendations
+01/26/2023 08:59:37 INFO - Recommendations complete
+Call Type: BLS1 Grid: TF161 FDID: 31D01_CITY Recommendation: ['M18']
+Response Plan: [['Medic Unit', 'Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'M18': [('M18', 1), ('E18', 1), ('A15', 2), ('M15', 2), ('E15', 2), ('M19', 3), ('E19', 3), ('M22', 4), ('E22', 4), ('L14', 5), ('E16', 6), ('M20', 7), ('E20', 7), ('M10', 8), ('M17', 9), ('E17', 9), ('M21', 10), ('E21', 10), ('KCE144', 11), ('KCA144', 11), ('E23', 12), ('A11A', 13), ('M11', 13), ('E11', 13), ('KCE157', 14), ('KCM157', 14), ('KCM163', 15), ('KCA163', 15), ('KCE164', 16), ('KCA164', 16), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('M25', 19), ('E25', 19), ('KCE165', 21), ('KCL161', 21)]}
+Station Ranks: {'STA 18': 1, 'STA 15': 2, 'STA 19': 3, 'STA 22': 4, 'STA 14': 5, 'STA 16': 6, 'STA 20': 7, 'STA 10': 8, 'STA 17': 9, 'STA 21': 10, 'KC STA 44': 11, 'STA 23': 12, 'STA 11': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'KC STA 64': 16, 'KC STA 45': 17, 'STA 76': 18, 'STA 25': 19, 'STA 73': 20, 'KC STA 65': 21, 'STA 72': 22}
+Cross Staffing: ['E18', 'M18']
+
+01/26/2023 08:59:37 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:59:37 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa', '31D01_RFA'])
+01/26/2023 08:59:37 INFO - Beginning recommendations
+01/26/2023 08:59:41 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 08:59:41 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:59:41 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa', '31D01_RFA'])
+01/26/2023 08:59:41 INFO - Beginning recommendations
+01/26/2023 08:59:43 INFO - Recommendations complete
+Call Type: MVC Grid: DF414 FDID: 31D01_RFA Recommendation: ['E21', 'A15']
+Response Plan: [['Engine', 'Ladder'], 'Aid Unit']
+Unit Ranks: {'E21': [('E21', 1), ('E22', 2), ('E15', 3), ('E18', 6), ('E23', 7), ('KCE145', 8), ('KCL144', 8), ('KCE144', 9), ('E7', 11), ('E11', 12), ('L14', 13), ('E25', 14), ('E19', 16), ('KCE142', 17), ('E16', 18), ('E6', 19), ('E51', 20), ('E12', 23), ('E20', 24), ('E5', 25), ('KCE157', 26), ('E13', 27), ('KCE164', 30)]}
+Station Ranks: {'STA 21': 1, 'STA 22': 2, 'STA 15': 3, 'STA 76': 4, 'STA 10': 5, 'STA 18': 6, 'STA 23': 7, 'KC STA 45': 8, 'KC STA 44': 9, 'STA 72': 10, 'STA 7': 11, 'STA 11': 12, 'STA 14': 13, 'STA 25': 14, 'STA 26': 15, 'STA 19': 16, 'KC STA 42': 17, 'STA 16': 18, 'STA 6': 19, 'STA 51': 20, 'STA 73': 21, 'KC STA 63': 22, 'STA 12': 23, 'STA 20': 24, 'STA 5': 25, 'KC STA 57': 26, 'STA 13': 27, 'STA 71': 28, 'KC STA 31': 29, 'KC STA 64': 30}
+Cross Staffing: ['E21', 'TR21']
+
+01/26/2023 08:59:43 INFO - 
+Starting new recommendation cycle
+01/26/2023 08:59:43 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa', '31D01_RFA'])
+01/26/2023 08:59:43 INFO - Beginning recommendations
+01/26/2023 08:59:47 INFO - Recommendations complete
+Call Type: MVC Grid: DF414 FDID: 31D01_RFA Recommendation: ['E21', 'A15']
+Response Plan: [['Engine', 'Ladder'], 'Aid Unit']
+Unit Ranks: {'E21': [('E21', 1), ('E22', 2), ('E15', 3), ('E18', 6), ('E23', 7), ('KCE145', 8), ('KCL144', 8), ('KCE144', 9), ('E7', 11), ('E11', 12), ('L14', 13), ('E25', 14), ('E19', 16), ('KCE142', 17), ('E16', 18), ('E6', 19), ('E51', 20), ('E12', 23), ('E20', 24), ('E5', 25), ('KCE157', 26), ('E13', 27), ('KCE164', 30)]}
+Station Ranks: {'STA 21': 1, 'STA 22': 2, 'STA 15': 3, 'STA 76': 4, 'STA 10': 5, 'STA 18': 6, 'STA 23': 7, 'KC STA 45': 8, 'KC STA 44': 9, 'STA 72': 10, 'STA 7': 11, 'STA 11': 12, 'STA 14': 13, 'STA 25': 14, 'STA 26': 15, 'STA 19': 16, 'KC STA 42': 17, 'STA 16': 18, 'STA 6': 19, 'STA 51': 20, 'STA 73': 21, 'KC STA 63': 22, 'STA 12': 23, 'STA 20': 24, 'STA 5': 25, 'KC STA 57': 26, 'STA 13': 27, 'STA 71': 28, 'KC STA 31': 29, 'KC STA 64': 30}
+Cross Staffing: ['E21', 'TR21']
+
+01/26/2023 09:00:39 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:00:39 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa', '31D01_RFA'])
+01/26/2023 09:00:39 INFO - Beginning recommendations
+01/26/2023 09:00:44 INFO - Recommendations complete
+Call Type: BLS1 Grid: LF258 FDID: 31D01_RFA Recommendation: ['L14']
+Response Plan: [['Medic Unit', 'Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'L14': [('L14', 1), ('A15', 2), ('M15', 2), ('E15', 2), ('E16', 3), ('M20', 4), ('E20', 4), ('M10', 5), ('M19', 6), ('E19', 6), ('M18', 7), ('E18', 7), ('M17', 8), ('E17', 8), ('E23', 9), ('M21', 10), ('E21', 10), ('KCE164', 11), ('KCA164', 11), ('M22', 12), ('E22', 12), ('A11A', 13), ('M11', 13), ('E11', 13), ('M25', 14), ('E25', 14), ('KCM163', 15), ('KCA163', 15), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('KCE165', 18), ('KCL161', 18), ('KCE144', 19), ('KCA144', 19), ('KCE157', 20), ('KCM157', 20), ('KCE142', 21), ('KCM142', 21), ('KCA142', 21), ('M12', 22), ('E12', 22), ('M24', 23), ('E24', 23), ('M13', 24), ('E13', 24)]}
+Station Ranks: {'STA 14': 1, 'STA 15': 2, 'STA 16': 3, 'STA 20': 4, 'STA 10': 5, 'STA 19': 6, 'STA 18': 7, 'STA 17': 8, 'STA 23': 9, 'STA 21': 10, 'KC STA 64': 11, 'STA 22': 12, 'STA 11': 13, 'STA 25': 14, 'KC STA 63': 15, 'STA 76': 16, 'KC STA 45': 17, 'KC STA 65': 18, 'KC STA 44': 19, 'KC STA 57': 20, 'KC STA 42': 21, 'STA 12': 22, 'STA 24': 23, 'STA 13': 24}
+Cross Staffing: []
+
+01/26/2023 09:00:44 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:00:44 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa', '31D01_RFA'])
+01/26/2023 09:00:44 INFO - Beginning recommendations
+01/26/2023 09:00:47 INFO - Recommendations complete
+Call Type: BLS1 Grid: TF161 FDID: 31D01_CITY Recommendation: ['M18']
+Response Plan: [['Medic Unit', 'Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'M18': [('M18', 1), ('E18', 1), ('A15', 2), ('M15', 2), ('E15', 2), ('M19', 3), ('E19', 3), ('M22', 4), ('E22', 4), ('L14', 5), ('E16', 6), ('M20', 7), ('E20', 7), ('M10', 8), ('M17', 9), ('E17', 9), ('M21', 10), ('E21', 10), ('KCE144', 11), ('KCA144', 11), ('E23', 12), ('A11A', 13), ('M11', 13), ('E11', 13), ('KCE157', 14), ('KCM157', 14), ('KCM163', 15), ('KCA163', 15), ('KCE164', 16), ('KCA164', 16), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('M25', 19), ('E25', 19), ('KCE165', 21), ('KCL161', 21)]}
+Station Ranks: {'STA 18': 1, 'STA 15': 2, 'STA 19': 3, 'STA 22': 4, 'STA 14': 5, 'STA 16': 6, 'STA 20': 7, 'STA 10': 8, 'STA 17': 9, 'STA 21': 10, 'KC STA 44': 11, 'STA 23': 12, 'STA 11': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'KC STA 64': 16, 'KC STA 45': 17, 'STA 76': 18, 'STA 25': 19, 'STA 73': 20, 'KC STA 65': 21, 'STA 72': 22}
+Cross Staffing: ['E18', 'M18']
+
+01/26/2023 09:00:47 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:00:47 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa', '31D01_RFA'])
+01/26/2023 09:00:47 INFO - Beginning recommendations
+01/26/2023 09:00:50 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 09:00:50 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:00:50 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa', '31D01_RFA'])
+01/26/2023 09:00:50 INFO - Beginning recommendations
+01/26/2023 09:00:52 INFO - Recommendations complete
+Call Type: MVC Grid: DF414 FDID: 31D01_RFA Recommendation: ['E21', 'A15']
+Response Plan: [['Engine', 'Ladder'], 'Aid Unit']
+Unit Ranks: {'E21': [('E21', 1), ('E22', 2), ('E15', 3), ('E18', 6), ('E23', 7), ('KCE145', 8), ('KCL144', 8), ('KCE144', 9), ('E7', 11), ('E11', 12), ('L14', 13), ('E25', 14), ('E19', 16), ('KCE142', 17), ('E16', 18), ('E6', 19), ('E51', 20), ('E12', 23), ('E20', 24), ('E5', 25), ('KCE157', 26), ('E13', 27), ('KCE164', 30)]}
+Station Ranks: {'STA 21': 1, 'STA 22': 2, 'STA 15': 3, 'STA 76': 4, 'STA 10': 5, 'STA 18': 6, 'STA 23': 7, 'KC STA 45': 8, 'KC STA 44': 9, 'STA 72': 10, 'STA 7': 11, 'STA 11': 12, 'STA 14': 13, 'STA 25': 14, 'STA 26': 15, 'STA 19': 16, 'KC STA 42': 17, 'STA 16': 18, 'STA 6': 19, 'STA 51': 20, 'STA 73': 21, 'KC STA 63': 22, 'STA 12': 23, 'STA 20': 24, 'STA 5': 25, 'KC STA 57': 26, 'STA 13': 27, 'STA 71': 28, 'KC STA 31': 29, 'KC STA 64': 30}
+Cross Staffing: ['E21', 'TR21']
+
+01/26/2023 09:00:52 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:00:52 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_rfa', '31D01_RFA'])
+01/26/2023 09:00:52 INFO - Beginning recommendations
+01/26/2023 09:00:55 INFO - Recommendations complete
+Call Type: MVC Grid: DF414 FDID: 31D01_RFA Recommendation: ['E21', 'A15']
+Response Plan: [['Engine', 'Ladder'], 'Aid Unit']
+Unit Ranks: {'E21': [('E21', 1), ('E22', 2), ('E15', 3), ('E18', 6), ('E23', 7), ('KCE145', 8), ('KCL144', 8), ('KCE144', 9), ('E7', 11), ('E11', 12), ('L14', 13), ('E25', 14), ('E19', 16), ('KCE142', 17), ('E16', 18), ('E6', 19), ('E51', 20), ('E12', 23), ('E20', 24), ('E5', 25), ('KCE157', 26), ('E13', 27), ('KCE164', 30)]}
+Station Ranks: {'STA 21': 1, 'STA 22': 2, 'STA 15': 3, 'STA 76': 4, 'STA 10': 5, 'STA 18': 6, 'STA 23': 7, 'KC STA 45': 8, 'KC STA 44': 9, 'STA 72': 10, 'STA 7': 11, 'STA 11': 12, 'STA 14': 13, 'STA 25': 14, 'STA 26': 15, 'STA 19': 16, 'KC STA 42': 17, 'STA 16': 18, 'STA 6': 19, 'STA 51': 20, 'STA 73': 21, 'KC STA 63': 22, 'STA 12': 23, 'STA 20': 24, 'STA 5': 25, 'KC STA 57': 26, 'STA 13': 27, 'STA 71': 28, 'KC STA 31': 29, 'KC STA 64': 30}
+Cross Staffing: ['E21', 'TR21']
+
+01/26/2023 09:02:36 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:02:36 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:02:36 INFO - Beginning recommendations
+01/26/2023 09:02:38 INFO - Recommendations complete
+Call Type: BLS1 Grid: LF258 FDID: 31D01_RFA Recommendation: ['L14']
+Response Plan: [['Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'L14': [('L14', 1), ('A15', 2), ('E15', 2), ('E16', 3), ('E20', 4), ('E19', 6), ('E18', 7), ('E17', 8), ('E23', 9), ('E21', 10), ('KCE164', 11), ('KCA164', 11), ('E22', 12), ('A11A', 13), ('E11', 13), ('E25', 14), ('KCA163', 15), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('KCE165', 18), ('KCL161', 18), ('KCE144', 19), ('KCA144', 19), ('KCE157', 20), ('KCE142', 21), ('KCA142', 21), ('E12', 22), ('E24', 23), ('E13', 24)]}
+Station Ranks: {'STA 14': 1, 'STA 15': 2, 'STA 16': 3, 'STA 20': 4, 'STA 10': 5, 'STA 19': 6, 'STA 18': 7, 'STA 17': 8, 'STA 23': 9, 'STA 21': 10, 'KC STA 64': 11, 'STA 22': 12, 'STA 11': 13, 'STA 25': 14, 'KC STA 63': 15, 'STA 76': 16, 'KC STA 45': 17, 'KC STA 65': 18, 'KC STA 44': 19, 'KC STA 57': 20, 'KC STA 42': 21, 'STA 12': 22, 'STA 24': 23, 'STA 13': 24}
+Cross Staffing: []
+
+01/26/2023 09:02:38 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:02:38 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:02:38 INFO - Beginning recommendations
+01/26/2023 09:02:41 INFO - Recommendations complete
+Call Type: BLS1 Grid: TF161 FDID: 31D01_CITY Recommendation: ['M18']
+Response Plan: [['Medic Unit', 'Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'M18': [('M18', 1), ('E18', 1), ('A15', 2), ('M15', 2), ('E15', 2), ('M19', 3), ('E19', 3), ('M22', 4), ('E22', 4), ('L14', 5), ('E16', 6), ('M20', 7), ('E20', 7), ('M10', 8), ('M17', 9), ('E17', 9), ('M21', 10), ('E21', 10), ('KCE144', 11), ('KCA144', 11), ('E23', 12), ('A11A', 13), ('M11', 13), ('E11', 13), ('KCE157', 14), ('KCM157', 14), ('KCM163', 15), ('KCA163', 15), ('KCE164', 16), ('KCA164', 16), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('M25', 19), ('E25', 19), ('KCE165', 21), ('KCL161', 21)]}
+Station Ranks: {'STA 18': 1, 'STA 15': 2, 'STA 19': 3, 'STA 22': 4, 'STA 14': 5, 'STA 16': 6, 'STA 20': 7, 'STA 10': 8, 'STA 17': 9, 'STA 21': 10, 'KC STA 44': 11, 'STA 23': 12, 'STA 11': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'KC STA 64': 16, 'KC STA 45': 17, 'STA 76': 18, 'STA 25': 19, 'STA 73': 20, 'KC STA 65': 21, 'STA 72': 22}
+Cross Staffing: ['E18', 'M18']
+
+01/26/2023 09:02:41 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:02:41 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:02:41 INFO - Beginning recommendations
+01/26/2023 09:02:45 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 09:02:45 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:02:45 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:02:45 INFO - Beginning recommendations
+01/26/2023 09:02:47 INFO - Recommendations complete
+Call Type: MVC Grid: DF414 FDID: 31D01_RFA Recommendation: ['E21', 'M21']
+Response Plan: [['Engine', 'Ladder'], ['Aid Unit', 'Medic Unit']]
+Unit Ranks: {'E21': [('E21', 1), ('E22', 2), ('E15', 3), ('E18', 6), ('E23', 7), ('KCE145', 8), ('KCL144', 8), ('KCE144', 9), ('E7', 11), ('E11', 12), ('L14', 13), ('E25', 14), ('E19', 16), ('KCE142', 17), ('E16', 18), ('E6', 19), ('E51', 20), ('E12', 23), ('E20', 24), ('E5', 25), ('KCE157', 26), ('E13', 27), ('KCE164', 30)], 'M21': [('M21', 1), ('M22', 2), ('A15', 3), ('M15', 3), ('M10', 5), ('M18', 6), ('KCA145', 8), ('KCA144', 9), ('A11A', 12), ('M11', 12), ('M25', 14), ('M19', 16), ('KCM142', 17), ('KCA142', 17), ('A6', 19), ('M6', 19), ('A51', 20), ('A51A', 20), ('KCM163', 22), ('KCA163', 22), ('M12', 23), ('M20', 24), ('M5', 25), ('KCM157', 26), ('M13', 27), ('KCA131', 29), ('KCA164', 30)]}
+Station Ranks: {'STA 21': 1, 'STA 22': 2, 'STA 15': 3, 'STA 76': 4, 'STA 10': 5, 'STA 18': 6, 'STA 23': 7, 'KC STA 45': 8, 'KC STA 44': 9, 'STA 72': 10, 'STA 7': 11, 'STA 11': 12, 'STA 14': 13, 'STA 25': 14, 'STA 26': 15, 'STA 19': 16, 'KC STA 42': 17, 'STA 16': 18, 'STA 6': 19, 'STA 51': 20, 'STA 73': 21, 'KC STA 63': 22, 'STA 12': 23, 'STA 20': 24, 'STA 5': 25, 'KC STA 57': 26, 'STA 13': 27, 'STA 71': 28, 'KC STA 31': 29, 'KC STA 64': 30}
+Cross Staffing: ['E21', 'TR21']
+
+01/26/2023 09:02:47 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:02:47 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:02:47 INFO - Beginning recommendations
+01/26/2023 09:02:51 INFO - Recommendations complete
+Call Type: MVC Grid: DF414 FDID: 31D01_RFA Recommendation: ['E21', 'M21']
+Response Plan: [['Engine', 'Ladder'], ['Aid Unit', 'Medic Unit']]
+Unit Ranks: {'E21': [('E21', 1), ('E22', 2), ('E15', 3), ('E18', 6), ('E23', 7), ('KCE145', 8), ('KCL144', 8), ('KCE144', 9), ('E7', 11), ('E11', 12), ('L14', 13), ('E25', 14), ('E19', 16), ('KCE142', 17), ('E16', 18), ('E6', 19), ('E51', 20), ('E12', 23), ('E20', 24), ('E5', 25), ('KCE157', 26), ('E13', 27), ('KCE164', 30)], 'M21': [('M21', 1), ('M22', 2), ('A15', 3), ('M15', 3), ('M10', 5), ('M18', 6), ('KCA145', 8), ('KCA144', 9), ('A11A', 12), ('M11', 12), ('M25', 14), ('M19', 16), ('KCM142', 17), ('KCA142', 17), ('A6', 19), ('M6', 19), ('A51', 20), ('A51A', 20), ('KCM163', 22), ('KCA163', 22), ('M12', 23), ('M20', 24), ('M5', 25), ('KCM157', 26), ('M13', 27), ('KCA131', 29), ('KCA164', 30)]}
+Station Ranks: {'STA 21': 1, 'STA 22': 2, 'STA 15': 3, 'STA 76': 4, 'STA 10': 5, 'STA 18': 6, 'STA 23': 7, 'KC STA 45': 8, 'KC STA 44': 9, 'STA 72': 10, 'STA 7': 11, 'STA 11': 12, 'STA 14': 13, 'STA 25': 14, 'STA 26': 15, 'STA 19': 16, 'KC STA 42': 17, 'STA 16': 18, 'STA 6': 19, 'STA 51': 20, 'STA 73': 21, 'KC STA 63': 22, 'STA 12': 23, 'STA 20': 24, 'STA 5': 25, 'KC STA 57': 26, 'STA 13': 27, 'STA 71': 28, 'KC STA 31': 29, 'KC STA 64': 30}
+Cross Staffing: ['E21', 'TR21']
+
+01/26/2023 09:12:57 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:12:57 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:12:57 INFO - Beginning recommendations
+01/26/2023 09:13:05 INFO - Recommendations complete
+Call Type: BLS1 Grid: LF258 FDID: 31D01_RFA Recommendation: ['L14']
+Response Plan: [['Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'L14': [('L14', 1), ('A15', 2), ('E15', 2), ('E16', 3), ('E20', 4), ('E19', 6), ('E18', 7), ('E17', 8), ('E23', 9), ('E21', 10), ('KCE164', 11), ('KCA164', 11), ('E22', 12), ('A11A', 13), ('E11', 13), ('E25', 14), ('KCA163', 15), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('KCE165', 18), ('KCL161', 18), ('KCE144', 19), ('KCA144', 19), ('KCE157', 20), ('KCE142', 21), ('KCA142', 21), ('E12', 22), ('E24', 23), ('E13', 24)]}
+Station Ranks: {'STA 14': 1, 'STA 15': 2, 'STA 16': 3, 'STA 20': 4, 'STA 10': 5, 'STA 19': 6, 'STA 18': 7, 'STA 17': 8, 'STA 23': 9, 'STA 21': 10, 'KC STA 64': 11, 'STA 22': 12, 'STA 11': 13, 'STA 25': 14, 'KC STA 63': 15, 'STA 76': 16, 'KC STA 45': 17, 'KC STA 65': 18, 'KC STA 44': 19, 'KC STA 57': 20, 'KC STA 42': 21, 'STA 12': 22, 'STA 24': 23, 'STA 13': 24}
+Cross Staffing: []
+
+01/26/2023 09:13:05 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:13:05 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:13:05 INFO - Beginning recommendations
+01/26/2023 09:13:08 INFO - Recommendations complete
+Call Type: BLS1 Grid: TF161 FDID: 31D01_CITY Recommendation: ['M18']
+Response Plan: [['Medic Unit', 'Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'M18': [('M18', 1), ('E18', 1), ('A15', 2), ('M15', 2), ('E15', 2), ('M19', 3), ('E19', 3), ('M22', 4), ('E22', 4), ('L14', 5), ('E16', 6), ('M20', 7), ('E20', 7), ('M10', 8), ('M17', 9), ('E17', 9), ('M21', 10), ('E21', 10), ('KCE144', 11), ('KCA144', 11), ('E23', 12), ('A11A', 13), ('M11', 13), ('E11', 13), ('KCE157', 14), ('KCM157', 14), ('KCM163', 15), ('KCA163', 15), ('KCE164', 16), ('KCA164', 16), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('M25', 19), ('E25', 19), ('KCE165', 21), ('KCL161', 21)]}
+Station Ranks: {'STA 18': 1, 'STA 15': 2, 'STA 19': 3, 'STA 22': 4, 'STA 14': 5, 'STA 16': 6, 'STA 20': 7, 'STA 10': 8, 'STA 17': 9, 'STA 21': 10, 'KC STA 44': 11, 'STA 23': 12, 'STA 11': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'KC STA 64': 16, 'KC STA 45': 17, 'STA 76': 18, 'STA 25': 19, 'STA 73': 20, 'KC STA 65': 21, 'STA 72': 22}
+Cross Staffing: ['E18', 'M18']
+
+01/26/2023 09:13:08 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:13:08 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:13:08 INFO - Beginning recommendations
+01/26/2023 09:13:12 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 09:13:12 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:13:12 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:13:12 INFO - Beginning recommendations
+01/26/2023 09:13:15 INFO - Recommendations complete
+Call Type: MVC Grid: DF414 FDID: 31D01_RFA Recommendation: ['E21', 'M21']
+Response Plan: [['Engine', 'Ladder'], ['Aid Unit', 'Medic Unit']]
+Unit Ranks: {'E21': [('E21', 1), ('E22', 2), ('E15', 3), ('E18', 6), ('E23', 7), ('KCE145', 8), ('KCL144', 8), ('KCE144', 9), ('E7', 11), ('E11', 12), ('L14', 13), ('E25', 14), ('E19', 16), ('KCE142', 17), ('E16', 18), ('E6', 19), ('E51', 20), ('E12', 23), ('E20', 24), ('E5', 25), ('KCE157', 26), ('E13', 27), ('KCE164', 30)], 'M21': [('M21', 1), ('M22', 2), ('A15', 3), ('M15', 3), ('M10', 5), ('M18', 6), ('KCA145', 8), ('KCA144', 9), ('A11A', 12), ('M11', 12), ('M25', 14), ('M19', 16), ('KCM142', 17), ('KCA142', 17), ('A6', 19), ('M6', 19), ('A51', 20), ('A51A', 20), ('KCM163', 22), ('KCA163', 22), ('M12', 23), ('M20', 24), ('M5', 25), ('KCM157', 26), ('M13', 27), ('KCA131', 29), ('KCA164', 30)]}
+Station Ranks: {'STA 21': 1, 'STA 22': 2, 'STA 15': 3, 'STA 76': 4, 'STA 10': 5, 'STA 18': 6, 'STA 23': 7, 'KC STA 45': 8, 'KC STA 44': 9, 'STA 72': 10, 'STA 7': 11, 'STA 11': 12, 'STA 14': 13, 'STA 25': 14, 'STA 26': 15, 'STA 19': 16, 'KC STA 42': 17, 'STA 16': 18, 'STA 6': 19, 'STA 51': 20, 'STA 73': 21, 'KC STA 63': 22, 'STA 12': 23, 'STA 20': 24, 'STA 5': 25, 'KC STA 57': 26, 'STA 13': 27, 'STA 71': 28, 'KC STA 31': 29, 'KC STA 64': 30}
+Cross Staffing: ['E21', 'TR21']
+
+01/26/2023 09:13:15 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:13:15 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:13:15 INFO - Beginning recommendations
+01/26/2023 09:13:18 INFO - Recommendations complete
+Call Type: MVC Grid: DF414 FDID: 31D01_RFA Recommendation: ['E21', 'M21']
+Response Plan: [['Engine', 'Ladder'], ['Aid Unit', 'Medic Unit']]
+Unit Ranks: {'E21': [('E21', 1), ('E22', 2), ('E15', 3), ('E18', 6), ('E23', 7), ('KCE145', 8), ('KCL144', 8), ('KCE144', 9), ('E7', 11), ('E11', 12), ('L14', 13), ('E25', 14), ('E19', 16), ('KCE142', 17), ('E16', 18), ('E6', 19), ('E51', 20), ('E12', 23), ('E20', 24), ('E5', 25), ('KCE157', 26), ('E13', 27), ('KCE164', 30)], 'M21': [('M21', 1), ('M22', 2), ('A15', 3), ('M15', 3), ('M10', 5), ('M18', 6), ('KCA145', 8), ('KCA144', 9), ('A11A', 12), ('M11', 12), ('M25', 14), ('M19', 16), ('KCM142', 17), ('KCA142', 17), ('A6', 19), ('M6', 19), ('A51', 20), ('A51A', 20), ('KCM163', 22), ('KCA163', 22), ('M12', 23), ('M20', 24), ('M5', 25), ('KCM157', 26), ('M13', 27), ('KCA131', 29), ('KCA164', 30)]}
+Station Ranks: {'STA 21': 1, 'STA 22': 2, 'STA 15': 3, 'STA 76': 4, 'STA 10': 5, 'STA 18': 6, 'STA 23': 7, 'KC STA 45': 8, 'KC STA 44': 9, 'STA 72': 10, 'STA 7': 11, 'STA 11': 12, 'STA 14': 13, 'STA 25': 14, 'STA 26': 15, 'STA 19': 16, 'KC STA 42': 17, 'STA 16': 18, 'STA 6': 19, 'STA 51': 20, 'STA 73': 21, 'KC STA 63': 22, 'STA 12': 23, 'STA 20': 24, 'STA 5': 25, 'KC STA 57': 26, 'STA 13': 27, 'STA 71': 28, 'KC STA 31': 29, 'KC STA 64': 30}
+Cross Staffing: ['E21', 'TR21']
+
+01/26/2023 09:14:14 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:14:14 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:14:14 INFO - Beginning recommendations
+01/26/2023 09:14:20 INFO - Recommendations complete
+Call Type: BLS1 Grid: LF258 FDID: 31D01_RFA Recommendation: ['L14']
+Response Plan: [['Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'L14': [('L14', 1), ('A15', 2), ('E15', 2), ('E16', 3), ('E20', 4), ('E19', 6), ('E18', 7), ('E17', 8), ('E23', 9), ('E21', 10), ('KCE164', 11), ('KCA164', 11), ('E22', 12), ('A11A', 13), ('E11', 13), ('E25', 14), ('KCA163', 15), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('KCE165', 18), ('KCL161', 18), ('KCE144', 19), ('KCA144', 19), ('KCE157', 20), ('KCE142', 21), ('KCA142', 21), ('E12', 22), ('E24', 23), ('E13', 24)]}
+Station Ranks: {'STA 14': 1, 'STA 15': 2, 'STA 16': 3, 'STA 20': 4, 'STA 10': 5, 'STA 19': 6, 'STA 18': 7, 'STA 17': 8, 'STA 23': 9, 'STA 21': 10, 'KC STA 64': 11, 'STA 22': 12, 'STA 11': 13, 'STA 25': 14, 'KC STA 63': 15, 'STA 76': 16, 'KC STA 45': 17, 'KC STA 65': 18, 'KC STA 44': 19, 'KC STA 57': 20, 'KC STA 42': 21, 'STA 12': 22, 'STA 24': 23, 'STA 13': 24}
+Cross Staffing: []
+
+01/26/2023 09:14:20 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:14:20 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:14:20 INFO - Beginning recommendations
+01/26/2023 09:14:24 INFO - Recommendations complete
+Call Type: BLS1 Grid: TF161 FDID: 31D01_CITY Recommendation: ['M18']
+Response Plan: [['Medic Unit', 'Aid Unit', 'Engine', 'Ladder']]
+Unit Ranks: {'M18': [('M18', 1), ('E18', 1), ('A15', 2), ('M15', 2), ('E15', 2), ('M19', 3), ('E19', 3), ('M22', 4), ('E22', 4), ('L14', 5), ('E16', 6), ('M20', 7), ('E20', 7), ('M10', 8), ('M17', 9), ('E17', 9), ('M21', 10), ('E21', 10), ('KCE144', 11), ('KCA144', 11), ('E23', 12), ('A11A', 13), ('M11', 13), ('E11', 13), ('KCE157', 14), ('KCM157', 14), ('KCM163', 15), ('KCA163', 15), ('KCE164', 16), ('KCA164', 16), ('KCE145', 17), ('KCL144', 17), ('KCA145', 17), ('M25', 19), ('E25', 19), ('KCE165', 21), ('KCL161', 21)]}
+Station Ranks: {'STA 18': 1, 'STA 15': 2, 'STA 19': 3, 'STA 22': 4, 'STA 14': 5, 'STA 16': 6, 'STA 20': 7, 'STA 10': 8, 'STA 17': 9, 'STA 21': 10, 'KC STA 44': 11, 'STA 23': 12, 'STA 11': 13, 'KC STA 57': 14, 'KC STA 63': 15, 'KC STA 64': 16, 'KC STA 45': 17, 'STA 76': 18, 'STA 25': 19, 'STA 73': 20, 'KC STA 65': 21, 'STA 72': 22}
+Cross Staffing: ['E18', 'M18']
+
+01/26/2023 09:14:24 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:14:24 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:14:24 INFO - Beginning recommendations
+01/26/2023 09:14:27 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+
+01/26/2023 09:14:27 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:14:27 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:14:27 INFO - Beginning recommendations
+01/26/2023 09:14:31 INFO - Recommendations complete
+Call Type: MVC Grid: DF414 FDID: 31D01_RFA Recommendation: ['E21', 'A15']
+Response Plan: [['Engine', 'Ladder'], 'Aid Unit']
+Unit Ranks: {'E21': [('E21', 1), ('E22', 2), ('E15', 3), ('E18', 6), ('E23', 7), ('KCE145', 8), ('KCL144', 8), ('KCE144', 9), ('E7', 11), ('E11', 12), ('L14', 13), ('E25', 14), ('E19', 16), ('KCE142', 17), ('E16', 18), ('E6', 19), ('E51', 20), ('E12', 23), ('E20', 24), ('E5', 25), ('KCE157', 26), ('E13', 27), ('KCE164', 30)]}
+Station Ranks: {'STA 21': 1, 'STA 22': 2, 'STA 15': 3, 'STA 76': 4, 'STA 10': 5, 'STA 18': 6, 'STA 23': 7, 'KC STA 45': 8, 'KC STA 44': 9, 'STA 72': 10, 'STA 7': 11, 'STA 11': 12, 'STA 14': 13, 'STA 25': 14, 'STA 26': 15, 'STA 19': 16, 'KC STA 42': 17, 'STA 16': 18, 'STA 6': 19, 'STA 51': 20, 'STA 73': 21, 'KC STA 63': 22, 'STA 12': 23, 'STA 20': 24, 'STA 5': 25, 'KC STA 57': 26, 'STA 13': 27, 'STA 71': 28, 'KC STA 31': 29, 'KC STA 64': 30}
+Cross Staffing: ['E21', 'TR21']
+
+01/26/2023 09:14:31 INFO - 
+Starting new recommendation cycle
+01/26/2023 09:14:31 INFO - Does this work: dict_keys(['TAC-1', 'TAC-3', 'TAC-5', 'TAC-2', '31D01_RFA'])
+01/26/2023 09:14:31 INFO - Beginning recommendations
+01/26/2023 09:14:34 INFO - Recommendations complete
+Call Type: MVC Grid: DF414 FDID: 31D01_RFA Recommendation: ['E21', 'A15']
+Response Plan: [['Engine', 'Ladder'], 'Aid Unit']
+Unit Ranks: {'E21': [('E21', 1), ('E22', 2), ('E15', 3), ('E18', 6), ('E23', 7), ('KCE145', 8), ('KCL144', 8), ('KCE144', 9), ('E7', 11), ('E11', 12), ('L14', 13), ('E25', 14), ('E19', 16), ('KCE142', 17), ('E16', 18), ('E6', 19), ('E51', 20), ('E12', 23), ('E20', 24), ('E5', 25), ('KCE157', 26), ('E13', 27), ('KCE164', 30)]}
+Station Ranks: {'STA 21': 1, 'STA 22': 2, 'STA 15': 3, 'STA 76': 4, 'STA 10': 5, 'STA 18': 6, 'STA 23': 7, 'KC STA 45': 8, 'KC STA 44': 9, 'STA 72': 10, 'STA 7': 11, 'STA 11': 12, 'STA 14': 13, 'STA 25': 14, 'STA 26': 15, 'STA 19': 16, 'KC STA 42': 17, 'STA 16': 18, 'STA 6': 19, 'STA 51': 20, 'STA 73': 21, 'KC STA 63': 22, 'STA 12': 23, 'STA 20': 24, 'STA 5': 25, 'KC STA 57': 26, 'STA 13': 27, 'STA 71': 28, 'KC STA 31': 29, 'KC STA 64': 30}
+Cross Staffing: ['E21', 'TR21']
+
