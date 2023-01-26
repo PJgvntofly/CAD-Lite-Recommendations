@@ -4,7 +4,11 @@ import unittest
 class TestResponsePlans(unittest.TestCase):
     def test_tac_1(self):
         data = import_response_plans()
-        self.assertEqual(data['SNO911']['TAC-1']['BLS'], [["Aid Unit", "Engine", "Ladder"]])
+        self.assertEqual(data['SNO911']['TAC-1']['BLS1'], [["Aid Unit", "Engine", "Ladder"]])
+    
+    def test_31D01_rfa(self):
+        data = import_response_plans()
+        self.assertEqual(data['SNO911']['31D01_rfa']['BLS1'], [['Aid Unit', 'Engine', 'Ladder']])
     
     def test_create_new_agency(self):
         update_response_plan('ValleyCOM', 'Test_Zone', 'Test', ['Engine'])
@@ -27,7 +31,7 @@ class TestResponsePlans(unittest.TestCase):
         data = import_response_plans()
         self.assertEqual(data['VALLEYCOM']['TEST_ZONE']['TEST'], ['Engine'])
         self.assertEqual(data['VALLEYCOM']['TEST_ZONE']['TEST2'], ['Engine', ['Aid Unit', 'Medic Unit']])
-        self.assertEqual(data['SNO911']['TAC-1']['BLS'], [["Aid Unit", "Engine", "Ladder"]])
+        self.assertEqual(data['SNO911']['TAC-1']['BLS1'], [["Aid Unit", "Engine", "Ladder"]])
         
 
 if __name__ == '__main__':

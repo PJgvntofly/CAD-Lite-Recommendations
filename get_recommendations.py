@@ -8,6 +8,7 @@ from log_config import rec_log
 def get_recommendations(call_type, grid):
     rec_log.info("\nStarting new recommendation cycle")
     response_plans = import_response_plans()
+    rec_log.debug(f"SNO911 Response Plan Keys: {response_plans['SNO911'].keys()}")
     try:
         #call_type = input("Enter the call type:")
         rec_log.debug(f"Input Call Type: {call_type}")
