@@ -1582,3 +1582,13 @@ Unit Ranks: {'E21': [('E21', 1), ('E22', 2), ('E15', 3), ('E18', 6), ('E23', 7),
 Station Ranks: {'STA 21': 1, 'STA 22': 2, 'STA 15': 3, 'STA 76': 4, 'STA 10': 5, 'STA 18': 6, 'STA 23': 7, 'KC STA 45': 8, 'KC STA 44': 9, 'STA 72': 10, 'STA 7': 11, 'STA 11': 12, 'STA 14': 13, 'STA 25': 14, 'STA 26': 15, 'STA 19': 16, 'KC STA 42': 17, 'STA 16': 18, 'STA 6': 19, 'STA 51': 20, 'STA 73': 21, 'KC STA 63': 22, 'STA 12': 23, 'STA 20': 24, 'STA 5': 25, 'KC STA 57': 26, 'STA 13': 27, 'STA 71': 28, 'KC STA 31': 29, 'KC STA 64': 30}
 Cross Staffing: ['E21', 'TR21']
 
+09/20/2023 08:19:06 INFO - 
+Starting new recommendation cycle
+09/20/2023 08:19:06 INFO - Beginning recommendations
+09/20/2023 08:19:14 INFO - Recommendations complete
+Call Type: MED1 Grid: BA0001 FDID: 31M04 Recommendation: ['M1', 'E2']
+Response Plan: ['Medic Unit', 'Engine']
+Unit Ranks: {}
+Station Ranks: {'STA 2': 1, 'XXSTA 3': 2, 'STA 1': 3, 'STA 5': 4, 'STA 4': 5, 'STA 6': 6, 'STA 7': 7, 'STA 61': 8, 'STA 63': 9, 'STA 82': 10}
+Cross Staffing: []
+

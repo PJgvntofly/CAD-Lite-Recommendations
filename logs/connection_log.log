@@ -2522,3 +2522,19 @@ TypeError: unhashable type: 'dict'
 01/26/2023 09:14:31 INFO - Attempting API connection
 01/26/2023 09:14:34 INFO - Verbose connection successful. Status code: 200
 01/26/2023 09:14:34 INFO - Refreshing units
+09/20/2023 05:42:52 INFO - Importing station orders
+09/20/2023 05:42:52 INFO - Creating positions
+09/20/2023 05:42:52 INFO - Creating FDIDs
+
+09/20/2023 08:18:45 INFO - Importing station orders
+09/20/2023 08:18:45 INFO - Creating positions
+09/20/2023 08:18:45 INFO - Creating FDIDs
+
+09/20/2023 08:18:54 INFO - Importing station orders
+09/20/2023 08:18:54 INFO - Creating positions
+09/20/2023 08:18:54 INFO - Creating FDIDs
+
+09/20/2023 08:19:06 INFO - Initializing database connection
+09/20/2023 08:19:06 INFO - Attempting API connection
+09/20/2023 08:19:14 INFO - Verbose connection successful. Status code: 200
+09/20/2023 08:19:14 INFO - Refreshing units
