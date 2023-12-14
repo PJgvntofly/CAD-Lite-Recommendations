@@ -20,22 +20,17 @@ class Unit:
         #String representation of a unit for easier debugging
         return '\nUnit Number: ' + self.unit_number + '\nUnit Type: ' + self.unit_type + '\nAssigned Station: ' + self.unit_station + '\nUnit Status: ' + self.unit_status + '\nCross Staffing: ' +self.cross_staffing
 
-def create_connection():
+def create_connection(window):
     #Function to create an API connection with output
-    connection = create_api_connection.create_api_connection(API_URL, 1, 'WA')
+    connection = create_api_connection.create_api_connection(API_URL, 1, 'WA', window)
     return connection
 
-def silent_connection():
-    #Function to create an API connection with no output
-    connection = create_api_connection.silent_api_connection(API_URL, 1, 'WA')
-    return connection
-
-def refresh_units():
+def refresh_units(window):
     #Function to refresh unit data from the API
     unit_list = []
     try:
         connection_log.info("Refreshing units")
-        with create_connection() as connection:
+        with create_connection(window) as connection:
             response = connection.json()
             #Create Unit objects from API response
             unit_list = [Unit(unit['unitId'], unit['unitType'], unit['assignedStation'], unit['unitStatus'], unit['crossStaffing']) for unit in response['data']]
@@ -55,6 +50,7 @@ def refresh_units():
     return unit_list
 
 def import_units():
+    #Function to import units from the .csv file should the app be unable to connect to the API
     unit_list = []
     print('Starting Offline Mode')
     try:
