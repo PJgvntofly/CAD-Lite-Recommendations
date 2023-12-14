@@ -1,13 +1,31 @@
 # CAD-Lite-Recommendations
-Version 1.0 Updated on 1/26/2023 by Christopher Gass
+This is a script for generating unit recommendations for CAD Lite based on simplified response plans identified by fire agencies.
+This script connects to an API from cadlite.org to read the unit's status and wiil only recommend units that match the unit type requested
+in the response plan, are assigned to a station contained in the station area of the quadrant, and are in an Available or AIQ status. 
 
-This version adds support for FDID specific and response grid specific response plans. For South County Fire, response plans can also be deignated for their RFA and city areas. 
-
-There is preliminary support for multiple dispatch agencies, but that functionality is not fully implemented at this time. 
-
-This is a script that will pull unit recommendations from CAD Lite based on the simplified reponse plans identified by agencies during the basic unit recommendations trial.
-
-This script connects to an API to read real-time unit data from cadlite.org. Logs are output to a connection log and a recommendation log. 
-
-Dependencies are a csv file with the quadrant station order called "Quadrant Station Order.csv", a csv file with a list of all units in CAD Lite called "CadLiteUnitList.csv, and a json file containing response plans called "response_plans.json"
-
+Dependencies for this script are:
+ - A csv file for the quadrant station order called "Quadrant Station Order.csv"
+    - This file should be formatted so that the quadrant name is in the first column and the station order for the 
+      quadrant is in the second column as a string with the stations seperated by commas within the string.
+    - There should only be 2 columns of data total
+ 
+ - A list of all units in CAD Lite that is used if the API connection cannot be 
+   established called "CADLiteUnitList.csv"
+    - This file should have thee following formatting:
+      - Unit#,Jurisdiction,Unit Type,Assigned Station,Assigned Beat,Display in USM,Unit Status,Cross Staffing
+ 
+ - A JSON file containing the simplified response plans called "response_plans.json"
+   - The data should be structured with the root keys as the agency or agencies, with nested keys for the radio
+     position or jurisdictions with response plan differences. These should then contain a nested set of key value 
+     pairs with the keys being the call types and the values being a list of apparatus types that should be 
+     recommended for the call. 
+      - If more than one apparatus type could satisfy a request under a specific call type, the apparatus should 
+        be contained in a list within the overall list for the call type.
+      -Example:
+            "BLS1": [
+                [
+                    "Aid Unit",
+                    "Engine",
+                    "Ladder"
+                ]
+            ],
