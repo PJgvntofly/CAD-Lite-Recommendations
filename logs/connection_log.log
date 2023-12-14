@@ -2538,3 +2538,304 @@ TypeError: unhashable type: 'dict'
 09/20/2023 08:19:06 INFO - Attempting API connection
 09/20/2023 08:19:14 INFO - Verbose connection successful. Status code: 200
 09/20/2023 08:19:14 INFO - Refreshing units
+12/14/2023 07:15:06 INFO - Importing station orders
+12/14/2023 07:15:06 INFO - Creating positions
+12/14/2023 07:15:06 INFO - Creating FDIDs
+
+12/14/2023 07:15:13 INFO - Initializing database connection
+12/14/2023 07:15:13 INFO - Refreshing units
+12/14/2023 07:15:13 INFO - Attempting API connection
+12/14/2023 07:15:17 INFO - Verbose connection successful. Status code: 200
+12/14/2023 07:37:57 INFO - Importing station orders
+12/14/2023 07:37:57 INFO - Creating positions
+12/14/2023 07:37:57 INFO - Creating FDIDs
+
+12/14/2023 07:38:20 INFO - Initializing database connection
+12/14/2023 07:38:20 INFO - Refreshing units
+12/14/2023 07:38:20 INFO - Attempting API connection
+12/14/2023 07:38:22 INFO - Verbose connection successful. Status code: 200
+12/14/2023 07:41:49 INFO - Initializing database connection
+12/14/2023 07:41:49 INFO - Refreshing units
+12/14/2023 07:41:49 INFO - Attempting API connection
+12/14/2023 07:41:51 INFO - Verbose connection successful. Status code: 200
+12/14/2023 07:42:45 INFO - Importing station orders
+12/14/2023 07:42:45 INFO - Creating positions
+12/14/2023 07:42:45 INFO - Creating FDIDs
+
+12/14/2023 07:42:52 INFO - Initializing database connection
+12/14/2023 07:42:52 INFO - Refreshing units
+12/14/2023 07:42:52 INFO - Attempting API connection
+12/14/2023 07:42:53 INFO - Verbose connection successful. Status code: 200
+12/14/2023 07:43:12 INFO - Importing station orders
+12/14/2023 07:43:12 INFO - Creating positions
+12/14/2023 07:43:12 INFO - Creating FDIDs
+
+12/14/2023 07:43:29 INFO - Initializing database connection
+12/14/2023 07:43:29 INFO - Refreshing units
+12/14/2023 07:43:29 INFO - Attempting API connection
+12/14/2023 07:43:30 INFO - Verbose connection successful. Status code: 200
+12/14/2023 07:43:48 INFO - Importing station orders
+12/14/2023 07:43:48 INFO - Creating positions
+12/14/2023 07:43:48 INFO - Creating FDIDs
+
+12/14/2023 07:43:55 INFO - Initializing database connection
+12/14/2023 07:43:55 INFO - Refreshing units
+12/14/2023 07:43:55 INFO - Attempting API connection
+12/14/2023 07:43:56 INFO - Verbose connection successful. Status code: 200
+12/14/2023 07:44:12 INFO - Importing station orders
+12/14/2023 07:44:12 INFO - Creating positions
+12/14/2023 07:44:12 INFO - Creating FDIDs
+
+12/14/2023 07:44:22 INFO - Initializing database connection
+12/14/2023 07:44:22 INFO - Refreshing units
+12/14/2023 07:44:22 INFO - Attempting API connection
+12/14/2023 07:44:24 INFO - Verbose connection successful. Status code: 200
+12/14/2023 07:47:45 INFO - Importing station orders
+12/14/2023 07:47:45 INFO - Creating positions
+12/14/2023 07:47:45 INFO - Creating FDIDs
+
+12/14/2023 07:47:51 INFO - Initializing database connection
+12/14/2023 07:47:51 INFO - Refreshing units
+12/14/2023 07:47:51 INFO - Attempting API connection
+12/14/2023 07:47:53 INFO - Verbose connection successful. Status code: 200
+12/14/2023 07:51:25 INFO - Importing station orders
+12/14/2023 07:51:25 INFO - Creating positions
+12/14/2023 07:51:25 INFO - Creating FDIDs
+
+12/14/2023 07:51:37 INFO - Initializing database connection
+12/14/2023 07:51:37 INFO - Refreshing units
+12/14/2023 07:51:37 INFO - Attempting API connection
+12/14/2023 07:51:39 INFO - Verbose connection successful. Status code: 200
+12/14/2023 07:51:41 ERROR - Error during recommendations - popup_textbox() missing 1 required positional argument: 'window'
+Traceback (most recent call last):
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\get_recommendations.py", line 26, in get_recommendations
+    return recommendations(call_type,grid, window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\recommendations.py", line 113, in recommendations
+    response_plan = get_response_plan(call_type, grid, department, window)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\recommendations.py", line 52, in get_response_plan
+    call_type = find_hydrant(call_type, radio_position, window)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\recommendations.py", line 44, in find_hydrant
+    popup_textbox("Please enter only Y or N")
+TypeError: popup_textbox() missing 1 required positional argument: 'window'
+12/14/2023 07:51:41 INFO - Importing offline units
+12/14/2023 07:51:41 ERROR - Error importing offline unit list
+12/14/2023 07:53:20 INFO - Importing station orders
+12/14/2023 07:53:20 INFO - Creating positions
+12/14/2023 07:53:20 INFO - Creating FDIDs
+
+12/14/2023 07:53:26 INFO - Initializing database connection
+12/14/2023 07:53:26 INFO - Refreshing units
+12/14/2023 07:53:26 INFO - Attempting API connection
+12/14/2023 07:53:27 INFO - Verbose connection successful. Status code: 200
+12/14/2023 08:03:08 INFO - Importing station orders
+12/14/2023 08:03:08 INFO - Creating positions
+12/14/2023 08:03:08 INFO - Creating FDIDs
+
+12/14/2023 08:03:19 INFO - Initializing database connection
+12/14/2023 08:03:19 ERROR - Error during recommendations - refresh_units() missing 1 required positional argument: 'window'
+Traceback (most recent call last):
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\get_recommendations.py", line 26, in get_recommendations
+    return recommendations(call_type,grid, window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\recommendations.py", line 110, in recommendations
+    unit_list = units.refresh_units()
+                ^^^^^^^^^^^^^^^^^^^^^
+TypeError: refresh_units() missing 1 required positional argument: 'window'
+12/14/2023 08:03:19 INFO - Importing offline units
+12/14/2023 08:03:19 ERROR - Error importing offline unit list
+12/14/2023 08:04:22 INFO - Importing station orders
+12/14/2023 08:04:22 INFO - Creating positions
+12/14/2023 08:04:22 INFO - Creating FDIDs
+
+12/14/2023 08:04:30 INFO - Initializing database connection
+12/14/2023 08:04:30 INFO - Refreshing units
+12/14/2023 08:04:30 INFO - Attempting API connection
+12/14/2023 08:04:30 ERROR - An error occurred while refreshing units
+Traceback (most recent call last):
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\units.py", line 38, in refresh_units
+    with create_connection(window) as connection:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\units.py", line 25, in create_connection
+    connection = create_api_connection.create_api_connection(API_URL, 1, 'WA', window)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\create_api_connection.py", line 25, in create_api_connection
+    create_loading_window()
+TypeError: create_loading_window() missing 1 required positional argument: 'window'
+12/14/2023 08:04:30 ERROR - Error during recommendations - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\get_recommendations.py", line 26, in get_recommendations
+    return recommendations(call_type,grid, window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\recommendations.py", line 111, in recommendations
+    unit_list = clean_unit_list(unit_list)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\recommendations.py", line 85, in clean_unit_list
+    return [unit for unit in unit_list if unit.unit_status != 'Off Shift' and unit.unit_station != 'None']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
+12/14/2023 08:04:30 INFO - Importing offline units
+12/14/2023 08:04:30 ERROR - Error importing offline unit list
+12/14/2023 08:06:01 INFO - Importing station orders
+12/14/2023 08:06:01 INFO - Creating positions
+12/14/2023 08:06:01 INFO - Creating FDIDs
+
+12/14/2023 08:06:06 INFO - Initializing database connection
+12/14/2023 08:06:06 INFO - Refreshing units
+12/14/2023 08:06:06 INFO - Attempting API connection
+12/14/2023 08:06:09 INFO - Verbose connection successful. Status code: 200
+12/14/2023 08:06:34 INFO - Importing station orders
+12/14/2023 08:06:34 INFO - Creating positions
+12/14/2023 08:06:34 INFO - Creating FDIDs
+
+12/14/2023 08:06:42 INFO - Initializing database connection
+12/14/2023 08:06:42 INFO - Refreshing units
+12/14/2023 08:06:42 INFO - Attempting API connection
+12/14/2023 08:06:43 INFO - Verbose connection successful. Status code: 200
+12/14/2023 08:06:53 INFO - Importing station orders
+12/14/2023 08:06:53 INFO - Creating positions
+12/14/2023 08:06:53 INFO - Creating FDIDs
+
+12/14/2023 08:06:59 INFO - Initializing database connection
+12/14/2023 08:06:59 INFO - Refreshing units
+12/14/2023 08:06:59 INFO - Attempting API connection
+12/14/2023 08:07:00 INFO - Verbose connection successful. Status code: 200
+12/14/2023 08:07:08 INFO - Importing station orders
+12/14/2023 08:07:08 INFO - Creating positions
+12/14/2023 08:07:08 INFO - Creating FDIDs
+
+12/14/2023 08:07:13 INFO - Initializing database connection
+12/14/2023 08:07:13 INFO - Refreshing units
+12/14/2023 08:07:13 INFO - Attempting API connection
+12/14/2023 08:07:13 ERROR - An error occurred while refreshing units
+Traceback (most recent call last):
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\units.py", line 38, in refresh_units
+    with create_connection(window) as connection:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\units.py", line 25, in create_connection
+    connection = create_api_connection.create_api_connection(API_URL, 1, 'WA', window)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\create_api_connection.py", line 25, in create_api_connection
+    create_loading_window(window)
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\create_api_connection.py", line 16, in create_loading_window
+    sg.popup_no_buttons(text, location=(popup_x, popup_y), no_titlebar=True,non_blocking=True,auto_close_duration=0, auto_close=True)
+  File "C:\Users\cgass\AppData\Roaming\Python\Python311\site-packages\PySimpleGUI\PySimpleGUI.py", line 19576, in popup_no_buttons
+    Popup(*args, title=title, background_color=background_color, text_color=text_color,
+  File "C:\Users\cgass\AppData\Roaming\Python\Python311\site-packages\PySimpleGUI\PySimpleGUI.py", line 19398, in popup
+    button, values = window.read(timeout=0)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\AppData\Roaming\Python\Python311\site-packages\PySimpleGUI\PySimpleGUI.py", line 10079, in read
+    results = self._read(timeout=timeout, timeout_key=timeout_key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\AppData\Roaming\Python\Python311\site-packages\PySimpleGUI\PySimpleGUI.py", line 10134, in _read
+    event, values = self._ReadNonBlocking()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\AppData\Roaming\Python\Python311\site-packages\PySimpleGUI\PySimpleGUI.py", line 10284, in _ReadNonBlocking
+    return _BuildResults(self, False, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\AppData\Roaming\Python\Python311\site-packages\PySimpleGUI\PySimpleGUI.py", line 13901, in _BuildResults
+    _BuildResultsForSubform(form, initialize_only, top_level_form)
+  File "C:\Users\cgass\AppData\Roaming\Python\Python311\site-packages\PySimpleGUI\PySimpleGUI.py", line 13909, in _BuildResultsForSubform
+    for row_num, row in enumerate(form.Rows):
+                        ^^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
+12/14/2023 08:07:13 ERROR - Error during recommendations - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\get_recommendations.py", line 26, in get_recommendations
+    return recommendations(call_type,grid, window)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\recommendations.py", line 111, in recommendations
+    unit_list = clean_unit_list(unit_list)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgass\Documents\GitHub\CAD-Lite-Recommendations\recommendations.py", line 85, in clean_unit_list
+    return [unit for unit in unit_list if unit.unit_status != 'Off Shift' and unit.unit_station != 'None']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
+12/14/2023 08:07:13 INFO - Importing offline units
+12/14/2023 08:07:13 ERROR - Error importing offline unit list
+12/14/2023 08:07:36 INFO - Importing station orders
+12/14/2023 08:07:36 INFO - Creating positions
+12/14/2023 08:07:36 INFO - Creating FDIDs
+
+12/14/2023 08:07:41 INFO - Initializing database connection
+12/14/2023 08:07:41 INFO - Refreshing units
+12/14/2023 08:07:41 INFO - Attempting API connection
+12/14/2023 08:07:43 INFO - Verbose connection successful. Status code: 200
+12/14/2023 08:11:03 INFO - Importing station orders
+12/14/2023 08:11:03 INFO - Creating positions
+12/14/2023 08:11:03 INFO - Creating FDIDs
+
+12/14/2023 08:11:08 INFO - Initializing database connection
+12/14/2023 08:11:08 INFO - Refreshing units
+12/14/2023 08:11:08 INFO - Attempting API connection
+12/14/2023 08:11:09 INFO - Verbose connection successful. Status code: 200
+12/14/2023 08:29:29 INFO - Importing station orders
+12/14/2023 08:29:29 INFO - Creating positions
+12/14/2023 08:29:29 INFO - Creating FDIDs
+
+12/14/2023 08:32:41 INFO - Importing station orders
+12/14/2023 08:32:41 INFO - Creating positions
+12/14/2023 08:32:41 INFO - Creating FDIDs
+
+12/14/2023 08:33:43 INFO - Importing station orders
+12/14/2023 08:33:43 INFO - Creating positions
+12/14/2023 08:33:43 INFO - Creating FDIDs
+
+12/14/2023 08:35:51 INFO - Importing station orders
+12/14/2023 08:35:51 INFO - Creating positions
+12/14/2023 08:35:51 INFO - Creating FDIDs
+
+12/14/2023 08:42:56 INFO - Importing station orders
+12/14/2023 08:42:56 INFO - Creating positions
+12/14/2023 08:42:56 INFO - Creating FDIDs
+
+12/14/2023 08:43:23 INFO - Importing station orders
+12/14/2023 08:43:23 INFO - Creating positions
+12/14/2023 08:43:23 INFO - Creating FDIDs
+
+12/14/2023 08:46:48 INFO - Importing station orders
+12/14/2023 08:46:48 INFO - Creating positions
+12/14/2023 08:46:48 INFO - Creating FDIDs
+
+12/14/2023 08:47:11 INFO - Importing station orders
+12/14/2023 08:47:11 INFO - Creating positions
+12/14/2023 08:47:11 INFO - Creating FDIDs
+
+12/14/2023 08:47:19 INFO - Initializing database connection
+12/14/2023 08:47:19 INFO - Refreshing units
+12/14/2023 08:47:19 INFO - Attempting API connection
+12/14/2023 08:47:22 INFO - Verbose connection successful. Status code: 200
+12/14/2023 08:47:30 INFO - Initializing database connection
+12/14/2023 08:47:30 INFO - Refreshing units
+12/14/2023 08:47:30 INFO - Attempting API connection
+12/14/2023 08:47:32 INFO - Verbose connection successful. Status code: 200
+12/14/2023 08:47:39 INFO - Initializing database connection
+12/14/2023 08:47:39 INFO - Refreshing units
+12/14/2023 08:47:39 INFO - Attempting API connection
+12/14/2023 08:47:40 INFO - Verbose connection successful. Status code: 200
+12/14/2023 08:49:26 INFO - Importing station orders
+12/14/2023 08:49:26 INFO - Creating positions
+12/14/2023 08:49:26 INFO - Creating FDIDs
+
+12/14/2023 08:49:35 INFO - Initializing database connection
+12/14/2023 08:49:35 INFO - Refreshing units
+12/14/2023 08:49:35 INFO - Attempting API connection
+12/14/2023 08:49:36 INFO - Verbose connection successful. Status code: 200
+12/14/2023 08:49:45 INFO - Initializing database connection
+12/14/2023 08:49:45 INFO - Refreshing units
+12/14/2023 08:49:45 INFO - Attempting API connection
+12/14/2023 08:49:47 INFO - Verbose connection successful. Status code: 200
+12/14/2023 08:50:17 INFO - Importing station orders
+12/14/2023 08:50:17 INFO - Creating positions
+12/14/2023 08:50:17 INFO - Creating FDIDs
+
+12/14/2023 08:50:23 INFO - Initializing database connection
+12/14/2023 08:50:23 INFO - Refreshing units
+12/14/2023 08:50:23 INFO - Attempting API connection
+12/14/2023 08:50:25 INFO - Verbose connection successful. Status code: 200
+12/14/2023 08:50:40 INFO - Initializing database connection
+12/14/2023 08:50:40 INFO - Refreshing units
+12/14/2023 08:50:40 INFO - Attempting API connection
+12/14/2023 08:50:41 INFO - Verbose connection successful. Status code: 200
