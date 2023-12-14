@@ -7,7 +7,7 @@ import PySimpleGUI as sg
 
 frls = import_response_plans()
 
-def offline_recommendations(call_type,grid):
+def offline_recommendations(call_type,grid, window):
     rec_log.info("Beginning offline recommendations")
     call_type = call_type.strip().upper()
     grid = grid.strip().upper()
@@ -37,7 +37,7 @@ def offline_recommendations(call_type,grid):
         radio_position = recommendations.TAC_5
     if radio_position == 'TAC_3':
         radio_position = recommendations.TAC_3
-    call_type = recommendations.find_hydrant(call_type, radio_position)
+    call_type = recommendations.find_hydrant(call_type, radio_position, window)
     agency = 'SNO911'
     if grid in frls[agency].keys() and call_type in frls[agency][grid].keys():
         response_plan = frls[agency][grid][call_type]
