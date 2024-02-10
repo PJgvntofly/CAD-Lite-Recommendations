@@ -56,7 +56,7 @@ def create_positions(station_order):
             position['TAC-2'].append(quadrant)
         if quadrant[:2] in ['MF', 'AG', 'AJ', 'BJ', 'SK', 'CA', 'AF', 'AC', 'BH', 'D7', 'NO']:
             position['TAC-5'].append(quadrant)
-        if quadrant[:2] in ['AK', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'BI', 'BK', 'DN', 'AW', 'AV', 'AE', 'AD']:
+        if quadrant[:2] in ['AK', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'BI', 'BK', 'DN', 'AW', 'AV', 'AE', 'AD', '31D04']:
             position['TAC-3'].append(quadrant)
         if quadrant[:2] in ['EF', 'BF', 'TF']:
             fdid['31D01_CITY'].append(quadrant)
