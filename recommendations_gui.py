@@ -118,9 +118,11 @@ def main():
         if event == "Recommendations Help":
             window.keep_on_top_clear()
             open_help_screen()
+            window.keep_on_top_set()
         if event == "Additional Requests":
             window.keep_on_top_clear()
             open_additional_requests()
+            window.keep_on_top_set()
     window.close()
 
 if __name__ == "__main__":
