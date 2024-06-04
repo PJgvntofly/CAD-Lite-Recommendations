@@ -74,7 +74,9 @@ def get_response_plan(call_type, grid, department, window):
 
     if grid in station_orders:
         agency = 'SNO911'
-    if grid in frls[agency].keys() and call_type in frls[agency][grid].keys():
+    if call_type in frls[agency]['Units'].keys():
+        response_plan = frls[agency]['Units'][call_type]
+    elif grid in frls[agency].keys() and call_type in frls[agency][grid].keys():
         response_plan = frls[agency][grid][call_type]
     elif department in frls[agency].keys() and call_type in frls[agency][department].keys():
         response_plan = frls[agency][department][call_type]

@@ -1,6 +1,13 @@
 {
     "SNO911": {
         "TAC-1": {
+            "AID": [
+                [
+                    "Aid Unit",
+                    "Engine",
+                    "Ladder"
+                ]
+            ],
             "AIR": [
                 "Engine",
                 "Medic Unit",
@@ -127,6 +134,11 @@
                     "Engine",
                     "Ladder"
                 ]
+            ],
+            "FWI": [
+                "Engine",
+                "Engine",
+                "Command Unit"
             ],
             "GLI": [
                 "Engine",
@@ -376,6 +388,14 @@
             ]
         },
         "TAC-3": {
+            "AID": [
+                [
+                    "Aid Unit",
+                    "Medic Unit",
+                    "Engine",
+                    "Ladder"
+                ]
+            ],
             "AIR": [
                 "Engine",
                 "Medic Unit",
@@ -522,6 +542,11 @@
                     "Engine",
                     "Ladder"
                 ]
+            ],
+            "FWI": [
+                "Engine",
+                "Engine",
+                "Command Unit"
             ],
             "GLI": [
                 "Engine",
@@ -787,6 +812,9 @@
             ]
         },
         "TAC-5": {
+            "AID": [
+                "Aid Unit"
+            ],
             "AIR": [
                 "Engine",
                 "Medic Unit",
@@ -901,6 +929,11 @@
                     "Engine",
                     "Ladder"
                 ]
+            ],
+            "FWI": [
+                "Engine",
+                "Engine",
+                "Command Unit"
             ],
             "GLI": [
                 "Engine",
@@ -1160,6 +1193,14 @@
             ]
         },
         "TAC-2": {
+            "AID": [
+                [
+                    "Medic Unit",
+                    "Aid Unit",
+                    "Engine",
+                    "Ladder"
+                ]
+            ],
             "AIR": [
                 "Engine",
                 "Medic Unit",
@@ -1285,6 +1326,11 @@
                     "Engine",
                     "Ladder"
                 ]
+            ],
+            "FWI": [
+                "Engine",
+                "Engine",
+                "Command Unit"
             ],
             "GLI": [
                 "Engine",
@@ -1578,6 +1624,184 @@
                     "Ladder"
                 ],
                 "Aid Unit"
+            ]
+        },
+        "31C02": {
+            "AID": [
+                "BE Engine"
+            ],
+            "AIR": [
+                "BE Engine"
+            ],
+            "AIRC": [
+                "BE Engine"
+            ],
+            "AIRS": [
+                "BE Engine"
+            ],
+            "BLS1": [
+                "BE Engine"
+            ],
+            "BLS2": [
+                "BE Engine"
+            ],
+            "BLS3": [
+                "BE Engine"
+            ],
+            "COA": [
+                "BE Engine"
+            ],
+            "COAM": [
+                "BE Engine"
+            ],
+            "FAC": [
+                "BE Engine"
+            ],
+            "FS": [
+                "BE Engine"
+            ],
+            "FTU": [
+                "BE Engine"
+            ],
+            "FFB": [
+                "BE Engine"
+            ],
+            "FAR": [
+                "BE Engine"
+            ],
+            "FAS": [
+                "BE Engine"
+            ],
+            "FB": [
+                "BE Engine"
+            ],
+            "FCC": [
+                "BE Engine"
+            ],
+            "FI": [],
+            "FRC": [
+                "BE Engine"
+            ],
+            "FSN": [
+                "BE Engine"
+            ],
+            "FWI": [
+                "BE Engine"
+            ],
+            "GLI": [
+                "BE Engine"
+            ],
+            "GLO": [
+                "BE Engine"
+            ],
+            "HZ": [
+                "BE Engine"
+            ],
+            "HZ2": [
+                "BE Engine"
+            ],
+            "HZ3": [
+                "BE Engine"
+            ],
+            "MCI": [
+                "BE Engine"
+            ],
+            "MED1": [
+                "BE Engine"
+            ],
+            "MED2": [
+                "BE Engine"
+            ],
+            "MED3": [
+                "BE Engine"
+            ],
+            "MEDX": [
+                "BE Engine"
+            ],
+            "MVC": [
+                "BE Engine"
+            ],
+            "MVCE": [
+                "BE Engine"
+            ],
+            "MVCF": [
+                "BE Engine"
+            ],
+            "MVCM": [
+                "BE Engine"
+            ],
+            "MVCN": [
+                "BE Engine"
+            ],
+            "MVCP": [
+                "BE Engine"
+            ],
+            "RESA": [
+                "BE Engine"
+            ],
+            "RESA2": [
+                "BE Engine"
+            ],
+            "RESA3": [
+                "BE Engine"
+            ],
+            "RESA4": [
+                "BE Engine"
+            ],
+            "RESCS": [],
+            "RESCS2": [
+                "BE Engine"
+            ],
+            "RESCS3": [
+                "BE Engine"
+            ],
+            "RESST": [
+                "BE Engine"
+            ],
+            "RESST2": [
+                "BE Engine"
+            ],
+            "RESST3": [
+                "BE Engine"
+            ],
+            "RESSW": [
+                "BE Engine"
+            ],
+            "RESTR": [],
+            "RESTR2": [
+                "BE Engine"
+            ],
+            "RESTR3": [
+                "BE Engine"
+            ],
+            "RESWA": [
+                "BE Engine"
+            ],
+            "SC": [
+                "BE Engine"
+            ]
+        },
+        "Units": {
+            "ENGINE": [
+                "Engine"
+            ],
+            "LADDER": [
+                "Ladder"
+            ],
+            "AID UNIT": [
+                "Aid Unit"
+            ],
+            "MEDIC UNIT": [
+                "Medic Unit"
+            ],
+            "COMMAND UNIT": [
+                "Command Unit"
+            ],
+            "BRUSH TRUCK": [
+                "Brush Truck"
+            ],
+            "TENDER": [
+                "Tender"
             ]
         }
     },

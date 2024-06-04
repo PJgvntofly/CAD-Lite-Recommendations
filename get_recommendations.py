@@ -24,13 +24,17 @@ def get_recommendations(call_type, grid, window):
         if call_type in unconfirmed_fire_types:
             print(f"Using {call_type}C plan")
             call_type = call_type + 'C'
+        if call_type.startswith('MEDIC'):
+            call_type = 'MEDIC UNIT'
+        if call_type.startswith('AID '):
+            call_type = 'AID UNIT'
 
     #Handle errors with the provided inputs
     except ValueError as error:
         rec_log.error(f'An error occured while getting recommendations {error}')
     
     if get_radio(grid):
-        if call_type in response_plans['SNO911']['TAC-1']:
+        if call_type in response_plans['SNO911']['TAC-1'] or call_type in response_plans['SNO911']['Units']:
             try:
                 #Try to obtain recommendations through the API connection
                 return recommendations(call_type,grid, window)
