@@ -28,7 +28,7 @@ def open_help_screen():
         [sg.Text("try the next closest Grid based on the CAD Lite map")]
     ]
     unit_layout = [
-        [sg.Text("To add the closesnt unit for a given unit type,")],
+        [sg.Text("To add the closest unit for a given unit type,")],
         [sg.Text("click the 'Additional Requests' button then select")],
         [sg.Text("the desired unit type from the given options. Enter")],
         [sg.Text("the grid of the incident and hit submit. A recommendation")],
