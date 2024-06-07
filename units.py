@@ -4,7 +4,7 @@ from log_config import connection_log, rec_log
 import regex as re
 
 #Constants
-API_URL = 'https://uacy6ocd51.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public'
+API_URL = 'https://Zuacy6ocd51.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public'
 OFFLINE_CSV_PATH = r'.\CADLiteUnitList.csv'
 
 #Create a class to represent a unit
@@ -57,7 +57,7 @@ def import_units():
         connection_log.info("Importing offline units")
         with open(OFFLINE_CSV_PATH,'r', newline='') as f:
             csv_f = csv.reader(f)
-            unit_list = [Unit(row[0], row[2], row[3], 'AIQ', row[7].split("-")) for row in csv_f]
+            unit_list = [Unit(row[0], row[2], row[3], 'AIQ', row[7].split("-")) for row in csv_f if row != '']
         connection_log.info("Finished importing offline units")
     except FileNotFoundError:
         connection_log.error("Error importing offline unit list: CSV file not found")
