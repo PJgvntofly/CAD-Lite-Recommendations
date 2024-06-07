@@ -57,10 +57,7 @@ def import_units():
         connection_log.info("Importing offline units")
         with open(OFFLINE_CSV_PATH,'r', newline='') as f:
             csv_f = csv.reader(f)
-            unit_list = [Unit(row[0], row[2], row[3], row[6], row[7].split("-")) for row in csv_f]
-        for unit in unit_list:
-            unit.unit_status = 'AIQ'
-            unit.cross_staffing = unit.cross_staffing.split("-")
+            unit_list = [Unit(row[0], row[2], row[3], 'AIQ', row[7].split("-")) for row in csv_f]
         connection_log.info("Finished importing offline units")
     except FileNotFoundError:
         connection_log.error("Error importing offline unit list: CSV file not found")

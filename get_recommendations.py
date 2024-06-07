@@ -1,6 +1,5 @@
 from multiprocessing.connection import wait
 from recommendations import get_radio, recommendations
-import offline_mode
 from import_response_plans import import_response_plans
 from log_config import connection_log
 from log_config import rec_log
@@ -41,7 +40,6 @@ def get_recommendations(call_type, grid, window):
             except Exception as e:
                 #If there is an error with the API connection, log the exception and try offline mode
                 connection_log.exception(f"Error during recommendations - {e}")
-                return offline_mode.offline_recommendations(call_type,grid, window)
         else:
             rec_log.warning(f"Invalid call type entered: {call_type}")
             print(f"{call_type} is not valid. \nPlease enter a valid call type \n")

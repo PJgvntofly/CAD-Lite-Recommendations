@@ -106,13 +106,19 @@ def recommendations(call_type,grid, window):
     cross_staff_dict = {}
     sorted_unit_log = {}
     station_rank_log = {}
+    skipped_units = []
+    offline_mode = False
 
     # Inform users to use the second alarm type code for specific rescue call types
     if call_type in ['RESCS', 'RESTR']:
         return print("Use second alarm type code: {}".format(call_type + "2"))
     connection_log.info('Initializing database connection')
     unit_list = units.refresh_units(window)
-    unit_list = clean_unit_list(unit_list)
+    if unit_list == None:
+        unit_list = units.import_units()
+        offline_mode = True
+    else:
+        unit_list = clean_unit_list(unit_list)
     department = get_fdid(grid)
     response_plan = get_response_plan(call_type, grid, department, window)
 
@@ -169,12 +175,29 @@ def recommendations(call_type,grid, window):
 
         for sorted_unit in sorted_unit_list:
             if not list_result: 
-                result.append(sorted_unit)
-                if sorted_unit in cross_staff_dict.keys():
-                    cross_staffing_list.extend(cross_staff_dict[sorted_unit])
-                sorted_unit_log[sorted_unit] = sorted_units
-                station_rank_log[sorted_unit] = station_rank
-                list_result = True
+                if offline_mode:
+                    window.keep_on_top_clear()
+                    window_loc = get_main_window_location(window)
+                    text = f"Call Type: {call_type} | Request: {unit_type} | Recommendation: {sorted_unit}\nAccept recommended unit?\nEnter Y for yes or N to see the next unit. "
+                    accept = sg.popup_get_text(text, location=((window_loc[0] - (window.size[0]//4), window_loc[1] - (window.size[1]//4))), title='Offline Mode', keep_on_top=True, modal=True, font='Courier 14')
+                    try:
+                        accept = accept.strip().upper()
+                        if accept[0] == 'Y':
+                            result.append(sorted_unit)
+                            cross_staffing_list.extend(cross_staff_dict[sorted_unit])
+                            list_result = True
+                        else:
+                            skipped_units.append(sorted_unit)
+                    except AttributeError as err:
+                        rec_log.exception(err)
+                        break
+                else: 
+                    result.append(sorted_unit)
+                    if sorted_unit in cross_staff_dict.keys():
+                        cross_staffing_list.extend(cross_staff_dict[sorted_unit])
+                    sorted_unit_log[sorted_unit] = sorted_units
+                    station_rank_log[sorted_unit] = station_rank
+                    list_result = True
 
         # If the recommendation can't be filled, toggle unfulfilled_resources to True
         # and add the unfulfilled request to a list to be returned later
