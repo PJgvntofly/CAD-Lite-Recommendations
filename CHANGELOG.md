@@ -1,3 +1,9 @@
+Version 1.2 Updated on 6/4/2024 by Christopher Gass
+- Added the ability to request an additional unit by unit type
+- Adds an additional request button to the GUI which launches a new window to select the unit type
+- Removed the offline mode logic and incorporated the functionality of offline mode into the main recommendations logic
+- Adds a help button to the GUI with some basic help information
+
 Version 1.1 Updated on 12/14/2023 by Christopher Gass
 - Optimized code throughout for better readability and efficency
 - Change the GUI window to be always on top so that it doesn't get lost while in use
