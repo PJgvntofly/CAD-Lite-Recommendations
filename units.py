@@ -4,7 +4,7 @@ from log_config import connection_log, rec_log
 import regex as re
 
 #Constants
-API_URL = 'https://Zuacy6ocd51.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public'
+API_URL = 'https://uacy6ocd51.execute-api.us-west-2.amazonaws.com/prod/api/units/get-public'
 OFFLINE_CSV_PATH = r'.\CADLiteUnitList.csv'
 
 #Create a class to represent a unit
