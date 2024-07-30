@@ -261,6 +261,13 @@
                 ],
                 "Medic Unit"
             ],
+            "MVCT": [
+                "Engine",
+                "Ladder",
+                "Medic Unit",
+                "Command Unit",
+                "Medical Services Officer"
+            ],
             "RESA": [
                 [
                     "Engine",
@@ -385,6 +392,51 @@
                     "Engine",
                     "Ladder"
                 ]
+            ],
+            "TRNLR": [
+                "Engine",
+                "Engine",
+                "Ladder",
+                "Engine",
+                "Engine",
+                "Medic Unit",
+                [
+                    "Aid Unit",
+                    "Medic Unit"
+                ],
+                "Ladder",
+                "Command Unit",
+                "Medical Services Officer"
+            ],
+            "TRNCARG": [
+                "Engine",
+                "Engine",
+                "Ladder",
+                "Engine",
+                "Engine",
+                "Medic Unit",
+                [
+                    "Aid Unit",
+                    "Medic Unit"
+                ],
+                "Ladder",
+                "Command Unit",
+                "Medical Services Officer"
+            ],
+            "TRNPAS": [
+                "Engine",
+                "Engine",
+                "Ladder",
+                "Engine",
+                "Engine",
+                "Medic Unit",
+                [
+                    "Aid Unit",
+                    "Medic Unit"
+                ],
+                "Ladder",
+                "Command Unit",
+                "Medical Services Officer"
             ]
         },
         "TAC-3": {
@@ -685,6 +737,16 @@
                 ],
                 "Command Unit"
             ],
+            "MVCT": [
+                [
+                    "Engine",
+                    "Ladder"
+                ],
+                "Medic Unit",
+                "Aid Unit",
+                "Engine",
+                "Command Unit"
+            ],
             "RESA": [
                 [
                     "Engine",
@@ -809,6 +871,36 @@
                     "Engine",
                     "Ladder"
                 ]
+            ],
+            "TRNCARG": [
+                "Ladder",
+                "Engine",
+                "Engine",
+                "Engine",
+                "Engine",
+                "Medic Unit",
+                "Aid Unit",
+                "Command Unit"
+            ],
+            "TRNLR": [
+                "Ladder",
+                "Engine",
+                "Engine",
+                "Engine",
+                "Engine",
+                "Medic Unit",
+                "Aid Unit",
+                "Command Unit"
+            ],
+            "TRNPAS": [
+                "Ladder",
+                "Engine",
+                "Engine",
+                "Engine",
+                "Engine",
+                "Medic Unit",
+                "Aid Unit",
+                "Command Unit"
             ]
         },
         "TAC-5": {
@@ -1066,6 +1158,16 @@
                 ],
                 "Command Unit"
             ],
+            "MVCT": [
+                [
+                    "Engine",
+                    "Ladder"
+                ],
+                "Medic Unit",
+                "Aid Unit",
+                "Engine",
+                "Command Unit"
+            ],
             "RESA": [
                 [
                     "Engine",
@@ -1190,6 +1292,30 @@
                     "Engine",
                     "Ladder"
                 ]
+            ],
+            "TRNCARG": [
+                "Engine",
+                "Engine",
+                "Ladder",
+                "Engine",
+                "Medic Unit",
+                "Command Unit"
+            ],
+            "TRNLR": [
+                "Engine",
+                "Engine",
+                "Ladder",
+                "Engine",
+                "Medic Unit",
+                "Command Unit"
+            ],
+            "TRNPAS": [
+                "Engine",
+                "Engine",
+                "Ladder",
+                "Engine",
+                "Medic Unit",
+                "Command Unit"
             ]
         },
         "TAC-2": {
@@ -1470,6 +1596,16 @@
                 "Aid Unit",
                 "Command Unit"
             ],
+            "MVCT": [
+                [
+                    "Engine",
+                    "Ladder"
+                ],
+                "Medic Unit",
+                "Aid Unit",
+                "Engine",
+                "Command Unit"
+            ],
             "RESA": [
                 [
                     "Engine",
@@ -1594,6 +1730,36 @@
                     "Engine",
                     "Ladder"
                 ]
+            ],
+            "TRNCARG": [
+                "Ladder",
+                "Engine",
+                "Engine",
+                "Engine",
+                "Engine",
+                "Medic Unit",
+                "Aid Unit",
+                "Command Unit"
+            ],
+            "TRNLR": [
+                "Ladder",
+                "Engine",
+                "Engine",
+                "Engine",
+                "Engine",
+                "Medic Unit",
+                "Aid Unit",
+                "Command Unit"
+            ],
+            "TRNPAS": [
+                "Ladder",
+                "Engine",
+                "Engine",
+                "Engine",
+                "Engine",
+                "Medic Unit",
+                "Aid Unit",
+                "Command Unit"
             ]
         },
         "31D01_RFA": {
@@ -1736,6 +1902,9 @@
             "MVCP": [
                 "BE Engine"
             ],
+            "MVCT": [
+                "BE Engine"
+            ],
             "RESA": [
                 "BE Engine"
             ],
@@ -1778,6 +1947,15 @@
                 "BE Engine"
             ],
             "SC": [
+                "BE Engine"
+            ],
+            "TRNCARG": [
+                "BE Engine"
+            ],
+            "TRNLR": [
+                "BE Engine"
+            ],
+            "TRNPAS": [
                 "BE Engine"
             ]
         },
